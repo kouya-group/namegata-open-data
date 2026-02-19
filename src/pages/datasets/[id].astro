@@ -53,6 +53,13 @@ interface EvidenceDataset {
   };
 }
 
+interface GeoPoint {
+  lat: number;
+  lon: number;
+  label: string;
+  sublabel: string;
+}
+
 export function getStaticPaths() {
   return (datasets as DatasetSummary[]).map(dataset => ({
     params: { id: dataset.id },
@@ -105,6 +112,26 @@ const toNumber = (value: unknown) => {
   return 0;
 };
 
+const toCoordinate = (value: unknown, type: 'lat' | 'lon'): number | null => {
+  if (typeof value !== 'string' && typeof value !== 'number') {
+    return null;
+  }
+
+  const parsed = Number(String(value).replace(/,/g, '').trim());
+  if (!Number.isFinite(parsed)) {
+    return null;
+  }
+
+  if (type === 'lat') {
+    return parsed >= -90 && parsed <= 90 ? parsed : null;
+  }
+
+  return parsed >= -180 && parsed <= 180 ? parsed : null;
+};
+
+const findHeader = (headers: string[], patterns: RegExp[]) =>
+  headers.find(header => patterns.some(pattern => pattern.test(header)));
+
 const fmtDateTime = (value?: string) => {
   if (!value) {
     return '未取得';
@@ -140,6 +167,65 @@ const evidenceLicense = evidence?.source?.license ?? dataset.license ?? 'CC BY 2
 const evidenceSha = evidence?.integrity?.sha256 ?? dataset.sha256 ?? '-';
 const transformationText =
   evidence?.transformation?.description ?? 'CSV (Shift_JIS/UTF-8) → UTF-8 → JSON';
+
+const latHeader = processed
+  ? findHeader(processed.headers, [/^緯度$/i, /緯度/i, /^lat$/i, /latitude/i])
+  : undefined;
+const lonHeader = processed
+  ? findHeader(processed.headers, [/^経度$/i, /経度/i, /^lon$/i, /^lng$/i, /longitude/i])
+  : undefined;
+const labelHeader = processed
+  ? findHeader(processed.headers, [/^名称$/, /^介護サービス事業所名称$/, /^データ名称$/, /^地域名$/, /名称/, /地域名/])
+  : undefined;
+const sublabelHeader = processed
+  ? findHeader(processed.headers, [/^所在地$/, /住所/, /位置/, /場所/, /連絡先住所/])
+  : undefined;
+const categoryHeader = processed
+  ? findHeader(processed.headers, [/^種別$/, /分類/, /区分/, /カテゴリ/, /文化財分類/, /^地域名$/])
+  : undefined;
+
+const geoPoints: GeoPoint[] = [];
+if (processed && latHeader && lonHeader) {
+  for (const row of records) {
+    const lat = toCoordinate(row[latHeader], 'lat');
+    const lon = toCoordinate(row[lonHeader], 'lon');
+    if (lat === null || lon === null) {
+      continue;
+    }
+
+    geoPoints.push({
+      lat,
+      lon,
+      label: (labelHeader ? row[labelHeader] : '').trim() || `地点 ${geoPoints.length + 1}`,
+      sublabel: (sublabelHeader ? row[sublabelHeader] : '').trim(),
+    });
+  }
+}
+
+const maxMapPoints = 300;
+const mapPoints = geoPoints.slice(0, maxMapPoints);
+const hiddenGeoPointCount = Math.max(geoPoints.length - mapPoints.length, 0);
+const hasGeoMap = mapPoints.length > 0;
+const mapElementId = `dataset-map-${dataset.id.replace(/[^a-z0-9-]/gi, '')}`;
+
+const categoryCountMap = new Map<string, number>();
+if (processed && categoryHeader) {
+  for (const row of records) {
+    const value = (row[categoryHeader] ?? '').trim();
+    if (!value) {
+      continue;
+    }
+    categoryCountMap.set(value, (categoryCountMap.get(value) ?? 0) + 1);
+  }
+}
+
+const categoryDistribution = Array.from(categoryCountMap.entries())
+  .map(([label, count]) => ({ label, count }))
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 8);
+const hiddenCategoryCount = Math.max(categoryCountMap.size - categoryDistribution.length, 0);
+const maxCategoryCount = Math.max(...categoryDistribution.map(item => item.count), 0);
+const hasCategoryChart = categoryDistribution.length > 1;
 
 const isPopulationDataset = dataset.id === 'population' && !!processed;
 const ageColumns: Array<{ label: string; key: string }> = [];
@@ -207,6 +293,17 @@ if (isPopulationDataset) {
 ---
 
 <Layout title={`${dataset.title} | NAMEGATA OPEN DATA`}>
+  {hasGeoMap ? (
+    <Fragment slot="head">
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+      />
+    </Fragment>
+  ) : null}
+
   <Nav />
 
   <main class="section">
@@ -244,6 +341,47 @@ if (isPopulationDataset) {
           <a href={dataset.sourcePageUrl} target="_blank" rel="noopener" class="btn-link">市公式詳細ページ</a>
         </div>
       </header>
+
+      {hasGeoMap ? (
+        <section class="card map-card">
+          <h2>地図（座標表示）</h2>
+          <p class="table-note">
+            座標付きデータ {geoPoints.length.toLocaleString('ja-JP')} 件を地図上に表示しています。
+            {hiddenGeoPointCount > 0
+              ? ` 表示負荷を抑えるため、先頭 ${maxMapPoints} 件を描画しています。`
+              : ''}
+          </p>
+
+          <div class={`map-and-chart ${hasCategoryChart ? '' : 'single'}`}>
+            <div class="map-container">
+              <div id={mapElementId} class="map-canvas"></div>
+            </div>
+
+            {hasCategoryChart ? (
+              <div class="category-card">
+                <h3>{categoryHeader} 分布</h3>
+                <div class="category-bars">
+                  {categoryDistribution.map(item => (
+                    <div class="category-row">
+                      <span class="category-label">{item.label}</span>
+                      <div class="category-track">
+                        <div
+                          class="category-fill"
+                          style={`width: ${(item.count / (maxCategoryCount || 1)) * 100}%`}
+                        ></div>
+                      </div>
+                      <span class="category-count">{item.count}</span>
+                    </div>
+                  ))}
+                </div>
+                {hiddenCategoryCount > 0 ? (
+                  <p class="category-note">他 {hiddenCategoryCount} 種類は省略しています。</p>
+                ) : null}
+              </div>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
 
       {isPopulationDataset && ageDistribution.length > 0 ? (
         <section class="card chart-card">
@@ -344,6 +482,52 @@ if (isPopulationDataset) {
       </details>
     </div>
   </main>
+
+  {hasGeoMap ? (
+    <>
+      <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+      ></script>
+      <script is:inline define:vars={{ mapElementId, mapPoints }}>
+        const element = document.getElementById(mapElementId);
+        if (element && window.L) {
+          const map = window.L.map(element, {
+            scrollWheelZoom: false,
+            preferCanvas: true,
+          });
+
+          window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+          }).addTo(map);
+
+          const bounds = [];
+          for (const point of mapPoints) {
+            const marker = window.L.circleMarker([point.lat, point.lon], {
+              radius: 5,
+              weight: 1,
+              color: '#0f172a',
+              fillColor: '#22c55e',
+              fillOpacity: 0.8,
+            });
+
+            const label = (point.label || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const sublabel = (point.sublabel || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            marker.bindPopup(sublabel ? `<strong>${label}</strong><br>${sublabel}` : label);
+            marker.addTo(map);
+            bounds.push([point.lat, point.lon]);
+          }
+
+          if (bounds.length === 1) {
+            map.setView(bounds[0], 14);
+          } else if (bounds.length > 1) {
+            map.fitBounds(bounds, { padding: [24, 24] });
+          }
+        }
+      </script>
+    </>
+  ) : null}
 
   <Footer />
 </Layout>
@@ -451,6 +635,97 @@ if (isPopulationDataset) {
     color: var(--text-secondary);
     font-size: 0.84rem;
     margin-top: 0.45rem;
+  }
+
+  .map-card h2 {
+    font-size: 1rem;
+  }
+
+  .map-and-chart {
+    margin-top: 0.85rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 0.9rem;
+    align-items: start;
+  }
+
+  .map-and-chart.single {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg-base);
+  }
+
+  .map-canvas {
+    width: 100%;
+    height: 420px;
+  }
+
+  .category-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.65rem;
+    background: var(--bg-base);
+  }
+
+  .category-card h3 {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.6rem;
+    font-family: var(--font-mono);
+  }
+
+  .category-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .category-row {
+    display: grid;
+    grid-template-columns: minmax(70px, 1fr) minmax(0, 1.2fr) 40px;
+    gap: 0.45rem;
+    align-items: center;
+  }
+
+  .category-label {
+    color: var(--text-secondary);
+    font-size: 0.68rem;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .category-track {
+    height: 10px;
+    border: 1px solid rgba(59, 130, 246, 0.24);
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .category-fill {
+    height: 100%;
+    min-width: 2px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+  }
+
+  .category-count {
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    color: var(--text-secondary);
+    text-align: right;
+  }
+
+  .category-note {
+    margin-top: 0.6rem;
+    color: var(--text-dim);
+    font-size: 0.68rem;
   }
 
   .chart-card h2 {
@@ -592,6 +867,14 @@ if (isPopulationDataset) {
   }
 
   @media (max-width: 640px) {
+    .map-and-chart {
+      grid-template-columns: 1fr;
+    }
+
+    .map-canvas {
+      height: 320px;
+    }
+
     .bar-row {
       grid-template-columns: 70px 1fr 62px;
       gap: 0.45rem;
