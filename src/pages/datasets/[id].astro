@@ -60,6 +60,13 @@ interface GeoPoint {
   sublabel: string;
 }
 
+interface Bounds {
+  minLat: number;
+  maxLat: number;
+  minLon: number;
+  maxLon: number;
+}
+
 export function getStaticPaths() {
   return (datasets as DatasetSummary[]).map(dataset => ({
     params: { id: dataset.id },
@@ -204,10 +211,27 @@ if (processed && latHeader && lonHeader) {
   }
 }
 
+const NAMEGATA_CITY_BOUNDS: Bounds = {
+  minLat: 35.9,
+  maxLat: 36.2,
+  minLon: 140.33,
+  maxLon: 140.6,
+};
+
+const isInBounds = (point: GeoPoint, bounds: Bounds) =>
+  point.lat >= bounds.minLat &&
+  point.lat <= bounds.maxLat &&
+  point.lon >= bounds.minLon &&
+  point.lon <= bounds.maxLon;
+
+const geoPointsInCity = geoPoints.filter(point => isInBounds(point, NAMEGATA_CITY_BOUNDS));
+const excludedOutsideCityCount = Math.max(geoPoints.length - geoPointsInCity.length, 0);
+
 const maxMapPoints = 300;
-const mapPoints = geoPoints.slice(0, maxMapPoints);
-const hiddenGeoPointCount = Math.max(geoPoints.length - mapPoints.length, 0);
+const mapPoints = geoPointsInCity.slice(0, maxMapPoints);
+const hiddenGeoPointCount = Math.max(geoPointsInCity.length - mapPoints.length, 0);
 const hasGeoMap = mapPoints.length > 0;
+const hasOnlyOutsideCityGeoPoints = geoPoints.length > 0 && !hasGeoMap;
 const mapElementId = `dataset-map-${dataset.id.replace(/[^a-z0-9-]/gi, '')}`;
 
 const categoryCountMap = new Map<string, number>();
@@ -343,7 +367,11 @@ if (isPopulationDataset) {
         <section class="card map-card">
           <h2>地図（座標表示）</h2>
           <p class="table-note">
-            座標付きデータ {geoPoints.length.toLocaleString('ja-JP')} 件を地図上に表示しています。
+            座標付きデータ {geoPoints.length.toLocaleString('ja-JP')} 件のうち、
+            市域内 {geoPointsInCity.length.toLocaleString('ja-JP')} 件を地図上に表示しています。
+            {excludedOutsideCityCount > 0
+              ? ` 市域外と判定された ${excludedOutsideCityCount.toLocaleString('ja-JP')} 件は除外しています。`
+              : ''}
             {hiddenGeoPointCount > 0
               ? ` 表示負荷を抑えるため、先頭 ${maxMapPoints} 件を描画しています。`
               : ''}
@@ -377,6 +405,16 @@ if (isPopulationDataset) {
               </div>
             ) : null}
           </div>
+        </section>
+      ) : null}
+
+      {hasOnlyOutsideCityGeoPoints ? (
+        <section class="card map-card">
+          <h2>地図（座標表示）</h2>
+          <p class="table-note">
+            座標付きデータ {geoPoints.length.toLocaleString('ja-JP')} 件を検出しましたが、
+            市域内の座標が0件のため地図表示を省略しています。
+          </p>
         </section>
       ) : null}
 
