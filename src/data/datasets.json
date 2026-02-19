@@ -1,0 +1,62 @@
+[
+  {
+    "id": "schools",
+    "title": "幼稚園・小中学校（園児・児童生徒数）一覧",
+    "titleEn": "Schools & Student Count",
+    "description": "行方市立の幼稚園・小学校・中学校の園児数・児童生徒数一覧",
+    "icon": "🏫",
+    "category": "教育",
+    "categoryEn": "EDUCATION",
+    "updatedAt": "2022-12-23",
+    "format": "CSV",
+    "url": "https://www.city.namegata.ibaraki.jp/opendata.php"
+  },
+  {
+    "id": "shops",
+    "title": "お店一覧",
+    "titleEn": "Local Shops",
+    "description": "行方市内の店舗情報一覧",
+    "icon": "🏪",
+    "category": "商業",
+    "categoryEn": "COMMERCE",
+    "updatedAt": "2020-07-03",
+    "format": "CSV",
+    "url": "https://www.city.namegata.ibaraki.jp/opendata.php"
+  },
+  {
+    "id": "aed",
+    "title": "AED設置箇所一覧",
+    "titleEn": "AED Locations",
+    "description": "行方市内のAED（自動体外式除細動器）設置場所",
+    "icon": "🫀",
+    "category": "防災・安全",
+    "categoryEn": "SAFETY",
+    "updatedAt": "2020-06-25",
+    "format": "CSV",
+    "url": "https://www.city.namegata.ibaraki.jp/opendata.php"
+  },
+  {
+    "id": "care",
+    "title": "介護サービス事業所一覧",
+    "titleEn": "Care Service Facilities",
+    "description": "行方市内の介護サービス事業所の情報",
+    "icon": "🏥",
+    "category": "福祉",
+    "categoryEn": "WELFARE",
+    "updatedAt": "2020-06-25",
+    "format": "CSV",
+    "url": "https://www.city.namegata.ibaraki.jp/opendata.php"
+  },
+  {
+    "id": "medical",
+    "title": "医療機関一覧",
+    "titleEn": "Medical Facilities",
+    "description": "行方市内の病院・診療所などの医療機関情報",
+    "icon": "⚕️",
+    "category": "医療",
+    "categoryEn": "MEDICAL",
+    "updatedAt": "2020-06-25",
+    "format": "CSV",
+    "url": "https://www.city.namegata.ibaraki.jp/opendata.php"
+  }
+]

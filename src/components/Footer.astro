@@ -1,0 +1,94 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">NAMEGATA OPEN DATA</span>
+        <p class="footer-desc">
+          行方市のオープンデータを可視化し、市民・開発者・研究者に届ける。
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.city.namegata.ibaraki.jp/" target="_blank" rel="noopener">行方市公式</a>
+        <a href="https://www.city.namegata.ibaraki.jp/opendata.php" target="_blank" rel="noopener">オープンデータ</a>
+        <a href="https://github.com/kouya-group/namegata-open-data" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/kouya-group" target="_blank" rel="noopener">kouya-group</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {year} kouya-group — MIT License</span>
+      <span class="footer-version">v0.1.0</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 0 1.5rem;
+    margin-top: var(--section-gap);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    max-width: 400px;
+  }
+
+  .footer-logo {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-desc {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-links a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links a:hover {
+    color: var(--text-primary);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .footer-version {
+    color: var(--accent-blue);
+  }
+</style>

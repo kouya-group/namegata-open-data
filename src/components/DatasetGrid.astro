@@ -1,0 +1,30 @@
+---
+import DatasetCard from './DatasetCard.astro';
+import datasets from '../data/datasets.json';
+---
+
+<section id="datasets" class="section">
+  <div class="container">
+    <span class="section-label">// ACTIVE DATASETS</span>
+    <h2 class="section-title">公開データセット</h2>
+    <div class="grid">
+      {datasets.map(ds => (
+        <DatasetCard {...ds} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,89 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<nav class="nav">
+  <div class="nav-inner container">
+    <a href={base} class="nav-logo">
+      <span class="nav-logo-mark">N</span>
+      <span class="nav-logo-text">NAMEGATA OPEN DATA</span>
+    </a>
+    <div class="nav-links">
+      <a href="https://github.com/kouya-group/namegata-open-data" target="_blank" rel="noopener">
+        GITHUB
+      </a>
+      <a href="https://www.city.namegata.ibaraki.jp/" target="_blank" rel="noopener">
+        行方市公式
+      </a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 0;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-logo:hover {
+    color: var(--text-primary);
+  }
+
+  .nav-logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 480px) {
+    .nav-logo-text {
+      display: none;
+    }
+  }
+</style>

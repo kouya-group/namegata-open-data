@@ -1,0 +1,89 @@
+---
+---
+
+<section class="section">
+  <div class="container">
+    <span class="section-label">// USAGE GUIDE</span>
+    <h2 class="section-title">データの利用について</h2>
+    <div class="guide-grid">
+      <div class="card guide-card">
+        <div class="guide-icon text-blue">01</div>
+        <h3 class="guide-heading">ライセンス</h3>
+        <p class="guide-text">
+          クリエイティブ・コモンズ 表示 4.0（CC BY 4.0）に基づき、
+          二次利用が可能です。出典を明記してご利用ください。
+        </p>
+        <code class="guide-code">出典：行方市オープンデータ</code>
+      </div>
+
+      <div class="card guide-card">
+        <div class="guide-icon text-green">02</div>
+        <h3 class="guide-heading">データ形式</h3>
+        <p class="guide-text">
+          CSV形式で提供。文字コードはShift_JISまたはUTF-8。
+          プログラムからの自動処理に適した構造化データです。
+        </p>
+        <code class="guide-code">Content-Type: text/csv</code>
+      </div>
+
+      <div class="card guide-card">
+        <div class="guide-icon text-orange">03</div>
+        <h3 class="guide-heading">免責事項</h3>
+        <p class="guide-text">
+          データの正確性・完全性は保証されません。
+          利用により生じた損害について、行方市および本サイト運営者は責任を負いません。
+        </p>
+        <code class="guide-code">USE AT YOUR OWN RISK</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .guide-icon {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .guide-heading {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+  }
+
+  .guide-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    flex: 1;
+  }
+
+  .guide-code {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    background: var(--bg-base);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 480px) {
+    .guide-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

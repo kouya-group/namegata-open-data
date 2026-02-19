@@ -1,0 +1,149 @@
+/* ===== NAMEGATA OPEN DATA — グローバルスタイル ===== */
+
+/* --- CSS変数 --- */
+:root {
+  /* 背景 */
+  --bg-base: #0a0a0f;
+  --bg-card: #111118;
+  --bg-raised: #1a1a24;
+  --bg-hover: #22222e;
+
+  /* テキスト */
+  --text-primary: #e8e8ed;
+  --text-secondary: #9898a8;
+  --text-dim: #5a5a6e;
+
+  /* 行方市カラー */
+  --accent-blue: #3b82f6;      /* 霞ヶ浦・北浦 */
+  --accent-green: #22c55e;     /* 豊かな自然 */
+  --accent-orange: #f97316;    /* 太陽 */
+
+  /* ボーダー */
+  --border: #1e1e2e;
+  --border-hover: #2e2e42;
+
+  /* フォント */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  --font-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+
+  /* スペーシング */
+  --section-gap: 5rem;
+  --card-radius: 12px;
+}
+
+/* --- リセット --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* --- メッシュグラデーション背景 --- */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 600px 600px at 15% 10%, rgba(59, 130, 246, 0.08), transparent),
+    radial-gradient(ellipse 500px 500px at 85% 20%, rgba(34, 197, 94, 0.06), transparent),
+    radial-gradient(ellipse 400px 400px at 50% 80%, rgba(249, 115, 22, 0.04), transparent);
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-green);
+}
+
+/* --- タイポグラフィ --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+}
+
+/* --- コンテナ --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- セクション --- */
+.section {
+  padding: var(--section-gap) 0;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- カード --- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.05);
+}
+
+/* --- ユーティリティ --- */
+.text-dim { color: var(--text-dim); }
+.text-secondary { color: var(--text-secondary); }
+.text-blue { color: var(--accent-blue); }
+.text-green { color: var(--accent-green); }
+.text-orange { color: var(--accent-orange); }
+
+/* --- レスポンシブ --- */
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+}

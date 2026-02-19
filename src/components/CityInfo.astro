@@ -1,0 +1,185 @@
+---
+---
+
+<section class="section">
+  <div class="container">
+    <span class="section-label">// ABOUT NAMEGATA</span>
+    <h2 class="section-title">行方市について</h2>
+    <div class="info-grid">
+      <div class="card info-card">
+        <h3 class="info-heading">地理</h3>
+        <p class="info-text">
+          茨城県南東部に位置し、西に霞ヶ浦、東に北浦。
+          二つの湖に挟まれた豊かな水郷地帯。
+        </p>
+        <div class="info-stats">
+          <div class="info-stat">
+            <span class="info-stat-value text-blue">222.48</span>
+            <span class="info-stat-label">km² 面積</span>
+          </div>
+          <div class="info-stat">
+            <span class="info-stat-value text-green">~32,000</span>
+            <span class="info-stat-label">人口（推計）</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <h3 class="info-heading">市章</h3>
+        <p class="info-text">
+          3つの帆を模した「N」のデザイン。
+          麻生町・北浦町・玉造町の合併（2005年）を象徴。
+        </p>
+        <div class="info-colors">
+          <div class="color-chip">
+            <span class="color-dot" style="background: #3b82f6"></span>
+            <span>青 — 霞ヶ浦・北浦</span>
+          </div>
+          <div class="color-chip">
+            <span class="color-dot" style="background: #22c55e"></span>
+            <span>緑 — 豊かな自然</span>
+          </div>
+          <div class="color-chip">
+            <span class="color-dot" style="background: #f97316"></span>
+            <span>赤 — 太陽</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card info-card">
+        <h3 class="info-heading">シンボル</h3>
+        <div class="symbols">
+          <div class="symbol-row">
+            <span class="symbol-icon">🌸</span>
+            <div>
+              <span class="symbol-label">市の花</span>
+              <span class="symbol-value">コスモス</span>
+            </div>
+          </div>
+          <div class="symbol-row">
+            <span class="symbol-icon">🌲</span>
+            <div>
+              <span class="symbol-label">市の木</span>
+              <span class="symbol-value">ケヤキ</span>
+            </div>
+          </div>
+          <div class="symbol-row">
+            <span class="symbol-icon">🐦</span>
+            <div>
+              <span class="symbol-label">市の鳥</span>
+              <span class="symbol-value">ヨシキリ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info-heading {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .info-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: auto;
+  }
+
+  .info-stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-stat-value {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .info-stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+  }
+
+  .info-colors {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  .color-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .symbols {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .symbol-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .symbol-icon {
+    font-size: 1.25rem;
+  }
+
+  .symbol-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    display: block;
+  }
+
+  .symbol-value {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 480px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

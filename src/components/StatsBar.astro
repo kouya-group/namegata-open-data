@@ -1,0 +1,66 @@
+---
+import datasets from '../data/datasets.json';
+
+const stats = [
+  { label: 'DATASETS', value: datasets.length.toString(), color: 'var(--accent-blue)' },
+  { label: 'CATEGORIES', value: new Set(datasets.map(d => d.category)).size.toString(), color: 'var(--accent-green)' },
+  { label: 'FORMAT', value: 'CSV', color: 'var(--accent-orange)' },
+  { label: 'LICENSE', value: 'CC BY', color: 'var(--accent-blue)' },
+  { label: 'LAST UPDATE', value: '2022-12-23', color: 'var(--accent-green)' },
+];
+---
+
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      {stats.map(stat => (
+        <div class="stat">
+          <span class="stat-value" style={`color: ${stat.color}`}>{stat.value}</span>
+          <span class="stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .stats-bar {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-card);
+    padding: 1.25rem 0;
+  }
+
+  .stats-inner {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .stat-value {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 640px) {
+    .stats-inner {
+      gap: 1.5rem;
+    }
+  }
+</style>
