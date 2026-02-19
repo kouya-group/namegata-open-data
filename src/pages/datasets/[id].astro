@@ -1,0 +1,409 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import datasets from '../../data/datasets.json';
+
+const processedModules = import.meta.glob('../../data/processed/*.json', { eager: true });
+const evidenceModules = import.meta.glob('../../data/evidence/*.evidence.json', { eager: true });
+
+interface DatasetSummary {
+  id: string;
+  title: string;
+  titleEn: string;
+  description: string;
+  icon: string;
+  category: string;
+  categoryEn: string;
+  updatedAt: string;
+  format: string;
+  url: string;
+  sourcePageUrl?: string;
+  status?: 'available' | 'unavailable';
+  rowCount?: number;
+  columnCount?: number;
+  fileSizeBytes?: number;
+  fetchedAt?: string;
+  license?: string;
+  sha256?: string;
+  error?: string;
+}
+
+interface ProcessedDataset {
+  headers: string[];
+  records: Record<string, string>[];
+}
+
+interface EvidenceDataset {
+  source?: {
+    url?: string;
+    detail_page_url?: string;
+    license?: string;
+  };
+  acquisition?: {
+    timestamp?: string;
+    method?: string;
+  };
+  integrity?: {
+    sha256?: string;
+  };
+  transformation?: {
+    description?: string;
+  };
+}
+
+export function getStaticPaths() {
+  return (datasets as DatasetSummary[]).map(dataset => ({
+    params: { id: dataset.id },
+    props: { dataset },
+  }));
+}
+
+const { dataset } = Astro.props as { dataset: DatasetSummary };
+
+const unwrapModule = <T,>(mod: unknown): T | null => {
+  if (!mod) {
+    return null;
+  }
+
+  if (typeof mod === 'object' && mod !== null && 'default' in mod) {
+    return (mod as { default: T }).default;
+  }
+
+  return mod as T;
+};
+
+const processed = unwrapModule<ProcessedDataset>(
+  processedModules[`../../data/processed/${dataset.id}.json`],
+);
+
+const evidence = unwrapModule<EvidenceDataset>(
+  evidenceModules[`../../data/evidence/${dataset.id}.evidence.json`],
+);
+
+const records = processed?.records ?? [];
+const previewRows = records.slice(0, 20);
+const tableKeys = Object.keys(previewRows[0] ?? {});
+const headerLabels =
+  processed?.headers?.length === tableKeys.length ? processed.headers : tableKeys;
+
+const fmtDateTime = (value?: string) => {
+  if (!value) {
+    return '未取得';
+  }
+
+  return new Date(value).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+};
+
+const fmtBytes = (value?: number) => {
+  if (typeof value !== 'number') {
+    return '-';
+  }
+
+  if (value < 1024) {
+    return `${value} B`;
+  }
+
+  if (value < 1024 ** 2) {
+    return `${(value / 1024).toFixed(2)} KB`;
+  }
+
+  return `${(value / 1024 ** 2).toFixed(2)} MB`;
+};
+
+const basePath = import.meta.env.BASE_URL;
+const homeUrl = `${basePath}#datasets`;
+const localSnapshotUrl = `${basePath}data/raw/${dataset.id}.csv`;
+
+const evidenceSourceUrl = evidence?.source?.url ?? dataset.url;
+const evidencePageUrl = evidence?.source?.detail_page_url ?? dataset.sourcePageUrl;
+const evidenceFetchedAt = evidence?.acquisition?.timestamp ?? dataset.fetchedAt;
+const evidenceLicense = evidence?.source?.license ?? dataset.license ?? 'CC BY 2.1 JP';
+const evidenceSha = evidence?.integrity?.sha256 ?? dataset.sha256 ?? '-';
+const transformationText =
+  evidence?.transformation?.description ?? 'CSV (Shift_JIS/UTF-8) → UTF-8 → JSON';
+---
+
+<Layout title={`${dataset.title} | NAMEGATA OPEN DATA`}>
+  <Nav />
+
+  <main class="section">
+    <div class="container dataset-page">
+      <a href={homeUrl} class="back-link">← データセット一覧へ戻る</a>
+
+      <header class="page-header card">
+        <p class="header-category">{dataset.categoryEn}</p>
+        <h1>{dataset.icon} {dataset.title}</h1>
+        <p class="header-title-en">{dataset.titleEn}</p>
+        <p class="header-description">{dataset.description}</p>
+
+        <div class="quick-stats">
+          <div>
+            <span class="label">行数</span>
+            <strong>{dataset.rowCount?.toLocaleString('ja-JP') ?? '-'} 件</strong>
+          </div>
+          <div>
+            <span class="label">列数</span>
+            <strong>{dataset.columnCount ?? '-'} 列</strong>
+          </div>
+          <div>
+            <span class="label">ファイルサイズ</span>
+            <strong>{fmtBytes(dataset.fileSizeBytes)}</strong>
+          </div>
+          <div>
+            <span class="label">最終更新（公開）</span>
+            <strong>{dataset.updatedAt}</strong>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href={localSnapshotUrl} class="btn-link">このサイトのCSVスナップショット</a>
+          <a href={dataset.url} target="_blank" rel="noopener" class="btn-link">市公式CSV</a>
+          <a href={dataset.sourcePageUrl} target="_blank" rel="noopener" class="btn-link">市公式詳細ページ</a>
+        </div>
+      </header>
+
+      {dataset.status !== 'available' ? (
+        <section class="card warning-card">
+          <h2>データ取得エラー</h2>
+          <p>このデータセットは直近更新で取得に失敗しました。</p>
+          <code>{dataset.error ?? '不明なエラー'}</code>
+        </section>
+      ) : (
+        <section class="card">
+          <h2>データプレビュー（先頭 {previewRows.length} 件）</h2>
+          <p class="table-note">
+            市民向けにデータ内容を確認しやすくするため、先頭20件を表示しています。
+            全件はCSVをダウンロードして確認できます。
+          </p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  {headerLabels.map(header => <th>{header}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {previewRows.map(row => (
+                  <tr>
+                    {tableKeys.map(key => <td>{row[key]}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      <details class="card evidence-card" open>
+        <summary>エビデンス情報</summary>
+        <dl>
+          <dt>取得元URL</dt>
+          <dd><a href={evidenceSourceUrl} target="_blank" rel="noopener">{evidenceSourceUrl}</a></dd>
+
+          <dt>取得日時</dt>
+          <dd>{fmtDateTime(evidenceFetchedAt)}</dd>
+
+          <dt>SHA-256</dt>
+          <dd class="mono">{evidenceSha}</dd>
+
+          <dt>ライセンス</dt>
+          <dd>{evidenceLicense}</dd>
+
+          <dt>詳細ページ</dt>
+          <dd>
+            <a href={evidencePageUrl} target="_blank" rel="noopener">{evidencePageUrl}</a>
+          </dd>
+
+          <dt>変換処理</dt>
+          <dd>{transformationText}</dd>
+        </dl>
+      </details>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .dataset-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .back-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-top: 0.35rem;
+  }
+
+  .header-category {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--accent-green);
+  }
+
+  .header-title-en {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+
+  .header-description {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+  }
+
+  .quick-stats {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .quick-stats div {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .quick-stats .label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+
+  .quick-stats strong {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-primary);
+  }
+
+  .header-actions {
+    margin-top: 0.85rem;
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-link {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.28rem 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+  }
+
+  .btn-link:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+  }
+
+  .warning-card h2 {
+    font-size: 1rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .warning-card p {
+    color: var(--accent-orange);
+    margin-bottom: 0.5rem;
+  }
+
+  .table-note {
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+    margin-top: 0.45rem;
+  }
+
+  .table-wrap {
+    margin-top: 0.85rem;
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-base);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    min-width: 780px;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid var(--border);
+    padding: 0.45rem 0.55rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    background: var(--bg-card);
+    position: sticky;
+    top: 0;
+  }
+
+  td {
+    color: var(--text-secondary);
+    line-height: 1.45;
+    word-break: break-word;
+  }
+
+  .evidence-card summary {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+  }
+
+  .evidence-card dl {
+    margin-top: 0.75rem;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0.45rem 0.8rem;
+    font-size: 0.74rem;
+  }
+
+  .evidence-card dt {
+    font-family: var(--font-mono);
+    color: var(--text-dim);
+  }
+
+  .evidence-card dd {
+    color: var(--text-secondary);
+    word-break: break-all;
+  }
+
+  @media (max-width: 640px) {
+    .evidence-card dl {
+      grid-template-columns: 1fr;
+    }
+
+    .evidence-card dt {
+      margin-top: 0.45rem;
+    }
+
+    table {
+      min-width: 640px;
+    }
+  }
+</style>
