@@ -14,12 +14,11 @@ const year = new Date().getFullYear();
       <div class="footer-links">
         <a href="https://www.city.namegata.ibaraki.jp/" target="_blank" rel="noopener">行方市公式</a>
         <a href="https://www.city.namegata.ibaraki.jp/opendata.php" target="_blank" rel="noopener">オープンデータ</a>
-        <a href="https://github.com/kouya-group/namegata-open-data" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://github.com/kouya-group" target="_blank" rel="noopener">kouya-group</a>
+        <span class="footer-company">kouya-group</span>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; {year} kouya-group — MIT License</span>
+      <span>&copy; {year} kouya-group</span>
       <span class="footer-version">v0.1.0</span>
     </div>
   </div>
@@ -74,6 +73,13 @@ const year = new Date().getFullYear();
 
   .footer-links a:hover {
     color: var(--text-primary);
+  }
+
+  .footer-company {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
   }
 
   .footer-bottom {
