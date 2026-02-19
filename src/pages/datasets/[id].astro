@@ -293,17 +293,6 @@ if (isPopulationDataset) {
 ---
 
 <Layout title={`${dataset.title} | NAMEGATA OPEN DATA`}>
-  {hasGeoMap ? (
-    <Fragment slot="head">
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""
-      />
-    </Fragment>
-  ) : null}
-
   <Nav />
 
   <main class="section">
@@ -354,7 +343,11 @@ if (isPopulationDataset) {
 
           <div class={`map-and-chart ${hasCategoryChart ? '' : 'single'}`}>
             <div class="map-container">
-              <div id={mapElementId} class="map-canvas"></div>
+              <div
+                id={mapElementId}
+                class="map-canvas"
+                data-map-points={JSON.stringify(mapPoints)}
+              ></div>
             </div>
 
             {hasCategoryChart ? (
@@ -485,26 +478,43 @@ if (isPopulationDataset) {
 
   {hasGeoMap ? (
     <>
-      <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-      <script is:inline define:vars={{ mapElementId, mapPoints }}>
-        const initializeMap = () => {
-          const element = document.getElementById(mapElementId);
-          if (!element || !window.L) {
-            return false;
-          }
+      <script>
+        import L from 'leaflet';
+        import 'leaflet/dist/leaflet.css';
 
-          const map = window.L.map(element, {
+        const sanitizeHtml = value =>
+          String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+
+        const initializeMap = () => {
+          const element = document.querySelector('.map-canvas[data-map-points]');
+          if (!element) return;
+
+          const rawPoints = element.getAttribute('data-map-points');
+          if (!rawPoints) return;
+
+          let mapPoints = [];
+          try {
+            mapPoints = JSON.parse(rawPoints);
+          } catch {
+            return;
+          }
+          if (!Array.isArray(mapPoints) || mapPoints.length === 0) return;
+
+          const map = L.map(element, {
             scrollWheelZoom: false,
             preferCanvas: true,
           });
 
-          window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors',
           }).addTo(map);
 
           const bounds = [];
           for (const point of mapPoints) {
-            const marker = window.L.circleMarker([point.lat, point.lon], {
+            const marker = L.circleMarker([point.lat, point.lon], {
               radius: 5,
               weight: 1,
               color: '#0f172a',
@@ -512,8 +522,8 @@ if (isPopulationDataset) {
               fillOpacity: 0.8,
             });
 
-            const label = (point.label || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            const sublabel = (point.sublabel || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const label = sanitizeHtml(point.label || '');
+            const sublabel = sanitizeHtml(point.sublabel || '');
             marker.bindPopup(sublabel ? `<strong>${label}</strong><br>${sublabel}` : label);
             marker.addTo(map);
             bounds.push([point.lat, point.lon]);
@@ -524,18 +534,12 @@ if (isPopulationDataset) {
           } else if (bounds.length > 1) {
             map.fitBounds(bounds, { padding: [24, 24] });
           }
-
-          return true;
         };
 
-        if (!initializeMap()) {
-          let retries = 0;
-          const timer = setInterval(() => {
-            retries += 1;
-            if (initializeMap() || retries > 20) {
-              clearInterval(timer);
-            }
-          }, 150);
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeMap, { once: true });
+        } else {
+          initializeMap();
         }
       </script>
     </>
