@@ -225,7 +225,14 @@ const isInBounds = (point: GeoPoint, bounds: Bounds) =>
   point.lon <= bounds.maxLon;
 
 const geoPointsInCity = geoPoints.filter(point => isInBounds(point, NAMEGATA_CITY_BOUNDS));
+const excludedOutsideCityPoints = geoPoints.filter(point => !isInBounds(point, NAMEGATA_CITY_BOUNDS));
 const excludedOutsideCityCount = Math.max(geoPoints.length - geoPointsInCity.length, 0);
+const excludedPointPreviewLimit = 25;
+const excludedPointPreview = excludedOutsideCityPoints.slice(0, excludedPointPreviewLimit);
+const hiddenExcludedOutsideCityCount = Math.max(
+  excludedOutsideCityPoints.length - excludedPointPreview.length,
+  0,
+);
 
 const maxMapPoints = 300;
 const mapPoints = geoPointsInCity.slice(0, maxMapPoints);
@@ -513,6 +520,47 @@ if (isPopulationDataset) {
 
           <dt>変換処理</dt>
           <dd>{transformationText}</dd>
+
+          <dt>地図除外座標</dt>
+          <dd>
+            {excludedOutsideCityCount === 0 ? (
+              'なし'
+            ) : (
+              <>
+                <p class="evidence-note">
+                  市域外と判定した {excludedOutsideCityCount.toLocaleString('ja-JP')} 件を
+                  地図表示から除外しています（先頭 {excludedPointPreview.length.toLocaleString('ja-JP')} 件を表示）。
+                </p>
+                <div class="excluded-points-wrap">
+                  <table class="excluded-points-table">
+                    <thead>
+                      <tr>
+                        <th>名称</th>
+                        <th>緯度</th>
+                        <th>経度</th>
+                        <th>補足</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {excludedPointPreview.map(point => (
+                        <tr>
+                          <td>{point.label}</td>
+                          <td>{point.lat.toFixed(6)}</td>
+                          <td>{point.lon.toFixed(6)}</td>
+                          <td>{point.sublabel || '-'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {hiddenExcludedOutsideCityCount > 0 ? (
+                  <p class="evidence-note">
+                    他 {hiddenExcludedOutsideCityCount.toLocaleString('ja-JP')} 件は省略しています。
+                  </p>
+                ) : null}
+              </>
+            )}
+          </dd>
         </dl>
       </details>
     </div>
@@ -947,6 +995,37 @@ if (isPopulationDataset) {
     word-break: break-all;
   }
 
+  .evidence-note {
+    margin: 0;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+  }
+
+  .excluded-points-wrap {
+    margin-top: 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: auto;
+    background: var(--bg-base);
+  }
+
+  .excluded-points-table {
+    min-width: 560px;
+    font-size: 0.68rem;
+  }
+
+  .excluded-points-table th,
+  .excluded-points-table td {
+    padding: 0.35rem 0.45rem;
+  }
+
+  .excluded-points-table td:nth-child(2),
+  .excluded-points-table td:nth-child(3) {
+    font-family: var(--font-mono);
+    white-space: nowrap;
+  }
+
   @media (max-width: 640px) {
     .map-and-chart {
       grid-template-columns: 1fr;
@@ -971,6 +1050,10 @@ if (isPopulationDataset) {
 
     table {
       min-width: 640px;
+    }
+
+    .excluded-points-table {
+      min-width: 520px;
     }
   }
 </style>
