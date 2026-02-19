@@ -484,6 +484,15 @@ if (isPopulationDataset) {
     <>
       <script is:inline src={leafletJsUrl}></script>
       <script is:inline define:vars={{ mapElementId, mapPoints }}>
+        const showMapError = message => {
+          const element = document.getElementById(mapElementId);
+          if (!element) {
+            return;
+          }
+
+          element.innerHTML = `<p class="map-error-text">${message}</p>`;
+        };
+
         const sanitizeHtml = value =>
           String(value)
             .replace(/&/g, '&amp;')
@@ -496,36 +505,41 @@ if (isPopulationDataset) {
             return false;
           }
 
-          const map = window.L.map(element, {
-            scrollWheelZoom: false,
-            preferCanvas: true,
-          });
-
-          window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors',
-          }).addTo(map);
-
-          const bounds = [];
-          for (const point of mapPoints) {
-            const marker = window.L.circleMarker([point.lat, point.lon], {
-              radius: 5,
-              weight: 1,
-              color: '#0f172a',
-              fillColor: '#22c55e',
-              fillOpacity: 0.8,
+          try {
+            const map = window.L.map(element, {
+              scrollWheelZoom: false,
+              preferCanvas: true,
             });
 
-            const label = sanitizeHtml(point.label || '');
-            const sublabel = sanitizeHtml(point.sublabel || '');
-            marker.bindPopup(sublabel ? `<strong>${label}</strong><br>${sublabel}` : label);
-            marker.addTo(map);
-            bounds.push([point.lat, point.lon]);
-          }
+            window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; OpenStreetMap contributors',
+            }).addTo(map);
 
-          if (bounds.length === 1) {
-            map.setView(bounds[0], 14);
-          } else if (bounds.length > 1) {
-            map.fitBounds(bounds, { padding: [24, 24] });
+            const bounds = [];
+            for (const point of mapPoints) {
+              const marker = window.L.circleMarker([point.lat, point.lon], {
+                radius: 5,
+                weight: 1,
+                color: '#0f172a',
+                fillColor: '#22c55e',
+                fillOpacity: 0.8,
+              });
+
+              const label = sanitizeHtml(point.label || '');
+              const sublabel = sanitizeHtml(point.sublabel || '');
+              marker.bindPopup(sublabel ? `<strong>${label}</strong><br>${sublabel}` : label);
+              marker.addTo(map);
+              bounds.push([point.lat, point.lon]);
+            }
+
+            if (bounds.length === 1) {
+              map.setView(bounds[0], 14);
+            } else if (bounds.length > 1) {
+              map.fitBounds(bounds, { padding: [24, 24] });
+            }
+          } catch (error) {
+            showMapError('地図の描画に失敗しました。再読み込みしてください。');
+            return true;
           }
 
           return true;
@@ -536,6 +550,9 @@ if (isPopulationDataset) {
           const timer = setInterval(() => {
             retries += 1;
             if (initializeMap() || retries > 20) {
+              if (retries > 20) {
+                showMapError('地図ライブラリの読み込みに失敗しました。');
+              }
               clearInterval(timer);
             }
           }, 150);
@@ -678,6 +695,17 @@ if (isPopulationDataset) {
   .map-canvas {
     width: 100%;
     height: 420px;
+  }
+
+  .map-canvas :global(.map-error-text) {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
   }
 
   .category-card {
