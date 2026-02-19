@@ -1,0 +1,32 @@
+{
+  "dataset_id": "care",
+  "title": "介護サービス事業所一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=19",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=5",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593045325_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:22.738Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "aafbcc1a167f32b37576d5f0feb7fa70f485c22e32982a5ec9561843c6b8a511",
+    "file_size_bytes": 5453,
+    "row_count": 25,
+    "column_count": 22
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/care.csv",
+    "processed_json_path": "src/data/processed/care.json"
+  }
+}

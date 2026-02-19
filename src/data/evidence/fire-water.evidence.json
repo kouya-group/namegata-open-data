@@ -1,0 +1,32 @@
+{
+  "dataset_id": "fire-water",
+  "title": "消防水利施設一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=21",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=7",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593045361_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:23.734Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "7e304f96fddcd66475dfd0e05ba51698555d95c3cc3445f96ad032435a5549f3",
+    "file_size_bytes": 111063,
+    "row_count": 1786,
+    "column_count": 11
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/fire-water.csv",
+    "processed_json_path": "src/data/processed/fire-water.json"
+  }
+}

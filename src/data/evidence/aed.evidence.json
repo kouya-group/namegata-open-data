@@ -1,0 +1,32 @@
+{
+  "dataset_id": "aed",
+  "title": "AED設置箇所一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=16",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=4",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593045235_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:21.956Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "f5c53f206d10b28023f28d9b6506bc8a31ec2663c8c8600b34c75504ebf9caa9",
+    "file_size_bytes": 5089,
+    "row_count": 31,
+    "column_count": 18
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/aed.csv",
+    "processed_json_path": "src/data/processed/aed.json"
+  }
+}

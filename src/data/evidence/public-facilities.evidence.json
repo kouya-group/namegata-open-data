@@ -1,0 +1,32 @@
+{
+  "dataset_id": "public-facilities",
+  "title": "公共施設一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=51",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=15",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593153993_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:28.885Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "f908d657f907e546de45c1df58f26e1a1f4f43348a263d08733403fc180bce22",
+    "file_size_bytes": 54475,
+    "row_count": 174,
+    "column_count": 25
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/public-facilities.csv",
+    "processed_json_path": "src/data/processed/public-facilities.json"
+  }
+}

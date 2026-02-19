@@ -1,12 +1,20 @@
 ---
 import datasets from '../data/datasets.json';
 
+const availableDatasets = datasets.filter(d => d.status === 'available');
+const lastUpdate = datasets
+  .map(d => d.updatedAt)
+  .filter(Boolean)
+  .sort()
+  .at(-1) ?? '-';
+
 const stats = [
   { label: 'DATASETS', value: datasets.length.toString(), color: 'var(--accent-blue)' },
   { label: 'CATEGORIES', value: new Set(datasets.map(d => d.category)).size.toString(), color: 'var(--accent-green)' },
   { label: 'FORMAT', value: 'CSV', color: 'var(--accent-orange)' },
-  { label: 'LICENSE', value: 'CC BY', color: 'var(--accent-blue)' },
-  { label: 'LAST UPDATE', value: '2022-12-23', color: 'var(--accent-green)' },
+  { label: 'LICENSE', value: 'CC BY 2.1 JP', color: 'var(--accent-blue)' },
+  { label: 'EVIDENCE', value: `${availableDatasets.length}/${datasets.length}`, color: 'var(--accent-orange)' },
+  { label: 'LAST UPDATE', value: lastUpdate, color: 'var(--accent-green)' },
 ];
 ---
 

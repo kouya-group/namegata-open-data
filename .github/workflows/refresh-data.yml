@@ -1,0 +1,54 @@
+name: Refresh Open Data Snapshots
+
+on:
+  schedule:
+    - cron: '0 21 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh datasets and evidence
+        run: npm run data:refresh
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'chore(data): refresh open data evidence snapshots'
+          title: 'chore(data): refresh open data evidence snapshots'
+          body: |
+            Automated refresh of Namegata open datasets.
+
+            Includes:
+            - latest CSV snapshots under `public/data/raw/`
+            - processed JSON under `src/data/processed/`
+            - evidence metadata under `src/data/evidence/`
+            - dataset summary index `src/data/datasets.json`
+          branch: chore/data-refresh
+          delete-branch: true
+          labels: |
+            data-refresh
+            automation
+          add-paths: |
+            public/data/raw/**
+            src/data/processed/**
+            src/data/evidence/**
+            src/data/datasets.json

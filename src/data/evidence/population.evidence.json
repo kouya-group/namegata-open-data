@@ -1,0 +1,32 @@
+{
+  "dataset_id": "population",
+  "title": "地域・年齢別人口",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=26",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=9",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "地域・年齢別人口.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:26.564Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "f0686fbe75055969d055389c58d86e4aad43b544efaa89790c1a4cf63a7e3136",
+    "file_size_bytes": 9285,
+    "row_count": 58,
+    "column_count": 47
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/population.csv",
+    "processed_json_path": "src/data/processed/population.json"
+  }
+}

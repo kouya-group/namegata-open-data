@@ -1,0 +1,32 @@
+{
+  "dataset_id": "shops",
+  "title": "お店一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=55",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=18",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593737023_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:30.555Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "6dfb8b20f839923de27e5be863ab1f33e5a9db434ee26f072bb8b64c37dc92bc",
+    "file_size_bytes": 12005,
+    "row_count": 42,
+    "column_count": 31
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/shops.csv",
+    "processed_json_path": "src/data/processed/shops.json"
+  }
+}

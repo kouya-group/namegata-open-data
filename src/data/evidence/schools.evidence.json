@@ -1,0 +1,32 @@
+{
+  "dataset_id": "schools",
+  "title": "行方市立幼稚園・小中学校（園児・児童生徒数）一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=60",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=21",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "令和5年度 行方市立幼稚園・小中学校(園児、児童生徒数）.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:31.074Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "5236c7c7ee67116fb82212050cc8b69e9456beaef7faff2fd2c4684a2c4b2bf5",
+    "file_size_bytes": 910,
+    "row_count": 26,
+    "column_count": 9
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/schools.csv",
+    "processed_json_path": "src/data/processed/schools.json"
+  }
+}

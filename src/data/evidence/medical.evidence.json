@@ -1,0 +1,32 @@
+{
+  "dataset_id": "medical",
+  "title": "医療機関一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=30",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=6",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593046340_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:23.153Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "a26602eeb70c66c05c12dee11d6548e210341b8e0d188195767f6eb59400cd23",
+    "file_size_bytes": 2893,
+    "row_count": 12,
+    "column_count": 16
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/medical.csv",
+    "processed_json_path": "src/data/processed/medical.json"
+  }
+}

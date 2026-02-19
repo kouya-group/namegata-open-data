@@ -1,0 +1,32 @@
+{
+  "dataset_id": "toilets",
+  "title": "公衆トイレ一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=36",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=14",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593060221_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:28.434Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "5a103847ddcc062d42d7f522eac728f7de6117837eaf8a0d580579ba5c15e8e6",
+    "file_size_bytes": 3935,
+    "row_count": 17,
+    "column_count": 29
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/toilets.csv",
+    "processed_json_path": "src/data/processed/toilets.json"
+  }
+}

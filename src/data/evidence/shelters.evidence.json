@@ -1,0 +1,32 @@
+{
+  "dataset_id": "shelters",
+  "title": "指定緊急避難場所一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=24",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=8",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593045522_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:26.060Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "dc83bf14b694bc1104da00c541ec1fa85c60fb712458ffa440dc02c1f16ba3cd",
+    "file_size_bytes": 9198,
+    "row_count": 44,
+    "column_count": 26
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/shelters.csv",
+    "processed_json_path": "src/data/processed/shelters.json"
+  }
+}

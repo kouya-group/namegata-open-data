@@ -1,0 +1,32 @@
+{
+  "dataset_id": "childcare",
+  "title": "子育て施設一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=28",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=10",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "1593045614_od_224.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:27.021Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "a65b2595de8564d48dce055e32b4f68fe395a9b05edee5f9e455d4c32c404276",
+    "file_size_bytes": 2138,
+    "row_count": 11,
+    "column_count": 28
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/childcare.csv",
+    "processed_json_path": "src/data/processed/childcare.json"
+  }
+}

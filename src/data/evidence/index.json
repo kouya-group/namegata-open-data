@@ -1,0 +1,490 @@
+{
+  "generatedAt": "2026-02-19T02:28:31.526Z",
+  "agent": "namegata-open-data/fetch-data v0.1.0",
+  "license": "CC BY 2.1 JP",
+  "datasetCount": 15,
+  "availableCount": 15,
+  "unavailableCount": 0,
+  "datasets": [
+    {
+      "dataset_id": "aed",
+      "title": "AED設置箇所一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=16",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=4",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593045235_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:21.956Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "f5c53f206d10b28023f28d9b6506bc8a31ec2663c8c8600b34c75504ebf9caa9",
+        "file_size_bytes": 5089,
+        "row_count": 31,
+        "column_count": 18
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/aed.csv",
+        "processed_json_path": "src/data/processed/aed.json"
+      }
+    },
+    {
+      "dataset_id": "care",
+      "title": "介護サービス事業所一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=19",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=5",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593045325_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:22.738Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "aafbcc1a167f32b37576d5f0feb7fa70f485c22e32982a5ec9561843c6b8a511",
+        "file_size_bytes": 5453,
+        "row_count": 25,
+        "column_count": 22
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/care.csv",
+        "processed_json_path": "src/data/processed/care.json"
+      }
+    },
+    {
+      "dataset_id": "medical",
+      "title": "医療機関一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=30",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=6",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593046340_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:23.153Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "a26602eeb70c66c05c12dee11d6548e210341b8e0d188195767f6eb59400cd23",
+        "file_size_bytes": 2893,
+        "row_count": 12,
+        "column_count": 16
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/medical.csv",
+        "processed_json_path": "src/data/processed/medical.json"
+      }
+    },
+    {
+      "dataset_id": "fire-water",
+      "title": "消防水利施設一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=21",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=7",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593045361_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:23.734Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "7e304f96fddcd66475dfd0e05ba51698555d95c3cc3445f96ad032435a5549f3",
+        "file_size_bytes": 111063,
+        "row_count": 1786,
+        "column_count": 11
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/fire-water.csv",
+        "processed_json_path": "src/data/processed/fire-water.json"
+      }
+    },
+    {
+      "dataset_id": "shelters",
+      "title": "指定緊急避難場所一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=24",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=8",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593045522_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:26.060Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "dc83bf14b694bc1104da00c541ec1fa85c60fb712458ffa440dc02c1f16ba3cd",
+        "file_size_bytes": 9198,
+        "row_count": 44,
+        "column_count": 26
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/shelters.csv",
+        "processed_json_path": "src/data/processed/shelters.json"
+      }
+    },
+    {
+      "dataset_id": "population",
+      "title": "地域・年齢別人口",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=26",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=9",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "地域・年齢別人口.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:26.564Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "f0686fbe75055969d055389c58d86e4aad43b544efaa89790c1a4cf63a7e3136",
+        "file_size_bytes": 9285,
+        "row_count": 58,
+        "column_count": 47
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/population.csv",
+        "processed_json_path": "src/data/processed/population.json"
+      }
+    },
+    {
+      "dataset_id": "childcare",
+      "title": "子育て施設一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=28",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=10",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593045614_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:27.021Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "a65b2595de8564d48dce055e32b4f68fe395a9b05edee5f9e455d4c32c404276",
+        "file_size_bytes": 2138,
+        "row_count": 11,
+        "column_count": 28
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/childcare.csv",
+        "processed_json_path": "src/data/processed/childcare.json"
+      }
+    },
+    {
+      "dataset_id": "wifi",
+      "title": "公衆無線LANアクセスポイント一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=32",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=12",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "公衆無線LANアクセスポイント一覧.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:27.448Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "4abf6ee00b386721034d70b5c69d1f100cad5a3db2306c215fccbdbed4d34e5d",
+        "file_size_bytes": 2514,
+        "row_count": 10,
+        "column_count": 18
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/wifi.csv",
+        "processed_json_path": "src/data/processed/wifi.json"
+      }
+    },
+    {
+      "dataset_id": "tourism",
+      "title": "観光施設一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=34",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=13",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593059512_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:27.946Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "28a3822bc3a887d2e67f76a95e4def3b63c825d01c42a43ce8e58ba6a6572ad0",
+        "file_size_bytes": 6283,
+        "row_count": 13,
+        "column_count": 30
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/tourism.csv",
+        "processed_json_path": "src/data/processed/tourism.json"
+      }
+    },
+    {
+      "dataset_id": "toilets",
+      "title": "公衆トイレ一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=36",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=14",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593060221_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:28.434Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "5a103847ddcc062d42d7f522eac728f7de6117837eaf8a0d580579ba5c15e8e6",
+        "file_size_bytes": 3935,
+        "row_count": 17,
+        "column_count": 29
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/toilets.csv",
+        "processed_json_path": "src/data/processed/toilets.json"
+      }
+    },
+    {
+      "dataset_id": "public-facilities",
+      "title": "公共施設一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=51",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=15",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593153993_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:28.885Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "f908d657f907e546de45c1df58f26e1a1f4f43348a263d08733403fc180bce22",
+        "file_size_bytes": 54475,
+        "row_count": 174,
+        "column_count": 25
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/public-facilities.csv",
+        "processed_json_path": "src/data/processed/public-facilities.json"
+      }
+    },
+    {
+      "dataset_id": "open-data-catalog",
+      "title": "オープンデータ一覧（メタ）",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=53",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=16",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "オープンデータ一覧.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:29.556Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "d5d68671fc1c56250ee285a3408b50f0d54c4a9a9e9923746195b9c8a5b067e8",
+        "file_size_bytes": 4050,
+        "row_count": 28,
+        "column_count": 15
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/open-data-catalog.csv",
+        "processed_json_path": "src/data/processed/open-data-catalog.json"
+      }
+    },
+    {
+      "dataset_id": "cultural-properties",
+      "title": "文化財一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=42",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=17",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593063475_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:29.993Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "ef8d38ad17913312127b7b2e347f47e8935ad1ffd9504214786e19b17527954c",
+        "file_size_bytes": 12135,
+        "row_count": 85,
+        "column_count": 15
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/cultural-properties.csv",
+        "processed_json_path": "src/data/processed/cultural-properties.json"
+      }
+    },
+    {
+      "dataset_id": "shops",
+      "title": "お店一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=55",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=18",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "1593737023_od_224.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:30.555Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "6dfb8b20f839923de27e5be863ab1f33e5a9db434ee26f072bb8b64c37dc92bc",
+        "file_size_bytes": 12005,
+        "row_count": 42,
+        "column_count": 31
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/shops.csv",
+        "processed_json_path": "src/data/processed/shops.json"
+      }
+    },
+    {
+      "dataset_id": "schools",
+      "title": "行方市立幼稚園・小中学校（園児・児童生徒数）一覧",
+      "source": {
+        "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=60",
+        "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=21",
+        "publisher": "行方市",
+        "license": "CC BY 2.1 JP",
+        "original_filename": "令和5年度 行方市立幼稚園・小中学校(園児、児童生徒数）.csv"
+      },
+      "acquisition": {
+        "timestamp": "2026-02-19T02:28:31.074Z",
+        "method": "HTTP GET (fetch)",
+        "agent": "namegata-open-data/fetch-data v0.1.0"
+      },
+      "integrity": {
+        "sha256": "5236c7c7ee67116fb82212050cc8b69e9456beaef7faff2fd2c4684a2c4b2bf5",
+        "file_size_bytes": 910,
+        "row_count": 26,
+        "column_count": 9
+      },
+      "transformation": {
+        "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+        "columns_added": [],
+        "columns_removed": [],
+        "rows_filtered": 0
+      },
+      "artifacts": {
+        "raw_csv_path": "public/data/raw/schools.csv",
+        "processed_json_path": "src/data/processed/schools.json"
+      }
+    }
+  ]
+}

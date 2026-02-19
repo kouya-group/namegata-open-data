@@ -1,0 +1,32 @@
+{
+  "dataset_id": "wifi",
+  "title": "公衆無線LANアクセスポイント一覧",
+  "source": {
+    "url": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=32",
+    "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=12",
+    "publisher": "行方市",
+    "license": "CC BY 2.1 JP",
+    "original_filename": "公衆無線LANアクセスポイント一覧.csv"
+  },
+  "acquisition": {
+    "timestamp": "2026-02-19T02:28:27.448Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "4abf6ee00b386721034d70b5c69d1f100cad5a3db2306c215fccbdbed4d34e5d",
+    "file_size_bytes": 2514,
+    "row_count": 10,
+    "column_count": 18
+  },
+  "transformation": {
+    "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",
+    "columns_added": [],
+    "columns_removed": [],
+    "rows_filtered": 0
+  },
+  "artifacts": {
+    "raw_csv_path": "public/data/raw/wifi.csv",
+    "processed_json_path": "src/data/processed/wifi.json"
+  }
+}
