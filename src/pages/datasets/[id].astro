@@ -524,9 +524,19 @@ if (isPopulationDataset) {
           <dt>地図除外座標</dt>
           <dd>
             {excludedOutsideCityCount === 0 ? (
-              'なし'
+              <>
+                <p class="evidence-note">
+                  判定基準: 緯度 {NAMEGATA_CITY_BOUNDS.minLat} 〜 {NAMEGATA_CITY_BOUNDS.maxLat} /
+                  経度 {NAMEGATA_CITY_BOUNDS.minLon} 〜 {NAMEGATA_CITY_BOUNDS.maxLon}
+                </p>
+                なし
+              </>
             ) : (
               <>
+                <p class="evidence-note">
+                  判定基準: 緯度 {NAMEGATA_CITY_BOUNDS.minLat} 〜 {NAMEGATA_CITY_BOUNDS.maxLat} /
+                  経度 {NAMEGATA_CITY_BOUNDS.minLon} 〜 {NAMEGATA_CITY_BOUNDS.maxLon}
+                </p>
                 <p class="evidence-note">
                   市域外と判定した {excludedOutsideCityCount.toLocaleString('ja-JP')} 件を
                   地図表示から除外しています（先頭 {excludedPointPreview.length.toLocaleString('ja-JP')} 件を表示）。
