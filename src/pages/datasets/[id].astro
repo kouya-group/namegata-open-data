@@ -485,14 +485,14 @@ if (isPopulationDataset) {
 
   {hasGeoMap ? (
     <>
-      <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""
-      ></script>
+      <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
       <script is:inline define:vars={{ mapElementId, mapPoints }}>
-        const element = document.getElementById(mapElementId);
-        if (element && window.L) {
+        const initializeMap = () => {
+          const element = document.getElementById(mapElementId);
+          if (!element || !window.L) {
+            return false;
+          }
+
           const map = window.L.map(element, {
             scrollWheelZoom: false,
             preferCanvas: true,
@@ -524,6 +524,18 @@ if (isPopulationDataset) {
           } else if (bounds.length > 1) {
             map.fitBounds(bounds, { padding: [24, 24] });
           }
+
+          return true;
+        };
+
+        if (!initializeMap()) {
+          let retries = 0;
+          const timer = setInterval(() => {
+            retries += 1;
+            if (initializeMap() || retries > 20) {
+              clearInterval(timer);
+            }
+          }, 150);
         }
       </script>
     </>
