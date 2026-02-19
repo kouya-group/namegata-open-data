@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import datasets from '../../data/datasets.json';
+import { buildBasePath, normalizeBasePath } from '../../utils/base-path';
 
 const processedModules = import.meta.glob('../../data/processed/*.json', { eager: true });
 const evidenceModules = import.meta.glob('../../data/evidence/*.evidence.json', { eager: true });
@@ -128,9 +129,9 @@ const fmtBytes = (value?: number) => {
   return `${(value / 1024 ** 2).toFixed(2)} MB`;
 };
 
-const basePath = import.meta.env.BASE_URL;
-const homeUrl = `${basePath}#datasets`;
-const localSnapshotUrl = `${basePath}data/raw/${dataset.id}.csv`;
+const basePath = normalizeBasePath(import.meta.env.BASE_URL);
+const homeUrl = buildBasePath(basePath, '#datasets');
+const localSnapshotUrl = buildBasePath(basePath, `data/raw/${dataset.id}.csv`);
 
 const evidenceSourceUrl = evidence?.source?.url ?? dataset.url;
 const evidencePageUrl = evidence?.source?.detail_page_url ?? dataset.sourcePageUrl;
