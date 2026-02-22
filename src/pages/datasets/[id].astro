@@ -67,6 +67,14 @@ interface Bounds {
   maxLon: number;
 }
 
+interface RegionPopulation {
+  name: string;
+  total: number;
+  male: number;
+  female: number;
+  households: number;
+}
+
 export function getStaticPaths() {
   return (datasets as DatasetSummary[]).map(dataset => ({
     params: { id: dataset.id },
@@ -161,6 +169,22 @@ const fmtBytes = (value?: number) => {
   }
 
   return `${(value / 1024 ** 2).toFixed(2)} MB`;
+};
+
+const fmtPercent = (numerator: number, denominator: number, digits = 1) => {
+  if (denominator <= 0) {
+    return '-';
+  }
+
+  return `${((numerator / denominator) * 100).toFixed(digits)}%`;
+};
+
+const fmtDecimal = (value: number | null, digits = 1) => {
+  if (value === null || !Number.isFinite(value)) {
+    return '-';
+  }
+
+  return value.toFixed(digits);
 };
 
 const basePath = normalizeBasePath(import.meta.env.BASE_URL);
@@ -261,8 +285,10 @@ const maxCategoryCount = Math.max(...categoryDistribution.map(item => item.count
 const hasCategoryChart = categoryDistribution.length > 1;
 
 const isPopulationDataset = dataset.id === 'population' && !!processed;
-const ageColumns: Array<{ label: string; key: string }> = [];
+const ageColumns: Array<{ label: string; key: string; sex: 'male' | 'female' }> = [];
 const seenAgeLabels = new Set<string>();
+const regionPopulationRows: RegionPopulation[] = [];
+const surveyDateSet = new Set<string>();
 
 if (isPopulationDataset) {
   for (const header of processed.headers) {
@@ -271,23 +297,53 @@ if (isPopulationDataset) {
       continue;
     }
 
-    const label = ageMatch[1];
-    ageColumns.push({ label, key: header });
+    const label = ageMatch[3] ? `${ageMatch[1]}以上` : ageMatch[1];
+    const sex = ageMatch[2] === '男性' ? 'male' : 'female';
+    ageColumns.push({ label, key: header, sex });
     seenAgeLabels.add(label);
   }
 }
 
 const ageDistribution = Array.from(seenAgeLabels).map(label => ({ label, total: 0 }));
 const ageDistributionMap = new Map(ageDistribution.map(item => [item.label, item]));
+const ageSexDistribution = Array.from(seenAgeLabels).map(label => ({ label, male: 0, female: 0, total: 0 }));
+const ageSexDistributionMap = new Map(ageSexDistribution.map(item => [item.label, item]));
 
 if (isPopulationDataset) {
   for (const row of records) {
+    const surveyDate = String(row['調査年月日'] ?? '').trim();
+    if (surveyDate) {
+      surveyDateSet.add(surveyDate);
+    }
+
+    regionPopulationRows.push({
+      name: String(row['地域名'] ?? '').trim(),
+      total: toNumber(row['総人口']),
+      male: toNumber(row['男性']),
+      female: toNumber(row['女性']),
+      households: toNumber(row['世帯数']),
+    });
+
     for (const column of ageColumns) {
       const target = ageDistributionMap.get(column.label);
       if (!target) {
         continue;
       }
-      target.total += toNumber(row[column.key]);
+
+      const value = toNumber(row[column.key]);
+      target.total += value;
+
+      const ageSexTarget = ageSexDistributionMap.get(column.label);
+      if (!ageSexTarget) {
+        continue;
+      }
+
+      if (column.sex === 'male') {
+        ageSexTarget.male += value;
+      } else {
+        ageSexTarget.female += value;
+      }
+      ageSexTarget.total += value;
     }
   }
 }
@@ -298,18 +354,31 @@ ageDistribution.sort((a, b) => {
   return left - right;
 });
 
+ageSexDistribution.sort((a, b) => {
+  const left = Number((a.label.match(/^(\d+)/) || ['0', '0'])[1]);
+  const right = Number((b.label.match(/^(\d+)/) || ['0', '0'])[1]);
+  return left - right;
+});
+
 const maxAgePopulation = Math.max(...ageDistribution.map(item => item.total), 0);
 
 const populationSummary = {
   total: 0,
+  male: 0,
+  female: 0,
+  households: 0,
   children: 0,
   working: 0,
   seniors: 0,
+  regionCount: 0,
 };
 
 if (isPopulationDataset) {
   for (const row of records) {
     populationSummary.total += toNumber(row['総人口']);
+    populationSummary.male += toNumber(row['男性']);
+    populationSummary.female += toNumber(row['女性']);
+    populationSummary.households += toNumber(row['世帯数']);
   }
 
   for (const item of ageDistribution) {
@@ -322,7 +391,44 @@ if (isPopulationDataset) {
       populationSummary.seniors += item.total;
     }
   }
+
+  populationSummary.regionCount = regionPopulationRows.filter(row => row.name).length;
 }
+
+const populationSurveyDates = Array.from(surveyDateSet);
+const populationSurveyDate = populationSurveyDates[0] ?? '';
+const hasMultipleSurveyDates = populationSurveyDates.length > 1;
+
+const ageDistributionTotal = ageDistribution.reduce((sum, item) => sum + item.total, 0);
+const childrenRate = fmtPercent(populationSummary.children, populationSummary.total);
+const workingRate = fmtPercent(populationSummary.working, populationSummary.total);
+const seniorsRate = fmtPercent(populationSummary.seniors, populationSummary.total);
+const maleShare = fmtPercent(populationSummary.male, populationSummary.total);
+const femaleShare = fmtPercent(populationSummary.female, populationSummary.total);
+const ageCoverageRate = fmtPercent(ageDistributionTotal, populationSummary.total);
+const averageHouseholdSize =
+  populationSummary.households > 0 ? populationSummary.total / populationSummary.households : null;
+const femalePer100Male =
+  populationSummary.male > 0 ? (populationSummary.female / populationSummary.male) * 100 : null;
+const dependencyRatio =
+  populationSummary.working > 0
+    ? ((populationSummary.children + populationSummary.seniors) / populationSummary.working) * 100
+    : null;
+const agingIndex =
+  populationSummary.children > 0 ? (populationSummary.seniors / populationSummary.children) * 100 : null;
+
+const topRegionPopulationRows = [...regionPopulationRows]
+  .filter(row => row.name)
+  .sort((a, b) => b.total - a.total)
+  .slice(0, 8);
+const smallestRegionPopulationRows = [...regionPopulationRows]
+  .filter(row => row.name)
+  .sort((a, b) => a.total - b.total)
+  .slice(0, 3);
+const maxRegionPopulation = Math.max(...topRegionPopulationRows.map(row => row.total), 0);
+const smallestRegionsLabel = smallestRegionPopulationRows
+  .map(row => `${row.name} (${row.total.toLocaleString('ja-JP')}人)`)
+  .join(' / ');
 ---
 
 <Layout title={`${dataset.title} | NAMEGATA OPEN DATA`}>
@@ -427,13 +533,31 @@ if (isPopulationDataset) {
 
       {isPopulationDataset && ageDistribution.length > 0 ? (
         <section class="card chart-card">
-          <h2>年齢階層別人口（地域合算）</h2>
+          <h2>人口動態サマリー（地域合算）</h2>
           <p class="table-note">
-            地域ごとの人口データを年齢階層で合算した概況です（総人口:
-            {populationSummary.total.toLocaleString('ja-JP')} 人）。
+            調査日: {populationSurveyDate || '不明'}
+            {hasMultipleSurveyDates ? '（複数日付あり）' : ''} / 対象地域:
+            {populationSummary.regionCount.toLocaleString('ja-JP')} / 総人口:
+            {populationSummary.total.toLocaleString('ja-JP')} 人
           </p>
 
           <div class="summary-grid">
+            <div>
+              <span class="label">総人口</span>
+              <strong>{populationSummary.total.toLocaleString('ja-JP')} 人</strong>
+            </div>
+            <div>
+              <span class="label">男性</span>
+              <strong>{populationSummary.male.toLocaleString('ja-JP')} 人</strong>
+            </div>
+            <div>
+              <span class="label">女性</span>
+              <strong>{populationSummary.female.toLocaleString('ja-JP')} 人</strong>
+            </div>
+            <div>
+              <span class="label">世帯数</span>
+              <strong>{populationSummary.households.toLocaleString('ja-JP')} 世帯</strong>
+            </div>
             <div>
               <span class="label">0-14歳</span>
               <strong>{populationSummary.children.toLocaleString('ja-JP')} 人</strong>
@@ -446,8 +570,50 @@ if (isPopulationDataset) {
               <span class="label">65歳以上</span>
               <strong>{populationSummary.seniors.toLocaleString('ja-JP')} 人</strong>
             </div>
+            <div>
+              <span class="label">年少人口率</span>
+              <strong>{childrenRate}</strong>
+            </div>
+            <div>
+              <span class="label">生産年齢人口率</span>
+              <strong>{workingRate}</strong>
+            </div>
+            <div>
+              <span class="label">高齢化率</span>
+              <strong>{seniorsRate}</strong>
+            </div>
+            <div>
+              <span class="label">1世帯あたり人口</span>
+              <strong>{fmtDecimal(averageHouseholdSize, 2)} 人</strong>
+            </div>
           </div>
 
+          <dl class="population-meta">
+            <div>
+              <dt>男女構成</dt>
+              <dd>
+                男性 {maleShare} / 女性 {femaleShare}
+              </dd>
+            </div>
+            <div>
+              <dt>女性人口比（男性100人あたり）</dt>
+              <dd>{fmtDecimal(femalePer100Male, 1)}</dd>
+            </div>
+            <div>
+              <dt>従属人口指数</dt>
+              <dd>{fmtDecimal(dependencyRatio, 1)}</dd>
+            </div>
+            <div>
+              <dt>高齢化指数</dt>
+              <dd>{fmtDecimal(agingIndex, 1)}</dd>
+            </div>
+            <div>
+              <dt>年齢帯データ充足率</dt>
+              <dd>{ageCoverageRate}</dd>
+            </div>
+          </dl>
+
+          <h3 class="chart-subtitle">年齢階層別人口（男女計）</h3>
           <div class="bar-chart">
             {ageDistribution.map(item => (
               <div class="bar-row">
@@ -462,6 +628,55 @@ if (isPopulationDataset) {
               </div>
             ))}
           </div>
+
+          <h3 class="chart-subtitle">年齢階層別内訳（男性 / 女性）</h3>
+          <div class="table-wrap compact-table-wrap">
+            <table class="population-breakdown-table">
+              <thead>
+                <tr>
+                  <th>年齢階層</th>
+                  <th>男性</th>
+                  <th>女性</th>
+                  <th>計</th>
+                  <th>構成比</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ageSexDistribution.map(item => (
+                  <tr>
+                    <td>{item.label}</td>
+                    <td>{item.male.toLocaleString('ja-JP')}</td>
+                    <td>{item.female.toLocaleString('ja-JP')}</td>
+                    <td>{item.total.toLocaleString('ja-JP')}</td>
+                    <td>{fmtPercent(item.total, populationSummary.total)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {topRegionPopulationRows.length > 0 ? (
+            <>
+              <h3 class="chart-subtitle">地域別人口（上位 {topRegionPopulationRows.length}）</h3>
+              <div class="bar-chart region-bar-chart">
+                {topRegionPopulationRows.map(row => (
+                  <div class="bar-row region-bar-row">
+                    <span class="bar-label region-label" title={row.name}>{row.name}</span>
+                    <div class="bar-track">
+                      <div
+                        class="bar-fill"
+                        style={`width: ${(row.total / (maxRegionPopulation || 1)) * 100}%`}
+                      ></div>
+                    </div>
+                    <span class="bar-value">{row.total.toLocaleString('ja-JP')} 人</span>
+                  </div>
+                ))}
+              </div>
+              {smallestRegionsLabel ? (
+                <p class="table-note">人口最少地域: {smallestRegionsLabel}</p>
+              ) : null}
+            </>
+          ) : null}
         </section>
       ) : null}
 
@@ -901,6 +1116,45 @@ if (isPopulationDataset) {
     color: var(--text-primary);
   }
 
+  .population-meta {
+    margin-top: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 0.55rem;
+  }
+
+  .population-meta div {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-base);
+    padding: 0.5rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .population-meta dt {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+
+  .population-meta dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--text-primary);
+  }
+
+  .chart-subtitle {
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+  }
+
   .bar-chart {
     margin-top: 0.9rem;
     display: flex;
@@ -941,6 +1195,34 @@ if (isPopulationDataset) {
     font-size: 0.68rem;
     color: var(--text-secondary);
     text-align: right;
+  }
+
+  .compact-table-wrap {
+    margin-top: 0.75rem;
+  }
+
+  .population-breakdown-table {
+    min-width: 620px;
+    font-size: 0.7rem;
+  }
+
+  .population-breakdown-table td:nth-child(2),
+  .population-breakdown-table td:nth-child(3),
+  .population-breakdown-table td:nth-child(4),
+  .population-breakdown-table td:nth-child(5) {
+    font-family: var(--font-mono);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .region-bar-row {
+    grid-template-columns: minmax(92px, 1fr) 1fr 86px;
+  }
+
+  .region-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .table-wrap {
@@ -1050,6 +1332,14 @@ if (isPopulationDataset) {
       gap: 0.45rem;
     }
 
+    .region-bar-row {
+      grid-template-columns: minmax(70px, 1fr) 1fr 74px;
+    }
+
+    .population-meta {
+      grid-template-columns: 1fr;
+    }
+
     .evidence-card dl {
       grid-template-columns: 1fr;
     }
@@ -1063,6 +1353,10 @@ if (isPopulationDataset) {
     }
 
     .excluded-points-table {
+      min-width: 520px;
+    }
+
+    .population-breakdown-table {
       min-width: 520px;
     }
   }
