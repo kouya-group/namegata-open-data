@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest a new feature or improvement
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: What problem are you trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the proposed solution.
+    validations:
+      required: true
+  - type: textarea
+    id: non_goal
+    attributes:
+      label: Non-goals
+      description: What is explicitly out of scope?
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+
