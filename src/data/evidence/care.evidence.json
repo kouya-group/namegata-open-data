@@ -9,7 +9,7 @@
     "original_filename": "1593045325_od_224.csv"
   },
   "acquisition": {
-    "timestamp": "2026-02-19T02:28:22.738Z",
+    "timestamp": "2026-02-22T21:23:45.748Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },

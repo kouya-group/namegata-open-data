@@ -1,7 +1,7 @@
 {
   "datasetId": "population",
   "title": "地域・年齢別人口",
-  "acquiredAt": "2026-02-19T02:28:26.564Z",
+  "acquiredAt": "2026-02-22T21:23:48.002Z",
   "sourceUrl": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=26",
   "sourcePageUrl": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=9",
   "encoding": "shift_jis",

@@ -1,7 +1,7 @@
 {
   "datasetId": "medical",
   "title": "医療機関一覧",
-  "acquiredAt": "2026-02-19T02:28:23.153Z",
+  "acquiredAt": "2026-02-22T21:23:46.259Z",
   "sourceUrl": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=30",
   "sourcePageUrl": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=6",
   "encoding": "shift_jis",

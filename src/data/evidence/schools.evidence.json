@@ -9,7 +9,7 @@
     "original_filename": "令和5年度 行方市立幼稚園・小中学校(園児、児童生徒数）.csv"
   },
   "acquisition": {
-    "timestamp": "2026-02-19T02:28:31.074Z",
+    "timestamp": "2026-02-22T21:23:52.599Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },

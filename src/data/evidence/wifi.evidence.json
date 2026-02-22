@@ -9,7 +9,7 @@
     "original_filename": "公衆無線LANアクセスポイント一覧.csv"
   },
   "acquisition": {
-    "timestamp": "2026-02-19T02:28:27.448Z",
+    "timestamp": "2026-02-22T21:23:49.012Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
