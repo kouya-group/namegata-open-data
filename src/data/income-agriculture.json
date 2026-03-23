@@ -1,0 +1,279 @@
+{
+  "city": {
+    "name": "行方市",
+    "code": "08233"
+  },
+  "tax": {
+    "fiscal_year": 2024,
+    "taxpayers": 13080,
+    "taxable_income_thousand_yen": 40670145,
+    "per_capita_taxable_income_thousand_yen": 3109
+  },
+  "agriculture": {
+    "year": 2023,
+    "total_10million_yen": 2679,
+    "rank_prefecture": 48,
+    "rank_national": 2,
+    "items": [
+      {
+        "department": "農業産出額",
+        "item": "農業産出額",
+        "amount_10million_yen": 2679,
+        "rank_prefecture": 48,
+        "rank_national": 2
+      },
+      {
+        "department": "耕種計",
+        "item": "耕種計",
+        "amount_10million_yen": 2126,
+        "rank_prefecture": 18,
+        "rank_national": 2
+      },
+      {
+        "department": "米",
+        "item": "米",
+        "amount_10million_yen": 251,
+        "rank_prefecture": 151,
+        "rank_national": 6
+      },
+      {
+        "department": "豆類",
+        "item": "豆類計",
+        "amount_10million_yen": 4,
+        "rank_prefecture": 259,
+        "rank_national": 13
+      },
+      {
+        "department": "いも類",
+        "item": "いも類計",
+        "amount_10million_yen": 882,
+        "rank_prefecture": 3,
+        "rank_national": 2
+      },
+      {
+        "department": "いも類",
+        "item": "ばれいしょ",
+        "amount_10million_yen": 56,
+        "rank_prefecture": 37,
+        "rank_national": 2
+      },
+      {
+        "department": "いも類",
+        "item": "かんしょ",
+        "amount_10million_yen": 825,
+        "rank_prefecture": 3,
+        "rank_national": 2
+      },
+      {
+        "department": "野菜",
+        "item": "野菜計",
+        "amount_10million_yen": 974,
+        "rank_prefecture": 36,
+        "rank_national": 6
+      },
+      {
+        "department": "野菜",
+        "item": "だいこん",
+        "amount_10million_yen": 22,
+        "rank_prefecture": 76,
+        "rank_national": 4
+      },
+      {
+        "department": "野菜",
+        "item": "にんじん",
+        "amount_10million_yen": 22,
+        "rank_prefecture": 51,
+        "rank_national": 2
+      },
+      {
+        "department": "野菜",
+        "item": "さといも",
+        "amount_10million_yen": 4,
+        "rank_prefecture": 182,
+        "rank_national": 6
+      },
+      {
+        "department": "野菜",
+        "item": "やまのいも",
+        "amount_10million_yen": 5,
+        "rank_prefecture": 88,
+        "rank_national": 2
+      },
+      {
+        "department": "野菜",
+        "item": "はくさい",
+        "amount_10million_yen": 4,
+        "rank_prefecture": 147,
+        "rank_national": 16
+      },
+      {
+        "department": "野菜",
+        "item": "キャベツ",
+        "amount_10million_yen": 4,
+        "rank_prefecture": 243,
+        "rank_national": 14
+      },
+      {
+        "department": "野菜",
+        "item": "ほうれんそう",
+        "amount_10million_yen": 36,
+        "rank_prefecture": 39,
+        "rank_national": 4
+      },
+      {
+        "department": "野菜",
+        "item": "レタス",
+        "amount_10million_yen": 1,
+        "rank_prefecture": 389,
+        "rank_national": 19
+      },
+      {
+        "department": "野菜",
+        "item": "ねぎ",
+        "amount_10million_yen": 41,
+        "rank_prefecture": 76,
+        "rank_national": 10
+      },
+      {
+        "department": "野菜",
+        "item": "たまねぎ",
+        "amount_10million_yen": 2,
+        "rank_prefecture": 239,
+        "rank_national": 4
+      },
+      {
+        "department": "野菜",
+        "item": "ブロッコリー",
+        "amount_10million_yen": 1,
+        "rank_prefecture": 442,
+        "rank_national": 10
+      },
+      {
+        "department": "野菜",
+        "item": "きゅうり",
+        "amount_10million_yen": 27,
+        "rank_prefecture": 104,
+        "rank_national": 6
+      },
+      {
+        "department": "野菜",
+        "item": "なす",
+        "amount_10million_yen": 3,
+        "rank_prefecture": 439,
+        "rank_national": 19
+      },
+      {
+        "department": "野菜",
+        "item": "トマト",
+        "amount_10million_yen": 54,
+        "rank_prefecture": 81,
+        "rank_national": 5
+      },
+      {
+        "department": "野菜",
+        "item": "ピーマン",
+        "amount_10million_yen": 12,
+        "rank_prefecture": 79,
+        "rank_national": 8
+      },
+      {
+        "department": "野菜",
+        "item": "いちご",
+        "amount_10million_yen": 89,
+        "rank_prefecture": 50,
+        "rank_national": 3
+      },
+      {
+        "department": "野菜",
+        "item": "メロン",
+        "amount_10million_yen": 8,
+        "rank_prefecture": 91,
+        "rank_national": 13
+      },
+      {
+        "department": "果実",
+        "item": "果実計",
+        "amount_10million_yen": 7,
+        "rank_prefecture": 800,
+        "rank_national": 19
+      },
+      {
+        "department": "果実",
+        "item": "日本なし",
+        "amount_10million_yen": 2,
+        "rank_prefecture": 298,
+        "rank_national": 19
+      },
+      {
+        "department": "果実",
+        "item": "くり",
+        "amount_10million_yen": 2,
+        "rank_prefecture": 89,
+        "rank_national": 9
+      },
+      {
+        "department": "工芸農作物",
+        "item": "工芸農作物計",
+        "amount_10million_yen": 1,
+        "rank_prefecture": 632,
+        "rank_national": 15
+      },
+      {
+        "department": "畜産計",
+        "item": "畜産計",
+        "amount_10million_yen": 553,
+        "rank_prefecture": 183,
+        "rank_national": 9
+      },
+      {
+        "department": "肉用牛",
+        "item": "肉用牛",
+        "amount_10million_yen": 7,
+        "rank_prefecture": 788,
+        "rank_national": 25
+      },
+      {
+        "department": "乳用牛",
+        "item": "乳用牛計",
+        "amount_10million_yen": 63,
+        "rank_prefecture": 263,
+        "rank_national": 9
+      },
+      {
+        "department": "乳用牛",
+        "item": "生乳",
+        "amount_10million_yen": 62,
+        "rank_prefecture": 252,
+        "rank_national": 9
+      },
+      {
+        "department": "乳用牛",
+        "item": "乳牛",
+        "amount_10million_yen": 2,
+        "rank_prefecture": 399,
+        "rank_national": 9
+      },
+      {
+        "department": "豚",
+        "item": "豚",
+        "amount_10million_yen": 295,
+        "rank_prefecture": 50,
+        "rank_national": 3
+      },
+      {
+        "department": "鶏",
+        "item": "鶏計",
+        "amount_10million_yen": 187,
+        "rank_prefecture": 178,
+        "rank_national": 11
+      },
+      {
+        "department": "鶏",
+        "item": "鶏卵",
+        "amount_10million_yen": 185,
+        "rank_prefecture": 120,
+        "rank_national": 10
+      }
+    ]
+  }
+}

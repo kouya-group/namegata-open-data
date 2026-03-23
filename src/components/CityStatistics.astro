@@ -1,12 +1,19 @@
 ---
 import { buildBasePath } from '../utils/base-path';
 import cityData from '../data/city-statistics.json';
+import incomeData from '../data/income-agriculture.json';
 import evidence from '../data/evidence/city-statistics.evidence.json';
+import incomeEvidence from '../data/evidence/income-agriculture.evidence.json';
 
 const chartJsUrl = buildBasePath(import.meta.env.BASE_URL, 'chart.min.js');
 
 const { current_stats: stats, population_projection: projection } = cityData;
 const projections = projection.projections;
+const { tax, agriculture } = incomeData;
+const topAgriItems = agriculture.items
+  .filter((i: any) => i.item !== i.department && i.amount_10million_yen > 0)
+  .sort((a: any, b: any) => b.amount_10million_yen - a.amount_10million_yen)
+  .slice(0, 8);
 
 const naturalDecrease = stats.deaths - stats.births;
 ---
@@ -112,10 +119,38 @@ const naturalDecrease = stats.deaths - stats.births;
       </div>
     </div>
 
+    <div class="income-section">
+      <div class="card">
+        <h3>所得・経済</h3>
+        <div class="indicator-grid">
+          <div>
+            <span class="label">1人当たり課税所得</span>
+            <strong>{(tax.per_capita_taxable_income_thousand_yen / 1000).toFixed(1)} 百万円</strong>
+            <span class="sub">(令和{tax.fiscal_year - 2018}年度)</span>
+          </div>
+          <div>
+            <span class="label">納税義務者数</span>
+            <strong>{tax.taxpayers.toLocaleString('ja-JP')} 人</strong>
+          </div>
+          <div>
+            <span class="label">課税対象所得計</span>
+            <strong>{(tax.taxable_income_thousand_yen / 1000000).toFixed(0)} 億円</strong>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>農業産出額 <span class="rank-badge">全国{agriculture.rank_national}位</span></h3>
+        <p class="agri-total">{(agriculture.total_10million_yen / 100).toFixed(1)} 億円 <span class="sub">({agriculture.year}年)</span></p>
+        <div class="chart-wrap chart-wrap-small">
+          <canvas id="agriculture-chart"></canvas>
+        </div>
+      </div>
+    </div>
+
     <details class="card evidence-section">
       <summary>出典・エビデンス</summary>
       <dl>
-        {evidence.sources.map(src => (
+        {[...evidence.sources, ...incomeEvidence.sources].map(src => (
           <>
             <dt>{src.id}</dt>
             <dd>
@@ -128,14 +163,14 @@ const naturalDecrease = stats.deaths - stats.births;
         <dt>注記</dt>
         <dd>{evidence.notes}</dd>
         <dt>取得日時</dt>
-        <dd>{evidence.acquisition.timestamp}</dd>
+        <dd>{evidence.acquisition.timestamp} / {incomeEvidence.acquisition.timestamp}</dd>
       </dl>
     </details>
   </div>
 </section>
 
 <script is:inline src={chartJsUrl}></script>
-<script is:inline define:vars={{ projections, stats }}>
+<script is:inline define:vars={{ projections, stats, topAgriItems }}>
   if (typeof Chart !== 'undefined') {
     Chart.defaults.color = '#9898a8';
     Chart.defaults.borderColor = '#1e1e2e';
@@ -219,6 +254,32 @@ const naturalDecrease = stats.deaths - stats.births;
         },
       });
     }
+
+    const agriCtx = document.getElementById('agriculture-chart');
+    if (agriCtx && topAgriItems.length > 0) {
+      new Chart(agriCtx, {
+        type: 'bar',
+        data: {
+          labels: topAgriItems.map(i => i.item),
+          datasets: [{
+            label: '千万円',
+            data: topAgriItems.map(i => i.amount_10million_yen),
+            backgroundColor: 'rgba(34, 197, 94, 0.6)',
+            borderWidth: 0,
+            borderRadius: 3,
+          }],
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { beginAtZero: true, grid: { color: '#1e1e2e' }, title: { display: true, text: '千万円', font: { size: 9 }, color: '#5a5a6e' } },
+            y: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          },
+        },
+      });
+    }
   }
 </script>
 
@@ -272,6 +333,11 @@ const naturalDecrease = stats.deaths - stats.births;
   .table-wrap .actual-row td { color: var(--accent-blue); font-weight: 600; }
 
   .land-use-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .income-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .income-section h3 { font-size: 0.78rem; font-family: var(--font-mono); margin-bottom: 0.5rem; color: var(--text-secondary); }
+  .rank-badge { font-size: 0.65rem; color: var(--accent-green); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 4px; padding: 0.1rem 0.4rem; margin-left: 0.3rem; }
+  .agri-total { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent-green); margin-bottom: 0.5rem; }
+  .agri-total .sub { font-size: 0.65rem; color: var(--text-dim); font-weight: 400; }
 
   .evidence-section summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); list-style: none; }
   .evidence-section summary::-webkit-details-marker { display: none; }
@@ -285,6 +351,7 @@ const naturalDecrease = stats.deaths - stats.births;
   @media (max-width: 768px) {
     .projection-section { grid-template-columns: 1fr; }
     .land-use-row { grid-template-columns: 1fr; }
+    .income-section { grid-template-columns: 1fr; }
     .evidence-section dl { grid-template-columns: 1fr; }
   }
 </style>
