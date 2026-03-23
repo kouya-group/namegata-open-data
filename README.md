@@ -1,5 +1,10 @@
 # Namegata Open Data Portal
 
+[![Deploy to GitHub Pages](https://github.com/kouya-group/namegata-open-data/actions/workflows/deploy.yml/badge.svg)](https://github.com/kouya-group/namegata-open-data/actions/workflows/deploy.yml)
+[![Refresh Open Data](https://github.com/kouya-group/namegata-open-data/actions/workflows/refresh-data.yml/badge.svg)](https://github.com/kouya-group/namegata-open-data/actions/workflows/refresh-data.yml)
+[![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![License: CC BY 2.1 JP](https://img.shields.io/badge/data-CC%20BY%202.1%20JP-orange.svg)](https://creativecommons.org/licenses/by/2.1/jp/)
+
 行方市オープンデータを取得し、閲覧しやすい形で公開する Astro ベースの静的サイトです。
 
 - 公開先: `https://kouya-group.github.io/namegata-open-data/`
@@ -117,11 +122,18 @@ npm run dev -- --host 127.0.0.1 --port 4310
 出典: 行方市オープンデータ（CC BY 2.1 JP）
 ```
 
+## セキュリティ
+
+セキュリティ方針と技術的対策の詳細は `SECURITY.md` を参照してください。
+
+脆弱性を発見した場合は、公開 Issue ではなく [Security Advisory](https://github.com/kouya-group/namegata-open-data/security/advisories) から報告してください。
+
 ## OSS ドキュメント
 
 - コントリビューション: `CONTRIBUTING.md`
 - 行動規範: `CODE_OF_CONDUCT.md`
-- セキュリティ報告: `SECURITY.md`
+- セキュリティ: `SECURITY.md`
 - AI 協業ルール: `AGENTS.md` / `docs/AI_CONTRIBUTING.md`
 - API / MCP 方針: `docs/API_MCP.md`
+- 変更履歴: `CHANGELOG.md`
 - 技術運用ドキュメント一覧: `docs/README.md`
