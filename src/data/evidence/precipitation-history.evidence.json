@@ -1,0 +1,26 @@
+{
+  "dataset_id": "precipitation-history",
+  "title": "降水量実績 (2016-2025)",
+  "source": {
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.08&longitude=140.48&start_date=2016-01-01&end_date=2025-12-31&daily=precipitation_sum&timezone=Asia%2FTokyo",
+    "publisher": "Open-Meteo Archive API",
+    "license": "CC BY 4.0",
+    "original_source": "ERA5 (ECMWF / Copernicus Climate Change Service)"
+  },
+  "acquisition": {
+    "timestamp": "2026-03-23T20:53:45.509Z",
+    "method": "HTTP GET (fetch)",
+    "agent": "namegata-open-data/fetch-data v0.1.0"
+  },
+  "integrity": {
+    "sha256": "1d75e84c66834fcc6b3dd1f7b371fbecd89db2f5d37d79d1a2e88d91666f5ab6",
+    "daily_records": 3653,
+    "monthly_records": 120,
+    "yearly_records": 10
+  },
+  "analysis": {
+    "description": "日別降水量を月別・年別に集計。月別平年値（10年平均）と線形回帰によるトレンド推定を実施。",
+    "trend_slope": "-12.75 mm/年",
+    "trend_direction": "decreasing"
+  }
+}

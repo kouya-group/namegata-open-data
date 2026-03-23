@@ -1,0 +1,976 @@
+{
+  "location": {
+    "name": "行方市",
+    "latitude": 36.08,
+    "longitude": 140.48
+  },
+  "period": {
+    "start": "2016-01-01",
+    "end": "2025-12-31",
+    "years": 10
+  },
+  "monthly": [
+    {
+      "month": "2016-01",
+      "year": 2016,
+      "monthNum": 1,
+      "precipitation_mm": 94.7,
+      "days": 31
+    },
+    {
+      "month": "2016-02",
+      "year": 2016,
+      "monthNum": 2,
+      "precipitation_mm": 68.7,
+      "days": 29
+    },
+    {
+      "month": "2016-03",
+      "year": 2016,
+      "monthNum": 3,
+      "precipitation_mm": 107,
+      "days": 31
+    },
+    {
+      "month": "2016-04",
+      "year": 2016,
+      "monthNum": 4,
+      "precipitation_mm": 102.2,
+      "days": 30
+    },
+    {
+      "month": "2016-05",
+      "year": 2016,
+      "monthNum": 5,
+      "precipitation_mm": 104.2,
+      "days": 31
+    },
+    {
+      "month": "2016-06",
+      "year": 2016,
+      "monthNum": 6,
+      "precipitation_mm": 152.1,
+      "days": 30
+    },
+    {
+      "month": "2016-07",
+      "year": 2016,
+      "monthNum": 7,
+      "precipitation_mm": 83.6,
+      "days": 31
+    },
+    {
+      "month": "2016-08",
+      "year": 2016,
+      "monthNum": 8,
+      "precipitation_mm": 245.3,
+      "days": 31
+    },
+    {
+      "month": "2016-09",
+      "year": 2016,
+      "monthNum": 9,
+      "precipitation_mm": 193.2,
+      "days": 30
+    },
+    {
+      "month": "2016-10",
+      "year": 2016,
+      "monthNum": 10,
+      "precipitation_mm": 118.2,
+      "days": 31
+    },
+    {
+      "month": "2016-11",
+      "year": 2016,
+      "monthNum": 11,
+      "precipitation_mm": 151,
+      "days": 30
+    },
+    {
+      "month": "2016-12",
+      "year": 2016,
+      "monthNum": 12,
+      "precipitation_mm": 100.2,
+      "days": 31
+    },
+    {
+      "month": "2017-01",
+      "year": 2017,
+      "monthNum": 1,
+      "precipitation_mm": 41.7,
+      "days": 31
+    },
+    {
+      "month": "2017-02",
+      "year": 2017,
+      "monthNum": 2,
+      "precipitation_mm": 45.2,
+      "days": 28
+    },
+    {
+      "month": "2017-03",
+      "year": 2017,
+      "monthNum": 3,
+      "precipitation_mm": 145.9,
+      "days": 31
+    },
+    {
+      "month": "2017-04",
+      "year": 2017,
+      "monthNum": 4,
+      "precipitation_mm": 110.9,
+      "days": 30
+    },
+    {
+      "month": "2017-05",
+      "year": 2017,
+      "monthNum": 5,
+      "precipitation_mm": 80.7,
+      "days": 31
+    },
+    {
+      "month": "2017-06",
+      "year": 2017,
+      "monthNum": 6,
+      "precipitation_mm": 125,
+      "days": 30
+    },
+    {
+      "month": "2017-07",
+      "year": 2017,
+      "monthNum": 7,
+      "precipitation_mm": 92.3,
+      "days": 31
+    },
+    {
+      "month": "2017-08",
+      "year": 2017,
+      "monthNum": 8,
+      "precipitation_mm": 78.6,
+      "days": 31
+    },
+    {
+      "month": "2017-09",
+      "year": 2017,
+      "monthNum": 9,
+      "precipitation_mm": 165.2,
+      "days": 30
+    },
+    {
+      "month": "2017-10",
+      "year": 2017,
+      "monthNum": 10,
+      "precipitation_mm": 394.6,
+      "days": 31
+    },
+    {
+      "month": "2017-11",
+      "year": 2017,
+      "monthNum": 11,
+      "precipitation_mm": 83,
+      "days": 30
+    },
+    {
+      "month": "2017-12",
+      "year": 2017,
+      "monthNum": 12,
+      "precipitation_mm": 44.2,
+      "days": 31
+    },
+    {
+      "month": "2018-01",
+      "year": 2018,
+      "monthNum": 1,
+      "precipitation_mm": 79.4,
+      "days": 31
+    },
+    {
+      "month": "2018-02",
+      "year": 2018,
+      "monthNum": 2,
+      "precipitation_mm": 33.3,
+      "days": 28
+    },
+    {
+      "month": "2018-03",
+      "year": 2018,
+      "monthNum": 3,
+      "precipitation_mm": 153.2,
+      "days": 31
+    },
+    {
+      "month": "2018-04",
+      "year": 2018,
+      "monthNum": 4,
+      "precipitation_mm": 80,
+      "days": 30
+    },
+    {
+      "month": "2018-05",
+      "year": 2018,
+      "monthNum": 5,
+      "precipitation_mm": 167.3,
+      "days": 31
+    },
+    {
+      "month": "2018-06",
+      "year": 2018,
+      "monthNum": 6,
+      "precipitation_mm": 201.8,
+      "days": 30
+    },
+    {
+      "month": "2018-07",
+      "year": 2018,
+      "monthNum": 7,
+      "precipitation_mm": 88.9,
+      "days": 31
+    },
+    {
+      "month": "2018-08",
+      "year": 2018,
+      "monthNum": 8,
+      "precipitation_mm": 82.5,
+      "days": 31
+    },
+    {
+      "month": "2018-09",
+      "year": 2018,
+      "monthNum": 9,
+      "precipitation_mm": 267.9,
+      "days": 30
+    },
+    {
+      "month": "2018-10",
+      "year": 2018,
+      "monthNum": 10,
+      "precipitation_mm": 58.2,
+      "days": 31
+    },
+    {
+      "month": "2018-11",
+      "year": 2018,
+      "monthNum": 11,
+      "precipitation_mm": 96.5,
+      "days": 30
+    },
+    {
+      "month": "2018-12",
+      "year": 2018,
+      "monthNum": 12,
+      "precipitation_mm": 68.5,
+      "days": 31
+    },
+    {
+      "month": "2019-01",
+      "year": 2019,
+      "monthNum": 1,
+      "precipitation_mm": 10.7,
+      "days": 31
+    },
+    {
+      "month": "2019-02",
+      "year": 2019,
+      "monthNum": 2,
+      "precipitation_mm": 79.3,
+      "days": 28
+    },
+    {
+      "month": "2019-03",
+      "year": 2019,
+      "monthNum": 3,
+      "precipitation_mm": 111.3,
+      "days": 31
+    },
+    {
+      "month": "2019-04",
+      "year": 2019,
+      "monthNum": 4,
+      "precipitation_mm": 122.1,
+      "days": 30
+    },
+    {
+      "month": "2019-05",
+      "year": 2019,
+      "monthNum": 5,
+      "precipitation_mm": 88.2,
+      "days": 31
+    },
+    {
+      "month": "2019-06",
+      "year": 2019,
+      "monthNum": 6,
+      "precipitation_mm": 207.9,
+      "days": 30
+    },
+    {
+      "month": "2019-07",
+      "year": 2019,
+      "monthNum": 7,
+      "precipitation_mm": 213.5,
+      "days": 31
+    },
+    {
+      "month": "2019-08",
+      "year": 2019,
+      "monthNum": 8,
+      "precipitation_mm": 80.6,
+      "days": 31
+    },
+    {
+      "month": "2019-09",
+      "year": 2019,
+      "monthNum": 9,
+      "precipitation_mm": 158.7,
+      "days": 30
+    },
+    {
+      "month": "2019-10",
+      "year": 2019,
+      "monthNum": 10,
+      "precipitation_mm": 417.9,
+      "days": 31
+    },
+    {
+      "month": "2019-11",
+      "year": 2019,
+      "monthNum": 11,
+      "precipitation_mm": 149.3,
+      "days": 30
+    },
+    {
+      "month": "2019-12",
+      "year": 2019,
+      "monthNum": 12,
+      "precipitation_mm": 92.7,
+      "days": 31
+    },
+    {
+      "month": "2020-01",
+      "year": 2020,
+      "monthNum": 1,
+      "precipitation_mm": 100.6,
+      "days": 31
+    },
+    {
+      "month": "2020-02",
+      "year": 2020,
+      "monthNum": 2,
+      "precipitation_mm": 57.2,
+      "days": 29
+    },
+    {
+      "month": "2020-03",
+      "year": 2020,
+      "monthNum": 3,
+      "precipitation_mm": 141.3,
+      "days": 31
+    },
+    {
+      "month": "2020-04",
+      "year": 2020,
+      "monthNum": 4,
+      "precipitation_mm": 184.3,
+      "days": 30
+    },
+    {
+      "month": "2020-05",
+      "year": 2020,
+      "monthNum": 5,
+      "precipitation_mm": 170.4,
+      "days": 31
+    },
+    {
+      "month": "2020-06",
+      "year": 2020,
+      "monthNum": 6,
+      "precipitation_mm": 225.4,
+      "days": 30
+    },
+    {
+      "month": "2020-07",
+      "year": 2020,
+      "monthNum": 7,
+      "precipitation_mm": 417.5,
+      "days": 31
+    },
+    {
+      "month": "2020-08",
+      "year": 2020,
+      "monthNum": 8,
+      "precipitation_mm": 46.8,
+      "days": 31
+    },
+    {
+      "month": "2020-09",
+      "year": 2020,
+      "monthNum": 9,
+      "precipitation_mm": 161.7,
+      "days": 30
+    },
+    {
+      "month": "2020-10",
+      "year": 2020,
+      "monthNum": 10,
+      "precipitation_mm": 241.1,
+      "days": 31
+    },
+    {
+      "month": "2020-11",
+      "year": 2020,
+      "monthNum": 11,
+      "precipitation_mm": 52.7,
+      "days": 30
+    },
+    {
+      "month": "2020-12",
+      "year": 2020,
+      "monthNum": 12,
+      "precipitation_mm": 34.3,
+      "days": 31
+    },
+    {
+      "month": "2021-01",
+      "year": 2021,
+      "monthNum": 1,
+      "precipitation_mm": 65.3,
+      "days": 31
+    },
+    {
+      "month": "2021-02",
+      "year": 2021,
+      "monthNum": 2,
+      "precipitation_mm": 55.8,
+      "days": 28
+    },
+    {
+      "month": "2021-03",
+      "year": 2021,
+      "monthNum": 3,
+      "precipitation_mm": 126.6,
+      "days": 31
+    },
+    {
+      "month": "2021-04",
+      "year": 2021,
+      "monthNum": 4,
+      "precipitation_mm": 123.6,
+      "days": 30
+    },
+    {
+      "month": "2021-05",
+      "year": 2021,
+      "monthNum": 5,
+      "precipitation_mm": 120.1,
+      "days": 31
+    },
+    {
+      "month": "2021-06",
+      "year": 2021,
+      "monthNum": 6,
+      "precipitation_mm": 146.3,
+      "days": 30
+    },
+    {
+      "month": "2021-07",
+      "year": 2021,
+      "monthNum": 7,
+      "precipitation_mm": 378.8,
+      "days": 31
+    },
+    {
+      "month": "2021-08",
+      "year": 2021,
+      "monthNum": 8,
+      "precipitation_mm": 293.2,
+      "days": 31
+    },
+    {
+      "month": "2021-09",
+      "year": 2021,
+      "monthNum": 9,
+      "precipitation_mm": 188.1,
+      "days": 30
+    },
+    {
+      "month": "2021-10",
+      "year": 2021,
+      "monthNum": 10,
+      "precipitation_mm": 228.9,
+      "days": 31
+    },
+    {
+      "month": "2021-11",
+      "year": 2021,
+      "monthNum": 11,
+      "precipitation_mm": 81.9,
+      "days": 30
+    },
+    {
+      "month": "2021-12",
+      "year": 2021,
+      "monthNum": 12,
+      "precipitation_mm": 148.6,
+      "days": 31
+    },
+    {
+      "month": "2022-01",
+      "year": 2022,
+      "monthNum": 1,
+      "precipitation_mm": 26.9,
+      "days": 31
+    },
+    {
+      "month": "2022-02",
+      "year": 2022,
+      "monthNum": 2,
+      "precipitation_mm": 103.2,
+      "days": 28
+    },
+    {
+      "month": "2022-03",
+      "year": 2022,
+      "monthNum": 3,
+      "precipitation_mm": 115.1,
+      "days": 31
+    },
+    {
+      "month": "2022-04",
+      "year": 2022,
+      "monthNum": 4,
+      "precipitation_mm": 213.5,
+      "days": 30
+    },
+    {
+      "month": "2022-05",
+      "year": 2022,
+      "monthNum": 5,
+      "precipitation_mm": 199.9,
+      "days": 31
+    },
+    {
+      "month": "2022-06",
+      "year": 2022,
+      "monthNum": 6,
+      "precipitation_mm": 71,
+      "days": 30
+    },
+    {
+      "month": "2022-07",
+      "year": 2022,
+      "monthNum": 7,
+      "precipitation_mm": 125.8,
+      "days": 31
+    },
+    {
+      "month": "2022-08",
+      "year": 2022,
+      "monthNum": 8,
+      "precipitation_mm": 121.6,
+      "days": 31
+    },
+    {
+      "month": "2022-09",
+      "year": 2022,
+      "monthNum": 9,
+      "precipitation_mm": 119,
+      "days": 30
+    },
+    {
+      "month": "2022-10",
+      "year": 2022,
+      "monthNum": 10,
+      "precipitation_mm": 176.5,
+      "days": 31
+    },
+    {
+      "month": "2022-11",
+      "year": 2022,
+      "monthNum": 11,
+      "precipitation_mm": 107.3,
+      "days": 30
+    },
+    {
+      "month": "2022-12",
+      "year": 2022,
+      "monthNum": 12,
+      "precipitation_mm": 70.5,
+      "days": 31
+    },
+    {
+      "month": "2023-01",
+      "year": 2023,
+      "monthNum": 1,
+      "precipitation_mm": 40,
+      "days": 31
+    },
+    {
+      "month": "2023-02",
+      "year": 2023,
+      "monthNum": 2,
+      "precipitation_mm": 53.2,
+      "days": 28
+    },
+    {
+      "month": "2023-03",
+      "year": 2023,
+      "monthNum": 3,
+      "precipitation_mm": 111.7,
+      "days": 31
+    },
+    {
+      "month": "2023-04",
+      "year": 2023,
+      "monthNum": 4,
+      "precipitation_mm": 103.7,
+      "days": 30
+    },
+    {
+      "month": "2023-05",
+      "year": 2023,
+      "monthNum": 5,
+      "precipitation_mm": 152.7,
+      "days": 31
+    },
+    {
+      "month": "2023-06",
+      "year": 2023,
+      "monthNum": 6,
+      "precipitation_mm": 323.9,
+      "days": 30
+    },
+    {
+      "month": "2023-07",
+      "year": 2023,
+      "monthNum": 7,
+      "precipitation_mm": 55.9,
+      "days": 31
+    },
+    {
+      "month": "2023-08",
+      "year": 2023,
+      "monthNum": 8,
+      "precipitation_mm": 64.9,
+      "days": 31
+    },
+    {
+      "month": "2023-09",
+      "year": 2023,
+      "monthNum": 9,
+      "precipitation_mm": 285.3,
+      "days": 30
+    },
+    {
+      "month": "2023-10",
+      "year": 2023,
+      "monthNum": 10,
+      "precipitation_mm": 118.9,
+      "days": 31
+    },
+    {
+      "month": "2023-11",
+      "year": 2023,
+      "monthNum": 11,
+      "precipitation_mm": 70.9,
+      "days": 30
+    },
+    {
+      "month": "2023-12",
+      "year": 2023,
+      "monthNum": 12,
+      "precipitation_mm": 33.6,
+      "days": 31
+    },
+    {
+      "month": "2024-01",
+      "year": 2024,
+      "monthNum": 1,
+      "precipitation_mm": 54.1,
+      "days": 31
+    },
+    {
+      "month": "2024-02",
+      "year": 2024,
+      "monthNum": 2,
+      "precipitation_mm": 76.9,
+      "days": 29
+    },
+    {
+      "month": "2024-03",
+      "year": 2024,
+      "monthNum": 3,
+      "precipitation_mm": 172.8,
+      "days": 31
+    },
+    {
+      "month": "2024-04",
+      "year": 2024,
+      "monthNum": 4,
+      "precipitation_mm": 109.1,
+      "days": 30
+    },
+    {
+      "month": "2024-05",
+      "year": 2024,
+      "monthNum": 5,
+      "precipitation_mm": 190.2,
+      "days": 31
+    },
+    {
+      "month": "2024-06",
+      "year": 2024,
+      "monthNum": 6,
+      "precipitation_mm": 241.7,
+      "days": 30
+    },
+    {
+      "month": "2024-07",
+      "year": 2024,
+      "monthNum": 7,
+      "precipitation_mm": 115.9,
+      "days": 31
+    },
+    {
+      "month": "2024-08",
+      "year": 2024,
+      "monthNum": 8,
+      "precipitation_mm": 149.3,
+      "days": 31
+    },
+    {
+      "month": "2024-09",
+      "year": 2024,
+      "monthNum": 9,
+      "precipitation_mm": 88.1,
+      "days": 30
+    },
+    {
+      "month": "2024-10",
+      "year": 2024,
+      "monthNum": 10,
+      "precipitation_mm": 190.5,
+      "days": 31
+    },
+    {
+      "month": "2024-11",
+      "year": 2024,
+      "monthNum": 11,
+      "precipitation_mm": 125.8,
+      "days": 30
+    },
+    {
+      "month": "2024-12",
+      "year": 2024,
+      "monthNum": 12,
+      "precipitation_mm": 4,
+      "days": 31
+    },
+    {
+      "month": "2025-01",
+      "year": 2025,
+      "monthNum": 1,
+      "precipitation_mm": 39.4,
+      "days": 31
+    },
+    {
+      "month": "2025-02",
+      "year": 2025,
+      "monthNum": 2,
+      "precipitation_mm": 18.7,
+      "days": 28
+    },
+    {
+      "month": "2025-03",
+      "year": 2025,
+      "monthNum": 3,
+      "precipitation_mm": 166,
+      "days": 31
+    },
+    {
+      "month": "2025-04",
+      "year": 2025,
+      "monthNum": 4,
+      "precipitation_mm": 141.5,
+      "days": 30
+    },
+    {
+      "month": "2025-05",
+      "year": 2025,
+      "monthNum": 5,
+      "precipitation_mm": 220.1,
+      "days": 31
+    },
+    {
+      "month": "2025-06",
+      "year": 2025,
+      "monthNum": 6,
+      "precipitation_mm": 138.8,
+      "days": 30
+    },
+    {
+      "month": "2025-07",
+      "year": 2025,
+      "monthNum": 7,
+      "precipitation_mm": 70.9,
+      "days": 31
+    },
+    {
+      "month": "2025-08",
+      "year": 2025,
+      "monthNum": 8,
+      "precipitation_mm": 69.8,
+      "days": 31
+    },
+    {
+      "month": "2025-09",
+      "year": 2025,
+      "monthNum": 9,
+      "precipitation_mm": 151.4,
+      "days": 30
+    },
+    {
+      "month": "2025-10",
+      "year": 2025,
+      "monthNum": 10,
+      "precipitation_mm": 140.7,
+      "days": 31
+    },
+    {
+      "month": "2025-11",
+      "year": 2025,
+      "monthNum": 11,
+      "precipitation_mm": 48.1,
+      "days": 30
+    },
+    {
+      "month": "2025-12",
+      "year": 2025,
+      "monthNum": 12,
+      "precipitation_mm": 54.3,
+      "days": 31
+    }
+  ],
+  "yearly": [
+    {
+      "year": 2016,
+      "precipitation_mm": 1520.4
+    },
+    {
+      "year": 2017,
+      "precipitation_mm": 1407.3
+    },
+    {
+      "year": 2018,
+      "precipitation_mm": 1377.5
+    },
+    {
+      "year": 2019,
+      "precipitation_mm": 1732.2
+    },
+    {
+      "year": 2020,
+      "precipitation_mm": 1833.3
+    },
+    {
+      "year": 2021,
+      "precipitation_mm": 1957.2
+    },
+    {
+      "year": 2022,
+      "precipitation_mm": 1450.3
+    },
+    {
+      "year": 2023,
+      "precipitation_mm": 1414.7
+    },
+    {
+      "year": 2024,
+      "precipitation_mm": 1518.4
+    },
+    {
+      "year": 2025,
+      "precipitation_mm": 1259.7
+    }
+  ],
+  "monthNormals": [
+    {
+      "month": 1,
+      "average_mm": 55.3,
+      "years": 10
+    },
+    {
+      "month": 2,
+      "average_mm": 59.2,
+      "years": 10
+    },
+    {
+      "month": 3,
+      "average_mm": 135.1,
+      "years": 10
+    },
+    {
+      "month": 4,
+      "average_mm": 129.1,
+      "years": 10
+    },
+    {
+      "month": 5,
+      "average_mm": 149.4,
+      "years": 10
+    },
+    {
+      "month": 6,
+      "average_mm": 183.4,
+      "years": 10
+    },
+    {
+      "month": 7,
+      "average_mm": 164.3,
+      "years": 10
+    },
+    {
+      "month": 8,
+      "average_mm": 123.3,
+      "years": 10
+    },
+    {
+      "month": 9,
+      "average_mm": 177.9,
+      "years": 10
+    },
+    {
+      "month": 10,
+      "average_mm": 208.6,
+      "years": 10
+    },
+    {
+      "month": 11,
+      "average_mm": 96.6,
+      "years": 10
+    },
+    {
+      "month": 12,
+      "average_mm": 65.1,
+      "years": 10
+    }
+  ],
+  "trend": {
+    "slope_mm_per_year": -12.75,
+    "direction": "decreasing",
+    "forecast_years": [
+      {
+        "year": 2026,
+        "projected_mm": 1477
+      },
+      {
+        "year": 2030,
+        "projected_mm": 1425.9
+      },
+      {
+        "year": 2035,
+        "projected_mm": 1362.2
+      }
+    ]
+  }
+}

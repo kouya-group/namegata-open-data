@@ -1,0 +1,355 @@
+---
+import { buildBasePath } from '../utils/base-path';
+import precipData from '../data/precipitation.json';
+import precipEvidence from '../data/evidence/precipitation-history.evidence.json';
+
+const chartJsUrl = buildBasePath(import.meta.env.BASE_URL, 'chart.min.js');
+
+const { yearly, monthNormals, trend, period } = precipData;
+const avgAnnual = yearly.length > 0
+  ? Math.round(yearly.reduce((s, d) => s + d.precipitation_mm, 0) / yearly.length)
+  : 0;
+const maxYear = yearly.reduce((max, d) => d.precipitation_mm > max.precipitation_mm ? d : max, yearly[0]);
+const minYear = yearly.reduce((min, d) => d.precipitation_mm < min.precipitation_mm ? d : min, yearly[0]);
+const wetMonth = monthNormals.reduce((max, d) => d.average_mm > max.average_mm ? d : max, monthNormals[0]);
+const dryMonth = monthNormals.reduce((min, d) => d.average_mm < min.average_mm ? d : min, monthNormals[0]);
+
+const MONTH_NAMES = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
+const trendLabel = trend.direction === 'increasing' ? '増加傾向'
+  : trend.direction === 'decreasing' ? '減少傾向' : '横ばい';
+const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
+---
+
+<section class="section precip-section">
+  <div class="container">
+    <div class="precip-header">
+      <h2 class="precip-title">PRECIPITATION ANALYSIS</h2>
+      <p class="precip-sub">行方市 {period.years}年間降水量実績とトレンド分析</p>
+    </div>
+
+    <div class="precip-summary card">
+      <div class="summary-grid">
+        <div>
+          <span class="label">分析期間</span>
+          <strong>{yearly[0]?.year}〜{yearly[yearly.length - 1]?.year}年</strong>
+        </div>
+        <div>
+          <span class="label">年平均降水量</span>
+          <strong>{avgAnnual.toLocaleString('ja-JP')} mm</strong>
+        </div>
+        <div>
+          <span class="label">最多年</span>
+          <strong>{maxYear?.year}年 ({maxYear?.precipitation_mm.toLocaleString('ja-JP')} mm)</strong>
+        </div>
+        <div>
+          <span class="label">最少年</span>
+          <strong>{minYear?.year}年 ({minYear?.precipitation_mm.toLocaleString('ja-JP')} mm)</strong>
+        </div>
+        <div>
+          <span class="label">最多雨月</span>
+          <strong>{MONTH_NAMES[wetMonth.month - 1]} (平均{wetMonth.average_mm} mm)</strong>
+        </div>
+        <div>
+          <span class="label">最少雨月</span>
+          <strong>{MONTH_NAMES[dryMonth.month - 1]} (平均{dryMonth.average_mm} mm)</strong>
+        </div>
+        <div>
+          <span class="label">長期トレンド</span>
+          <strong class={trend.direction === 'decreasing' ? 'text-orange' : trend.direction === 'increasing' ? 'text-blue' : ''}>
+            {trendLabel} ({trendSign}{trend.slope_mm_per_year} mm/年)
+          </strong>
+        </div>
+        <div>
+          <span class="label">{trend.forecast_years[1]?.year}年推計</span>
+          <strong>{trend.forecast_years[1]?.projected_mm.toLocaleString('ja-JP')} mm</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="precip-charts">
+      <div class="card chart-panel">
+        <h3>年間降水量推移とトレンド</h3>
+        <div class="chart-wrap">
+          <canvas id="yearly-precip-chart"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-panel">
+        <h3>月別平年値（{period.years}年平均）</h3>
+        <div class="chart-wrap">
+          <canvas id="monthly-normal-chart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <details class="card precip-method" open>
+      <summary>分析手法・出典</summary>
+      <dl>
+        <dt>データソース</dt>
+        <dd>
+          <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo Archive API</a>
+          (CC BY 4.0) / 元データ: ERA5 再解析データ (ECMWF / Copernicus Climate Change Service)
+        </dd>
+
+        <dt>観測地点</dt>
+        <dd>行方市中心部 (北緯{precipData.location.latitude}度, 東経{precipData.location.longitude}度)</dd>
+
+        <dt>分析期間</dt>
+        <dd>{period.start} 〜 {period.end}（{period.years}年間 / 日別データ {precipEvidence.integrity?.daily_records?.toLocaleString('ja-JP')} 件）</dd>
+
+        <dt>集計方法</dt>
+        <dd>日別降水量 (mm) を月別・年別に合算。月別平年値は同月の{period.years}年間平均値。</dd>
+
+        <dt>トレンド推定</dt>
+        <dd>
+          年別降水量に対する最小二乗法（単回帰: y = ax + b）による線形回帰。
+          傾き a = {trend.slope_mm_per_year} mm/年。
+          将来推計は回帰直線の外挿であり、気候変動シナリオや極端現象を考慮していません。参考値としてご利用ください。
+        </dd>
+
+        <dt>SHA-256</dt>
+        <dd class="mono">{precipEvidence.integrity?.sha256 ?? '-'}</dd>
+
+        <dt>取得日時</dt>
+        <dd>{precipEvidence.acquisition?.timestamp ?? '-'}</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<script is:inline src={chartJsUrl}></script>
+<script is:inline define:vars={{ yearly, monthNormals, trend, MONTH_NAMES }}>
+  if (typeof Chart !== 'undefined') {
+    Chart.defaults.color = '#9898a8';
+    Chart.defaults.borderColor = '#1e1e2e';
+    Chart.defaults.font.family = 'JetBrains Mono, monospace';
+    Chart.defaults.font.size = 11;
+
+    const yearlyCtx = document.getElementById('yearly-precip-chart');
+    if (yearlyCtx) {
+      const years = yearly.map(d => d.year);
+      const values = yearly.map(d => d.precipitation_mm);
+
+      const trendLine = years.map(y => trend.slope_mm_per_year * y +
+        (yearly.reduce((s, d) => s + d.precipitation_mm, 0) / yearly.length -
+         trend.slope_mm_per_year * yearly.reduce((s, d) => s + d.year, 0) / yearly.length));
+
+      const forecastYears = trend.forecast_years.map(f => f.year);
+      const forecastValues = trend.forecast_years.map(f => f.projected_mm);
+      const allYears = [...years, ...forecastYears];
+      const allTrend = [...trendLine, ...forecastValues];
+
+      new Chart(yearlyCtx, {
+        type: 'bar',
+        data: {
+          labels: allYears,
+          datasets: [
+            {
+              label: '実績 (mm)',
+              data: [...values, ...forecastYears.map(() => null)],
+              backgroundColor: 'rgba(59, 130, 246, 0.6)',
+              borderWidth: 0,
+              borderRadius: 3,
+              order: 2,
+            },
+            {
+              label: '推計 (mm)',
+              data: [...years.map(() => null), ...forecastValues],
+              backgroundColor: 'rgba(59, 130, 246, 0.25)',
+              borderWidth: 1,
+              borderColor: 'rgba(59, 130, 246, 0.4)',
+              borderDash: [4, 4],
+              borderRadius: 3,
+              order: 3,
+            },
+            {
+              label: 'トレンド (線形回帰)',
+              data: allTrend,
+              type: 'line',
+              borderColor: 'rgba(249, 115, 22, 0.8)',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 0,
+              tension: 0,
+              order: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom',
+              labels: { boxWidth: 10, padding: 8, font: { size: 10 } },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: false,
+              title: { display: true, text: 'mm', font: { size: 9 }, color: '#5a5a6e' },
+              grid: { color: '#1e1e2e' },
+            },
+            x: {
+              grid: { display: false },
+              ticks: { font: { size: 9 } },
+            },
+          },
+        },
+      });
+    }
+
+    const monthlyCtx = document.getElementById('monthly-normal-chart');
+    if (monthlyCtx) {
+      new Chart(monthlyCtx, {
+        type: 'bar',
+        data: {
+          labels: MONTH_NAMES,
+          datasets: [{
+            label: '平年値 (mm)',
+            data: monthNormals.map(d => d.average_mm),
+            backgroundColor: monthNormals.map((d, i) =>
+              (i >= 5 && i <= 8) ? 'rgba(59, 130, 246, 0.7)' : 'rgba(59, 130, 246, 0.4)'
+            ),
+            borderWidth: 0,
+            borderRadius: 3,
+          }],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: 'mm', font: { size: 9 }, color: '#5a5a6e' },
+              grid: { color: '#1e1e2e' },
+            },
+            x: { grid: { display: false } },
+          },
+        },
+      });
+    }
+  }
+</script>
+
+<style>
+  .precip-section {
+    padding: 3rem 0;
+  }
+
+  .precip-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .precip-title {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--accent-blue);
+  }
+
+  .precip-sub {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    margin-top: 0.3rem;
+  }
+
+  .precip-summary {
+    margin-bottom: 1rem;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .summary-grid div {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .summary-grid .label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+
+  .summary-grid strong {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-primary);
+  }
+
+  .text-orange { color: var(--accent-orange); }
+  .text-blue { color: var(--accent-blue); }
+
+  .precip-charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .chart-panel h3 {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+  }
+
+  .chart-wrap {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .precip-method summary {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    list-style: none;
+  }
+
+  .precip-method summary::-webkit-details-marker { display: none; }
+  .precip-method summary::before { content: '▸'; margin-right: 0.3rem; color: var(--accent-green); }
+  .precip-method[open] summary::before { content: '▾'; }
+
+  .precip-method dl {
+    margin-top: 0.8rem;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0.4rem 0.8rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+  }
+
+  .precip-method dt {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+  }
+
+  .precip-method dd {
+    color: var(--text-secondary);
+    word-break: break-all;
+  }
+
+  .precip-method dd a { color: var(--text-secondary); }
+  .precip-method .mono { font-family: var(--font-mono); font-size: 0.65rem; }
+
+  @media (max-width: 768px) {
+    .precip-charts {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

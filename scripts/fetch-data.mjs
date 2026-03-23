@@ -625,6 +625,141 @@ async function main() {
   });
 
   console.log(`\nGenerated ${datasetSummaries.length} datasets (${datasetSummaries.filter(dataset => dataset.status === 'available').length} available).`);
+
+  await fetchPrecipitationHistory();
+}
+
+async function fetchPrecipitationHistory() {
+  const LAT = 36.08;
+  const LON = 140.48;
+  const endYear = new Date().getFullYear() - 1;
+  const startYear = endYear - 9;
+  const startDate = `${startYear}-01-01`;
+  const endDate = `${endYear}-12-31`;
+  const apiUrl = `https://archive-api.open-meteo.com/v1/archive?latitude=${LAT}&longitude=${LON}&start_date=${startDate}&end_date=${endDate}&daily=precipitation_sum&timezone=Asia%2FTokyo`;
+
+  const label = `precipitation-history (${startYear}-${endYear})`;
+
+  try {
+    const acquiredAt = new Date().toISOString();
+    const response = await fetch(apiUrl, {
+      headers: { 'user-agent': AGENT },
+      signal: AbortSignal.timeout(60_000),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const raw = await response.json();
+    const rawStr = JSON.stringify(raw);
+    const sha256 = createHash('sha256').update(rawStr).digest('hex');
+
+    const times = raw.daily.time;
+    const precipValues = raw.daily.precipitation_sum;
+
+    const monthlyMap = new Map();
+    for (let i = 0; i < times.length; i += 1) {
+      const key = times[i].slice(0, 7);
+      if (!monthlyMap.has(key)) {
+        monthlyMap.set(key, { total: 0, days: 0 });
+      }
+      const entry = monthlyMap.get(key);
+      entry.total += precipValues[i] ?? 0;
+      entry.days += 1;
+    }
+
+    const monthly = Array.from(monthlyMap.entries())
+      .map(([month, data]) => ({
+        month,
+        year: Number(month.slice(0, 4)),
+        monthNum: Number(month.slice(5, 7)),
+        precipitation_mm: Math.round(data.total * 10) / 10,
+        days: data.days,
+      }))
+      .sort((a, b) => a.month.localeCompare(b.month));
+
+    const yearlyMap = new Map();
+    for (const m of monthly) {
+      if (!yearlyMap.has(m.year)) {
+        yearlyMap.set(m.year, 0);
+      }
+      yearlyMap.set(m.year, yearlyMap.get(m.year) + m.precipitation_mm);
+    }
+
+    const yearly = Array.from(yearlyMap.entries())
+      .map(([year, total]) => ({ year, precipitation_mm: Math.round(total * 10) / 10 }))
+      .sort((a, b) => a.year - b.year);
+
+    const monthNormals = Array.from({ length: 12 }, (_, i) => {
+      const monthNum = i + 1;
+      const values = monthly.filter(m => m.monthNum === monthNum).map(m => m.precipitation_mm);
+      const avg = values.length > 0 ? values.reduce((s, v) => s + v, 0) / values.length : 0;
+      return { month: monthNum, average_mm: Math.round(avg * 10) / 10, years: values.length };
+    });
+
+    const n = yearly.length;
+    const sumX = yearly.reduce((s, d) => s + d.year, 0);
+    const sumY = yearly.reduce((s, d) => s + d.precipitation_mm, 0);
+    const sumXY = yearly.reduce((s, d) => s + d.year * d.precipitation_mm, 0);
+    const sumX2 = yearly.reduce((s, d) => s + d.year * d.year, 0);
+    const slope = n > 1 ? (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX) : 0;
+    const intercept = n > 0 ? (sumY - slope * sumX) / n : 0;
+
+    const trend = {
+      slope_mm_per_year: Math.round(slope * 100) / 100,
+      direction: slope > 1 ? 'increasing' : slope < -1 ? 'decreasing' : 'stable',
+      forecast_years: [endYear + 1, endYear + 5, endYear + 10].map(y => ({
+        year: y,
+        projected_mm: Math.round((slope * y + intercept) * 10) / 10,
+      })),
+    };
+
+    const processed = {
+      location: { name: '行方市', latitude: LAT, longitude: LON },
+      period: { start: startDate, end: endDate, years: n },
+      monthly,
+      yearly,
+      monthNormals,
+      trend,
+    };
+
+    const precipDir = path.join(rootDir, 'src', 'data');
+    await writeJson(path.join(precipDir, 'precipitation.json'), processed);
+
+    const evidence = {
+      dataset_id: 'precipitation-history',
+      title: `降水量実績 (${startYear}-${endYear})`,
+      source: {
+        url: apiUrl,
+        publisher: 'Open-Meteo Archive API',
+        license: 'CC BY 4.0',
+        original_source: 'ERA5 (ECMWF / Copernicus Climate Change Service)',
+      },
+      acquisition: {
+        timestamp: acquiredAt,
+        method: 'HTTP GET (fetch)',
+        agent: AGENT,
+      },
+      integrity: {
+        sha256,
+        daily_records: times.length,
+        monthly_records: monthly.length,
+        yearly_records: yearly.length,
+      },
+      analysis: {
+        description: '日別降水量を月別・年別に集計。月別平年値（10年平均）と線形回帰によるトレンド推定を実施。',
+        trend_slope: `${trend.slope_mm_per_year} mm/年`,
+        trend_direction: trend.direction,
+      },
+    };
+
+    await writeJson(path.join(evidenceDir, 'precipitation-history.evidence.json'), evidence);
+    console.log(`OK  ${label}: ${monthly.length} months, trend ${trend.slope_mm_per_year} mm/yr`);
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.warn(`NG  ${label}: ${errorMessage}`);
+  }
 }
 
 main().catch(error => {
