@@ -1,0 +1,101 @@
+{
+  "city": {
+    "name": "行方市",
+    "name_en": "Namegata",
+    "code": "08233",
+    "prefecture": "茨城県"
+  },
+  "current_stats": {
+    "area_km2": 222.48,
+    "population": 29161,
+    "population_date": "2026-01-01",
+    "population_density": 131.1,
+    "households": 11289,
+    "age_under_15_pct": 8.6,
+    "age_15_64_pct": 52.1,
+    "age_65_over_pct": 39.4,
+    "industry_primary_pct": 22.44,
+    "industry_secondary_pct": 28.43,
+    "industry_tertiary_pct": 49.13,
+    "births": 108,
+    "deaths": 593,
+    "births_deaths_year": 2023,
+    "municipal_income_million_yen": 111734,
+    "per_capita_income_thousand_yen": 3608,
+    "per_capita_income_year": 2022,
+    "fiscal_strength_index": 0.44,
+    "land_use": {
+      "agriculture_pct": 33.6,
+      "residential_pct": 6.1,
+      "forest_pct": 19.5,
+      "other_pct": 40.8,
+      "date": "2024-01-01"
+    },
+    "water_supply_pct": 93.3,
+    "sewage_pct": 67.6,
+    "doctors_per_100k": 58.1
+  },
+  "population_projection": {
+    "source": "国立社会保障・人口問題研究所「日本の地域別将来推計人口（令和5年推計）」",
+    "base_year": 2020,
+    "base_population": 32185,
+    "projections": [
+      {
+        "year": 2020,
+        "total": 32185,
+        "male": 15971,
+        "female": 16214,
+        "change_from_2020_pct": 0.0,
+        "is_actual": true
+      },
+      {
+        "year": 2025,
+        "total": 29644,
+        "male": 14761,
+        "female": 14883,
+        "change_from_2020_pct": -7.9,
+        "is_actual": false
+      },
+      {
+        "year": 2030,
+        "total": 27142,
+        "male": 13528,
+        "female": 13614,
+        "change_from_2020_pct": -15.7,
+        "is_actual": false
+      },
+      {
+        "year": 2035,
+        "total": 24706,
+        "male": 12291,
+        "female": 12415,
+        "change_from_2020_pct": -23.2,
+        "is_actual": false
+      },
+      {
+        "year": 2040,
+        "total": 22321,
+        "male": 11067,
+        "female": 11254,
+        "change_from_2020_pct": -30.6,
+        "is_actual": false
+      },
+      {
+        "year": 2045,
+        "total": 19957,
+        "male": 9882,
+        "female": 10075,
+        "change_from_2020_pct": -38.0,
+        "is_actual": false
+      },
+      {
+        "year": 2050,
+        "total": 17726,
+        "male": 8801,
+        "female": 8925,
+        "change_from_2020_pct": -44.9,
+        "is_actual": false
+      }
+    ]
+  }
+}

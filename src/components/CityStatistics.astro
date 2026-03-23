@@ -1,0 +1,290 @@
+---
+import { buildBasePath } from '../utils/base-path';
+import cityData from '../data/city-statistics.json';
+import evidence from '../data/evidence/city-statistics.evidence.json';
+
+const chartJsUrl = buildBasePath(import.meta.env.BASE_URL, 'chart.min.js');
+
+const { current_stats: stats, population_projection: projection } = cityData;
+const projections = projection.projections;
+
+const naturalDecrease = stats.deaths - stats.births;
+---
+
+<section class="section city-stats-section">
+  <div class="container">
+    <div class="stats-header">
+      <h2 class="stats-title">CITY STATISTICS</h2>
+      <p class="stats-sub">行方市の現況と将来推計</p>
+    </div>
+
+    <div class="stats-grid card">
+      <h3>現況指標</h3>
+      <div class="indicator-grid">
+        <div>
+          <span class="label">人口</span>
+          <strong>{stats.population.toLocaleString('ja-JP')} 人</strong>
+          <span class="sub">({stats.population_date})</span>
+        </div>
+        <div>
+          <span class="label">世帯数</span>
+          <strong>{stats.households.toLocaleString('ja-JP')}</strong>
+        </div>
+        <div>
+          <span class="label">高齢化率</span>
+          <strong class="text-orange">{stats.age_65_over_pct}%</strong>
+        </div>
+        <div>
+          <span class="label">年少人口率</span>
+          <strong>{stats.age_under_15_pct}%</strong>
+        </div>
+        <div>
+          <span class="label">自然減（年間）</span>
+          <strong class="text-orange">-{naturalDecrease} 人</strong>
+          <span class="sub">(出生{stats.births} / 死亡{stats.deaths}, {stats.births_deaths_year}年)</span>
+        </div>
+        <div>
+          <span class="label">1人当たり所得</span>
+          <strong>{(stats.per_capita_income_thousand_yen / 1000).toFixed(1)} 百万円</strong>
+          <span class="sub">({stats.per_capita_income_year}年度)</span>
+        </div>
+        <div>
+          <span class="label">財政力指数</span>
+          <strong>{stats.fiscal_strength_index}</strong>
+        </div>
+        <div>
+          <span class="label">第1次産業</span>
+          <strong>{stats.industry_primary_pct}%</strong>
+          <span class="sub">(全国平均の約6倍)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="projection-section">
+      <div class="card chart-panel">
+        <h3>将来推計人口（社人研 2023年推計）</h3>
+        <div class="chart-wrap">
+          <canvas id="population-projection-chart"></canvas>
+        </div>
+      </div>
+
+      <div class="card projection-table-card">
+        <h3>推計値一覧</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>年</th>
+                <th>総人口</th>
+                <th>男性</th>
+                <th>女性</th>
+                <th>2020年比</th>
+              </tr>
+            </thead>
+            <tbody>
+              {projections.map(p => (
+                <tr class={p.is_actual ? 'actual-row' : ''}>
+                  <td>{p.year}{p.is_actual ? ' (実績)' : ''}</td>
+                  <td>{p.total.toLocaleString('ja-JP')}</td>
+                  <td>{p.male.toLocaleString('ja-JP')}</td>
+                  <td>{p.female.toLocaleString('ja-JP')}</td>
+                  <td class={p.change_from_2020_pct < 0 ? 'text-orange' : ''}>{p.change_from_2020_pct > 0 ? '+' : ''}{p.change_from_2020_pct}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="land-use-row">
+      <div class="card chart-panel">
+        <h3>土地利用構成</h3>
+        <div class="chart-wrap chart-wrap-small">
+          <canvas id="land-use-chart"></canvas>
+        </div>
+      </div>
+      <div class="card chart-panel">
+        <h3>産業別就業構成（2020年）</h3>
+        <div class="chart-wrap chart-wrap-small">
+          <canvas id="industry-chart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <details class="card evidence-section">
+      <summary>出典・エビデンス</summary>
+      <dl>
+        {evidence.sources.map(src => (
+          <>
+            <dt>{src.id}</dt>
+            <dd>
+              {src.title} / {src.publisher}<br/>
+              <a href={src.url} target="_blank" rel="noopener">{src.url}</a><br/>
+              ライセンス: {src.license}
+            </dd>
+          </>
+        ))}
+        <dt>注記</dt>
+        <dd>{evidence.notes}</dd>
+        <dt>取得日時</dt>
+        <dd>{evidence.acquisition.timestamp}</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<script is:inline src={chartJsUrl}></script>
+<script is:inline define:vars={{ projections, stats }}>
+  if (typeof Chart !== 'undefined') {
+    Chart.defaults.color = '#9898a8';
+    Chart.defaults.borderColor = '#1e1e2e';
+    Chart.defaults.font.family = 'JetBrains Mono, monospace';
+    Chart.defaults.font.size = 11;
+
+    const projCtx = document.getElementById('population-projection-chart');
+    if (projCtx) {
+      const actuals = projections.filter(p => p.is_actual);
+      const forecasts = projections.filter(p => !p.is_actual);
+      new Chart(projCtx, {
+        type: 'bar',
+        data: {
+          labels: projections.map(p => p.year + '年'),
+          datasets: [
+            {
+              label: '実績',
+              data: projections.map(p => p.is_actual ? p.total : null),
+              backgroundColor: 'rgba(59, 130, 246, 0.7)',
+              borderRadius: 3,
+              borderWidth: 0,
+            },
+            {
+              label: '推計',
+              data: projections.map(p => !p.is_actual ? p.total : null),
+              backgroundColor: 'rgba(249, 115, 22, 0.5)',
+              borderRadius: 3,
+              borderWidth: 1,
+              borderColor: 'rgba(249, 115, 22, 0.7)',
+              borderDash: [4, 4],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 8, font: { size: 10 } } },
+          },
+          scales: {
+            y: { beginAtZero: false, grid: { color: '#1e1e2e' }, title: { display: true, text: '人', font: { size: 9 }, color: '#5a5a6e' } },
+            x: { grid: { display: false } },
+          },
+        },
+      });
+    }
+
+    const landCtx = document.getElementById('land-use-chart');
+    if (landCtx) {
+      new Chart(landCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['農地', '山林', '宅地', 'その他'],
+          datasets: [{
+            data: [stats.land_use.agriculture_pct, stats.land_use.forest_pct, stats.land_use.residential_pct, stats.land_use.other_pct],
+            backgroundColor: ['#22c55e', '#15803d', '#3b82f6', '#6b7280'],
+            borderWidth: 0,
+          }],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 6, font: { size: 10 } } } },
+        },
+      });
+    }
+
+    const indCtx = document.getElementById('industry-chart');
+    if (indCtx) {
+      new Chart(indCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['第1次', '第2次', '第3次'],
+          datasets: [{
+            data: [stats.industry_primary_pct, stats.industry_secondary_pct, stats.industry_tertiary_pct],
+            backgroundColor: ['#22c55e', '#f97316', '#3b82f6'],
+            borderWidth: 0,
+          }],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 6, font: { size: 10 } } } },
+        },
+      });
+    }
+  }
+</script>
+
+<style>
+  .city-stats-section { padding: 3rem 0; }
+
+  .stats-header { text-align: center; margin-bottom: 1.5rem; }
+
+  .stats-title {
+    font-family: var(--font-mono);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 700; letter-spacing: 0.15em;
+    color: var(--accent-green);
+  }
+
+  .stats-sub { color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.3rem; }
+
+  .stats-grid { margin-bottom: 1rem; }
+  .stats-grid h3 { font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-secondary); margin-bottom: 0.7rem; }
+
+  .indicator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+    gap: 0.6rem;
+  }
+
+  .indicator-grid div {
+    background: var(--bg-base); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.5rem 0.65rem;
+    display: flex; flex-direction: column; gap: 0.1rem;
+  }
+
+  .indicator-grid .label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.08em; color: var(--text-dim); }
+  .indicator-grid strong { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-primary); }
+  .indicator-grid .sub { font-family: var(--font-mono); font-size: 0.55rem; color: var(--text-dim); }
+  .text-orange { color: var(--accent-orange); }
+
+  .projection-section { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1rem; margin-bottom: 1rem; }
+
+  .chart-panel h3 { font-size: 0.78rem; font-family: var(--font-mono); margin-bottom: 0.5rem; color: var(--text-secondary); }
+  .chart-wrap { position: relative; width: 100%; max-height: 300px; }
+  .chart-wrap-small { max-height: 220px; }
+
+  .projection-table-card { overflow: auto; }
+  .projection-table-card h3 { font-size: 0.78rem; font-family: var(--font-mono); margin-bottom: 0.5rem; color: var(--text-secondary); }
+
+  .table-wrap { overflow-x: auto; }
+  .table-wrap table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.7rem; }
+  .table-wrap th { color: var(--text-dim); font-weight: 400; text-align: right; padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); }
+  .table-wrap td { text-align: right; padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+  .table-wrap .actual-row td { color: var(--accent-blue); font-weight: 600; }
+
+  .land-use-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+  .evidence-section summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); list-style: none; }
+  .evidence-section summary::-webkit-details-marker { display: none; }
+  .evidence-section summary::before { content: '▸'; margin-right: 0.3rem; color: var(--accent-green); }
+  .evidence-section[open] summary::before { content: '▾'; }
+  .evidence-section dl { margin-top: 0.8rem; display: grid; grid-template-columns: 100px 1fr; gap: 0.4rem 0.8rem; font-size: 0.7rem; line-height: 1.6; }
+  .evidence-section dt { color: var(--text-dim); font-family: var(--font-mono); }
+  .evidence-section dd { color: var(--text-secondary); word-break: break-all; }
+  .evidence-section dd a { color: var(--text-secondary); }
+
+  @media (max-width: 768px) {
+    .projection-section { grid-template-columns: 1fr; }
+    .land-use-row { grid-template-columns: 1fr; }
+    .evidence-section dl { grid-template-columns: 1fr; }
+  }
+</style>

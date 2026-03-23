@@ -5,17 +5,54 @@ import Hero from '../components/Hero.astro';
 import StatsBar from '../components/StatsBar.astro';
 import DatasetGrid from '../components/DatasetGrid.astro';
 import PrecipitationTrend from '../components/PrecipitationTrend.astro';
+import CityStatistics from '../components/CityStatistics.astro';
 import CityInfo from '../components/CityInfo.astro';
 import UsageGuide from '../components/UsageGuide.astro';
 import Footer from '../components/Footer.astro';
+
+/**
+ * セクション並び順を季節・時期で動的に決定（ビルド時評価）
+ *
+ * 基本方針:
+ * - 梅雨・台風期(6-10月) → 降水量トレンドを上に
+ * - 年度替わり(3-4月) → 人口統計を上に
+ * - それ以外 → データセット一覧を上に（汎用）
+ */
+const month = new Date().getMonth() + 1; // 1-12
+
+type SectionId = 'datasets' | 'precipitation' | 'city-statistics';
+
+let sectionOrder: SectionId[];
+
+if (month >= 6 && month <= 10) {
+  // 梅雨〜台風期: 降水量が関心事
+  sectionOrder = ['precipitation', 'datasets', 'city-statistics'];
+} else if (month >= 3 && month <= 4) {
+  // 年度替わり: 人口・統計が関心事
+  sectionOrder = ['city-statistics', 'datasets', 'precipitation'];
+} else {
+  // 通常期: データセット一覧優先
+  sectionOrder = ['datasets', 'city-statistics', 'precipitation'];
+}
+
+const SECTIONS: Record<SectionId, string> = {
+  'datasets': 'DatasetGrid',
+  'precipitation': 'PrecipitationTrend',
+  'city-statistics': 'CityStatistics',
+};
 ---
 
 <Layout title="NAMEGATA OPEN DATA — 行方市オープンデータポータル">
   <Nav />
   <Hero />
   <StatsBar />
-  <PrecipitationTrend />
-  <DatasetGrid />
+
+  {sectionOrder.map(id => (
+    id === 'datasets' ? <DatasetGrid /> :
+    id === 'precipitation' ? <PrecipitationTrend /> :
+    id === 'city-statistics' ? <CityStatistics /> : null
+  ))}
+
   <CityInfo />
   <UsageGuide />
   <Footer />
