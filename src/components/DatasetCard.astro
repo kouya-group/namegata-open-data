@@ -62,7 +62,11 @@ const detailUrl = sourcePageUrl ?? url;
 const pageUrl = buildBasePath(import.meta.env.BASE_URL, `datasets/${id}/`);
 ---
 
-<article class={`dataset-card card ${status !== 'available' ? 'is-unavailable' : ''}`}>
+<article
+  class={`dataset-card card ${status !== 'available' ? 'is-unavailable' : ''}`}
+  data-category={categoryEn}
+  data-search-text={`${title} ${titleEn} ${description} ${categoryEn}`.toLowerCase()}
+>
   <div class="card-header">
     <span class="card-icon">{icon}</span>
     <span class="card-category">{categoryEn}</span>

@@ -190,8 +190,10 @@ const fmtDecimal = (value: number | null, digits = 1) => {
 const basePath = normalizeBasePath(import.meta.env.BASE_URL);
 const homeUrl = buildBasePath(basePath, '#datasets');
 const localSnapshotUrl = buildBasePath(basePath, `data/raw/${dataset.id}.csv`);
+const processedJsonUrl = buildBasePath(basePath, `data/processed/${dataset.id}.json`);
 const leafletJsUrl = buildBasePath(basePath, 'leaflet.js');
 const leafletCssUrl = buildBasePath(basePath, 'leaflet.css');
+const chartJsUrl = buildBasePath(basePath, 'chart.min.js');
 
 const evidenceSourceUrl = evidence?.source?.url ?? dataset.url;
 const evidencePageUrl = evidence?.source?.detail_page_url ?? dataset.sourcePageUrl;
@@ -429,6 +431,8 @@ const maxRegionPopulation = Math.max(...topRegionPopulationRows.map(row => row.t
 const smallestRegionsLabel = smallestRegionPopulationRows
   .map(row => `${row.name} (${row.total.toLocaleString('ja-JP')}人)`)
   .join(' / ');
+
+const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.length > 0);
 ---
 
 <Layout title={`${dataset.title} | NAMEGATA OPEN DATA`}>
@@ -473,6 +477,8 @@ const smallestRegionsLabel = smallestRegionPopulationRows
           <a href={localSnapshotUrl} class="btn-link">このサイトのCSVスナップショット</a>
           <a href={dataset.url} target="_blank" rel="noopener" class="btn-link">市公式CSV</a>
           <a href={dataset.sourcePageUrl} target="_blank" rel="noopener" class="btn-link">市公式詳細ページ</a>
+          <a href={localSnapshotUrl} download class="btn-link btn-download">CSV DL</a>
+          <a href={processedJsonUrl} download class="btn-link btn-download">JSON DL</a>
         </div>
       </header>
 
@@ -498,20 +504,25 @@ const smallestRegionsLabel = smallestRegionPopulationRows
             {hasCategoryChart ? (
               <div class="category-card">
                 <h3>{categoryHeader} 分布</h3>
-                <div class="category-bars">
-                  {categoryDistribution.map(item => (
-                    <div class="category-row">
-                      <span class="category-label">{item.label}</span>
-                      <div class="category-track">
-                        <div
-                          class="category-fill"
-                          style={`width: ${(item.count / (maxCategoryCount || 1)) * 100}%`}
-                        ></div>
-                      </div>
-                      <span class="category-count">{item.count}</span>
-                    </div>
-                  ))}
+                <div class="chart-canvas-wrap">
+                  <canvas id="category-chart"></canvas>
                 </div>
+                <noscript>
+                  <div class="category-bars">
+                    {categoryDistribution.map(item => (
+                      <div class="category-row">
+                        <span class="category-label">{item.label}</span>
+                        <div class="category-track">
+                          <div
+                            class="category-fill"
+                            style={`width: ${(item.count / (maxCategoryCount || 1)) * 100}%`}
+                          ></div>
+                        </div>
+                        <span class="category-count">{item.count}</span>
+                      </div>
+                    ))}
+                  </div>
+                </noscript>
                 {hiddenCategoryCount > 0 ? (
                   <p class="category-note">他 {hiddenCategoryCount} 種類は省略しています。</p>
                 ) : null}
@@ -614,20 +625,25 @@ const smallestRegionsLabel = smallestRegionPopulationRows
           </dl>
 
           <h3 class="chart-subtitle">年齢階層別人口（男女計）</h3>
-          <div class="bar-chart">
-            {ageDistribution.map(item => (
-              <div class="bar-row">
-                <span class="bar-label">{item.label}</span>
-                <div class="bar-track">
-                  <div
-                    class="bar-fill"
-                    style={`width: ${(item.total / (maxAgePopulation || 1)) * 100}%`}
-                  ></div>
-                </div>
-                <span class="bar-value">{item.total.toLocaleString('ja-JP')}</span>
-              </div>
-            ))}
+          <div class="chart-canvas-wrap chart-canvas-wide">
+            <canvas id="age-chart"></canvas>
           </div>
+          <noscript>
+            <div class="bar-chart">
+              {ageDistribution.map(item => (
+                <div class="bar-row">
+                  <span class="bar-label">{item.label}</span>
+                  <div class="bar-track">
+                    <div
+                      class="bar-fill"
+                      style={`width: ${(item.total / (maxAgePopulation || 1)) * 100}%`}
+                    ></div>
+                  </div>
+                  <span class="bar-value">{item.total.toLocaleString('ja-JP')}</span>
+                </div>
+              ))}
+            </div>
+          </noscript>
 
           <h3 class="chart-subtitle">年齢階層別内訳（男性 / 女性）</h3>
           <div class="table-wrap compact-table-wrap">
@@ -658,20 +674,25 @@ const smallestRegionsLabel = smallestRegionPopulationRows
           {topRegionPopulationRows.length > 0 ? (
             <>
               <h3 class="chart-subtitle">地域別人口（上位 {topRegionPopulationRows.length}）</h3>
-              <div class="bar-chart region-bar-chart">
-                {topRegionPopulationRows.map(row => (
-                  <div class="bar-row region-bar-row">
-                    <span class="bar-label region-label" title={row.name}>{row.name}</span>
-                    <div class="bar-track">
-                      <div
-                        class="bar-fill"
-                        style={`width: ${(row.total / (maxRegionPopulation || 1)) * 100}%`}
-                      ></div>
-                    </div>
-                    <span class="bar-value">{row.total.toLocaleString('ja-JP')} 人</span>
-                  </div>
-                ))}
+              <div class="chart-canvas-wrap chart-canvas-wide">
+                <canvas id="region-chart"></canvas>
               </div>
+              <noscript>
+                <div class="bar-chart region-bar-chart">
+                  {topRegionPopulationRows.map(row => (
+                    <div class="bar-row region-bar-row">
+                      <span class="bar-label region-label" title={row.name}>{row.name}</span>
+                      <div class="bar-track">
+                        <div
+                          class="bar-fill"
+                          style={`width: ${(row.total / (maxRegionPopulation || 1)) * 100}%`}
+                        ></div>
+                      </div>
+                      <span class="bar-value">{row.total.toLocaleString('ja-JP')} 人</span>
+                    </div>
+                  ))}
+                </div>
+              </noscript>
               {smallestRegionsLabel ? (
                 <p class="table-note">人口最少地域: {smallestRegionsLabel}</p>
               ) : null}
@@ -872,6 +893,124 @@ const smallestRegionsLabel = smallestRegionPopulationRows
     </>
   ) : null}
 
+  {hasCharts ? (
+    <>
+      <script is:inline src={chartJsUrl}></script>
+      <script is:inline define:vars={{
+        hasCategoryChart,
+        categoryDistribution,
+        isPopulationDataset,
+        ageDistribution,
+        ageSexDistribution,
+        topRegionPopulationRows,
+      }}>
+        const COLORS = {
+          blue: '#3b82f6',
+          green: '#22c55e',
+          orange: '#f97316',
+          blueAlpha: 'rgba(59, 130, 246, 0.7)',
+          greenAlpha: 'rgba(34, 197, 94, 0.7)',
+          orangeAlpha: 'rgba(249, 115, 22, 0.7)',
+          text: '#9898a8',
+          grid: '#1e1e2e',
+        };
+
+        const PALETTE = [
+          '#3b82f6', '#22c55e', '#f97316', '#a78bfa', '#f472b6',
+          '#facc15', '#2dd4bf', '#fb923c',
+        ];
+
+        if (typeof Chart !== 'undefined') {
+          Chart.defaults.color = COLORS.text;
+          Chart.defaults.borderColor = COLORS.grid;
+          Chart.defaults.font.family = 'JetBrains Mono, monospace';
+          Chart.defaults.font.size = 11;
+          Chart.defaults.plugins.legend.display = false;
+
+          if (hasCategoryChart) {
+            const ctx = document.getElementById('category-chart');
+            if (ctx) {
+              new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: categoryDistribution.map(d => d.label),
+                  datasets: [{
+                    data: categoryDistribution.map(d => d.count),
+                    backgroundColor: PALETTE.slice(0, categoryDistribution.length),
+                    borderWidth: 0,
+                  }],
+                },
+                options: {
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      display: true,
+                      position: 'bottom',
+                      labels: { boxWidth: 10, padding: 8, font: { size: 10 } },
+                    },
+                  },
+                },
+              });
+            }
+          }
+
+          if (isPopulationDataset && ageDistribution.length > 0) {
+            const ageCtx = document.getElementById('age-chart');
+            if (ageCtx) {
+              new Chart(ageCtx, {
+                type: 'bar',
+                data: {
+                  labels: ageDistribution.map(d => d.label),
+                  datasets: [{
+                    label: '人口',
+                    data: ageDistribution.map(d => d.total),
+                    backgroundColor: COLORS.blueAlpha,
+                    borderColor: COLORS.blue,
+                    borderWidth: 1,
+                    borderRadius: 3,
+                  }],
+                },
+                options: {
+                  responsive: true,
+                  scales: {
+                    y: { beginAtZero: true, grid: { color: COLORS.grid } },
+                    x: { grid: { display: false } },
+                  },
+                },
+              });
+            }
+
+            const regionCtx = document.getElementById('region-chart');
+            if (regionCtx && topRegionPopulationRows.length > 0) {
+              new Chart(regionCtx, {
+                type: 'bar',
+                data: {
+                  labels: topRegionPopulationRows.map(d => d.name),
+                  datasets: [{
+                    label: '人口',
+                    data: topRegionPopulationRows.map(d => d.total),
+                    backgroundColor: COLORS.greenAlpha,
+                    borderColor: COLORS.green,
+                    borderWidth: 1,
+                    borderRadius: 3,
+                  }],
+                },
+                options: {
+                  indexAxis: 'y',
+                  responsive: true,
+                  scales: {
+                    x: { beginAtZero: true, grid: { color: COLORS.grid } },
+                    y: { grid: { display: false } },
+                  },
+                },
+              });
+            }
+          }
+        }
+      </script>
+    </>
+  ) : null}
+
   <Footer />
 </Layout>
 
@@ -962,6 +1101,24 @@ const smallestRegionsLabel = smallestRegionPopulationRows
   .btn-link:hover {
     border-color: var(--border-hover);
     color: var(--text-primary);
+  }
+
+  .btn-download {
+    border-color: rgba(34, 197, 94, 0.4);
+    color: var(--accent-green);
+  }
+  .btn-download:hover {
+    background: rgba(34, 197, 94, 0.1);
+  }
+
+  .chart-canvas-wrap {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .chart-canvas-wide {
+    margin-top: 0.5rem;
+    max-height: 350px;
   }
 
   .warning-card h2 {

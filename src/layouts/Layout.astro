@@ -8,6 +8,8 @@ interface Props {
 
 const { title, description = '行方市のオープンデータを、誰もが使える形に' } = Astro.props;
 const faviconUrl = buildBasePath(import.meta.env.BASE_URL, 'favicon.svg');
+const manifestUrl = buildBasePath(import.meta.env.BASE_URL, 'manifest.json');
+const swUrl = buildBasePath(import.meta.env.BASE_URL, 'sw.js');
 ---
 
 <!doctype html>
@@ -21,11 +23,18 @@ const faviconUrl = buildBasePath(import.meta.env.BASE_URL, 'favicon.svg');
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="alternate" type="application/rss+xml" title="NAMEGATA OPEN DATA" href={buildBasePath(import.meta.env.BASE_URL, 'rss.xml')} />
+    <link rel="manifest" href={manifestUrl} />
     <slot name="head" />
     <title>{title}</title>
   </head>
   <body>
     <slot />
+    <script is:inline define:vars={{ swUrl }}>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(swUrl).catch(() => {});
+      }
+    </script>
   </body>
 </html>
 

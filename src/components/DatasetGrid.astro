@@ -1,29 +1,201 @@
 ---
 import DatasetCard from './DatasetCard.astro';
 import datasets from '../data/datasets.json';
+
+const categories = [...new Set(datasets.map(d => d.categoryEn))].sort();
 ---
 
-<section id="datasets" class="section">
+<section class="section" id="datasets">
   <div class="container">
-    <span class="section-label">// ACTIVE DATASETS</span>
-    <h2 class="section-title">公開データセット</h2>
-    <div class="grid">
-      {datasets.map(ds => (
-        <DatasetCard {...ds} />
+    <div class="section-header">
+      <h2 class="section-title">DATASETS</h2>
+      <p class="section-sub">公開中のデータセット一覧</p>
+    </div>
+
+    <div class="filter-bar">
+      <input
+        type="text"
+        id="dataset-search"
+        placeholder="データセットを検索..."
+        class="search-input"
+        autocomplete="off"
+      />
+      <div class="category-filters" id="category-filters">
+        <button class="filter-chip active" data-filter-category="ALL">ALL</button>
+        {categories.map(cat => (
+          <button class="filter-chip" data-filter-category={cat}>{cat}</button>
+        ))}
+      </div>
+      <p class="filter-count" id="filter-count"></p>
+    </div>
+
+    <div class="dataset-grid" id="dataset-grid">
+      {datasets.map(d => (
+        <DatasetCard {...d} />
       ))}
     </div>
+
+    <p class="no-results" id="no-results">該当するデータセットがありません</p>
   </div>
 </section>
 
+<script is:inline>
+  (() => {
+    const searchInput = document.getElementById('dataset-search');
+    const filterButtons = document.querySelectorAll('[data-filter-category]');
+    const grid = document.getElementById('dataset-grid');
+    const cards = grid.querySelectorAll('.dataset-card');
+    const noResults = document.getElementById('no-results');
+    const filterCount = document.getElementById('filter-count');
+
+    let activeCategory = 'ALL';
+    let searchText = '';
+    let debounceTimer;
+
+    function applyFilters() {
+      let visible = 0;
+
+      cards.forEach(card => {
+        const matchCategory = activeCategory === 'ALL' || card.dataset.category === activeCategory;
+        const matchSearch = !searchText || card.dataset.searchText.includes(searchText);
+        const show = matchCategory && matchSearch;
+
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+      filterCount.textContent = searchText || activeCategory !== 'ALL'
+        ? visible + ' / ' + cards.length + ' datasets'
+        : '';
+    }
+
+    searchInput.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        searchText = searchInput.value.toLowerCase();
+        applyFilters();
+      }, 150);
+    });
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.filterCategory;
+        applyFilters();
+      });
+    });
+  })();
+</script>
+
 <style>
-  .grid {
+  .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-family: var(--font-mono);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-sub {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  .filter-bar {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .search-input {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color 0.2s;
+  }
+
+  .search-input::placeholder {
+    color: var(--text-dim);
+  }
+
+  .search-input:focus {
+    border-color: var(--accent-blue);
+    outline: none;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.15);
+  }
+
+  .category-filters {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-chip {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.25rem 0.65rem;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+  }
+
+  .filter-chip.active {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.08);
+  }
+
+  .filter-count {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    min-height: 1em;
+  }
+
+  .dataset-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.25rem;
   }
 
-  @media (max-width: 480px) {
-    .grid {
+  .no-results {
+    display: none;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    padding: 3rem 0;
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 768px) {
+    .dataset-grid {
       grid-template-columns: 1fr;
     }
   }

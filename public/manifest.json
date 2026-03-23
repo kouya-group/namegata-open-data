@@ -1,0 +1,17 @@
+{
+  "name": "NAMEGATA OPEN DATA",
+  "short_name": "行方OD",
+  "description": "行方市のオープンデータを、誰もが使える形に",
+  "start_url": "/namegata-open-data/",
+  "scope": "/namegata-open-data/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "/namegata-open-data/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

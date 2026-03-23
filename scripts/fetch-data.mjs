@@ -196,6 +196,7 @@ const DATASET_SOURCES = [
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const rawDir = path.join(rootDir, 'public', 'data', 'raw');
 const processedDir = path.join(rootDir, 'src', 'data', 'processed');
+const publicProcessedDir = path.join(rootDir, 'public', 'data', 'processed');
 const evidenceDir = path.join(rootDir, 'src', 'data', 'evidence');
 const datasetsFile = path.join(rootDir, 'src', 'data', 'datasets.json');
 const evidenceIndexFile = path.join(evidenceDir, 'index.json');
@@ -205,6 +206,7 @@ async function ensureDirectories() {
     fs.mkdir(rawDir, { recursive: true }),
     fs.mkdir(processedDir, { recursive: true }),
     fs.mkdir(evidenceDir, { recursive: true }),
+    fs.mkdir(publicProcessedDir, { recursive: true }),
   ]);
 }
 
@@ -465,6 +467,19 @@ async function fetchDataset(source) {
     records,
   });
 
+  await writeJson(path.join(publicProcessedDir, `${source.id}.json`), {
+    datasetId: source.id,
+    title: source.title,
+    acquiredAt,
+    sourceUrl,
+    sourcePageUrl,
+    encoding,
+    headers,
+    rowCount,
+    columnCount,
+    records,
+  });
+
   const evidence = {
     dataset_id: source.id,
     title: source.title,
@@ -533,6 +548,7 @@ async function main() {
     clearDirectoryFiles(rawDir),
     clearDirectoryFiles(processedDir),
     clearDirectoryFiles(evidenceDir),
+    clearDirectoryFiles(publicProcessedDir),
   ]);
 
   const datasetSummaries = [];

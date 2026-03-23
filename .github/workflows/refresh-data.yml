@@ -52,3 +52,4 @@ jobs:
             src/data/processed/**
             src/data/evidence/**
             src/data/datasets.json
+            public/data/processed/**

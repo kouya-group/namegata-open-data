@@ -1,0 +1,13 @@
+{
+  "name": "namegata-open-data-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MCP server for Namegata Open Data - query datasets, processed data, and evidence",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
