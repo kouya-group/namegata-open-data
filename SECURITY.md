@@ -40,7 +40,24 @@
 ### 静的サイト配信
 
 - GitHub Pages による HTTPS 配信です
-- Leaflet ライブラリは CDN ではなく `public/` に同梱し、サプライチェーンリスクを軽減しています
+- Leaflet、Chart.js ライブラリは CDN ではなく `public/` に同梱し、サプライチェーンリスクを軽減しています
+
+### PWA / Service Worker
+
+- Service Worker (`public/sw.js`) はキャッシュの読み書きのみを行い、外部通信の改変は行いません
+- キャッシュ名にバージョン番号を含め、古いキャッシュは `activate` イベントで自動削除します
+
+### MCP Server
+
+- `mcp/index.mjs` はローカルファイルシステムからの読み取り専用です（書き込み操作なし）
+- データセット ID は正規表現 `/^[a-z0-9-]+$/` でバリデーションし、パストラバーサルを防止しています
+- stdio トランスポートのみ対応し、ネットワークリスニングは行いません
+
+### 外部 API 通信
+
+- 降水量データは Open-Meteo Archive API（パイプライン実行時のみ）から取得します
+- API キー不要、HTTPS 通信、タイムアウト 60 秒
+- 取得データは SHA-256 ハッシュ付きでエビデンスとして保存されます
 
 ## Reporting a Vulnerability
 

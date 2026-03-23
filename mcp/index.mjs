@@ -16,6 +16,15 @@ async function readJson(filePath) {
   return JSON.parse(content);
 }
 
+const VALID_ID_PATTERN = /^[a-z0-9-]+$/;
+
+function validateId(id) {
+  if (!id || typeof id !== 'string' || !VALID_ID_PATTERN.test(id)) {
+    throw new Error(`Invalid dataset ID: "${id}". IDs must contain only lowercase letters, numbers, and hyphens.`);
+  }
+  return id;
+}
+
 const server = new Server(
   { name: 'namegata-open-data', version: '0.1.0' },
   { capabilities: { tools: {} } },
@@ -121,7 +130,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           };
         }
 
-        const filePath = resolve(dataDir, 'processed', `${args.id}.json`);
+        const validId = validateId(args.id);
+        const filePath = resolve(dataDir, 'processed', `${validId}.json`);
         const data = await readJson(filePath);
 
         return {
@@ -137,10 +147,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           };
         }
 
+        const validEvidenceId = validateId(args.id);
         const filePath = resolve(
           dataDir,
           'evidence',
-          `${args.id}.evidence.json`,
+          `${validEvidenceId}.evidence.json`,
         );
         const evidence = await readJson(filePath);
 
