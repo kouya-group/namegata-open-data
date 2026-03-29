@@ -8,12 +8,12 @@
     "original_source": "ERA5 (ECMWF / Copernicus Climate Change Service)"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:45.509Z",
+    "timestamp": "2026-03-29T21:31:30.987Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "1d75e84c66834fcc6b3dd1f7b371fbecd89db2f5d37d79d1a2e88d91666f5ab6",
+    "sha256": "a772f76eab88381c3bfa6b28be39a23ff966ed867afc1541eab57b189fcaff38",
     "daily_records": 3653,
     "monthly_records": 120,
     "yearly_records": 10

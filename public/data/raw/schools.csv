@@ -1,30 +1,264 @@
-�ߘa5�N�x�������k��,,,,,,,,
-"���P�i�ڂ́@�������k���i���ʎx���w���������k�܂ށj
-�@�Q�i�ڂ́@���ʊw�����i���ʎx���w���͊܂܂Ȃ��j",,,,,,�ߘa5�N5��1�� ����,,
-�Z�@��,,�w�@�@�@�@�N,,,,,,���v
-,,1�N,2�N,3�N,4�N,5�N,6�N,
-������,������,45,53,42,62,50,50,302
-,�N���X��,2,2,2,2,2,2,12
-��������,������,28,35,36,28,41,41,209
-,�N���X��,1,1,2,1,1,1,7
-�k�Y��,������,51,44,55,56,47,50,303
-,�N���X��,2,2,2,2,2,2,12
-�ʑ���,������,76,73,76,87,94,76,482
-,�N���X��,3,3,3,3,3,2,17
-���@�v,,200,205,209,233,232,217,1296
-,,,,,,,,
-�Z�@��,,�w�@�@�@�@�N,,,,,,���v
-,,1�N,2�N,3�N,-,,,
-������,���k��,115,96,111,-,,,322
-,�N���X��,4,3,3,,,,10
-�k�Y��,���k��,42,55,50,,,,147
-,�N���X��,1,2,2,,,,5
-�ʑ���,���k��,74,80,81,,,,235
-,�N���X��,2,2,2,,,,6
-���@�v,,231,231,242,-,,,704
-,,,,,,,,
-���@��,,4�Ύ�,5�Ύ�,-,,,,���v
-�����c,������,10,19,-,,,,29
-�k�Y�c,������,6,5,,,,,11
-�ʑ��c,������,10,11,,,,,21
-���@�v,,26,35,-,,,,61
+
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=1100" />
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta property="og:url" content="">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.city.namegata.ibaraki.jp/web_clip_icon.png">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:image" content="https://www.city.namegata.ibaraki.jp/web_clip_icon.png">
+<title>&nbsp;|&nbsp;行方市公式ホームページ</title>
+<base href="https://www.city.namegata.ibaraki.jp/">
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="apple-touch-icon" href="./web_clip_icon.png" />
+<link rel="stylesheet" href="./skin/default/css/import.css?250924" type="text/css" media="all" />
+<link rel="stylesheet" href="./skin/common/css/print.css" type="text/css" media="print" />
+<script src="./skin/common/js/jquery.js"></script>
+<script src="./skin/common/js/jquery.jg.js"></script>
+<script src="./skin/common/js/functions.js"></script>
+<script src="./skin/common/js/plugins.js"></script>
+<script src="./skin/common/js/rwdImageMaps.js"></script>
+<script src="./skin/common/js/colorbox/colorbox.js"></script>
+<script src="./skin/common/js/slick.js"></script>
+<script src="./skin/common/js/ready.common.js"></script>
+<script src="./skin/common/js/gsearch.js"></script>
+<script src="//typesquare.com/3/tsst/script/ja/typesquare.js?616e89de4180483d9fc215c7ac1e02d5" charset="utf-8" defer></script>
+<script src="https://cdn-eas.readspeaker.com/script/13059/webReader/webReader.js?pids=wr&amp;forceAdapter=ioshtml5&amp;disable=translation,lookup" id="rs_req_Init"></script>
+<style> #readspeaker_button1 { z-index: 100 !important; } </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM9M67QTJT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GM9M67QTJT');
+</script>
+<script src="./count.php?type=10000&amp;code=0&amp;career=0" id="myTypeCode" data-type="10000" data-code="0"></script>
+</head>
+<body>
+<div id="container">
+	<header id="header">
+		<div id="headerContents">
+			<div id="logoTitle"><a href="./" title="行方市公式ホームページへ">行方市公式ホームページ</a></div>
+			<span class="hide"><a href="#wrapper">本文へ移動する</a></span>
+			<div id="headerInner">
+            	<a id="btn_sns" href="./page/page006031.html">行方市公式SNS</a>
+            	<span id="btnAccessibility">アクセシビリティ</span>
+				<div id="tools">
+					<div id="toolsInner">
+						<dl id="sizeChanger">
+							<dt>文字サイズ</dt>
+							<dd id="df"><span tabindex="0">標準</span></dd>
+							<dd id="zf"><span tabindex="0">拡大</span></dd>
+						</dl>
+						<dl id="colorChanger">
+							<dt>背景色</dt>
+							<dd id="bg_default"><a href="#" title="背景を白(標準)にします">白</a></dd>
+							<dd id="bg_blue"><a href="./skin/common/css/colorChanger/bg_blue.css" title="背景を青色にします">青</a></dd>
+							<dd id="bg_yellow"><a href="./skin/common/css/colorChanger/bg_yellow.css" title="背景を黄色にします">黄</a></dd>
+							<dd id="bg_black"><a href="./skin/common/css/colorChanger/bg_black.css" title="背景を黒色にします">黒</a></dd>
+						</dl>
+					</div>
+				<!-- /#tools --></div>
+                <a id="btnBrowserSupport" href="#rsPlayer">音声読み上げ</a>
+				<div id="rsPlayer">
+					<div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve">
+						<a href="//app-eas.readspeaker.com/cgi-bin/rsent?customerid=13059&amp;lang=ja_jp&amp;readid=wrapper&amp;url=" title="音声で読み上げる" rel="nofollow" class="rsbtn_play" accesskey="L">
+						<span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>読み上げる</span></span></span>
+						<span class="rsbtn_right rsimg rsplay rspart"></span>
+						</a>
+					</div>
+				</div>
+                <div id="foreigners">
+					<span id="btnForeigners" tabindex="0">Language</span>
+					<ul>
+						<li><a href="./page/page001813.html">English</a></li>
+						<li><a href="./page/page001814.html">简体中文</a></li>
+						<li><a href="./page/page001815.html">繁體中文</a></li>
+						<li><a href="./page/page001816.html">한국어</a></li>
+						<li><a href="./page/page001817.html">Português</a></li>
+						<li><a href="./page/page001818.html">Español</a></li>
+						<li><a href="./page/page001819.html">ไทย</a></li>
+					</ul>
+				<!-- /#foreigners --></div>
+            <!-- /#headerInner --></div>
+		<!-- /#headerContents --></div>
+		<nav id="gNav">
+			<ul>
+				<li class="nav01"><a href="./page/dir009176.html">防災・安全</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav02"><a href="./page/dir000002.html">生活</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav03"><a href="./page/dir011526.html" target="_blank">教育・文化・スポーツ</a></li>
+				<li class="nav04"><a href="./page/dir009178.html">まちづくり</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav05"><a href="./page/dir000004.html">事業者</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav06"><a href="./page/dir000005.html">市政</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav07"><a href="./page/dir015561.html">市制施行20周年</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+			</ul>
+		<!-- /#gNav --></nav>
+		<div id="pageSearchBox">
+			<div id="SearchBox">
+				<h2>キーワードから探す</h2>
+				<div id="SearchBoxInner">
+					<ul class="tab">
+						<li class="nav01"><a href="#SearchContents01"><span class="arw">サイト内検索</span></a></li>
+						<li class="nav02"><a href="#SearchContents02"><span class="arw">Google検索</span></a></li>
+						<li class="nav03"><a href="#SearchContents03"><span class="arw">ページ番号検索</span></a></li>
+					</ul>
+					<div id="SearchContents01" class="area">
+						<div id="searchPage" title="キーワード入力によるサイト内検索">
+							<form action="./search.php" method="post">
+								<label for="field_search_page" class="hide">お探しの情報は何でしょうか？</label>
+								<input id="field_search_page" type="text" name="keyword" placeholder="キーワード入力" autocomplete="off">
+								<input id="btn_search_page" type="submit" value="検索" title="ボタンを押すと検索を開始します">
+							</form>
+						</div>
+					</div>
+					<div id="SearchContents02" class="area">
+						<div id="googleBoxPage">
+							<form id="cse-search-box-top" action="./search_google.php">
+								<input type="hidden" name="cx" value="449e6534bedd64e24">
+								<input type="hidden" name="ie" value="UTF-8">
+								<input id="google_field_page" type="text" name="q" size="31" placeholder="キーワード入力">
+								<input id="btn_google_search_page" type="submit" name="sa" value="検索">
+							</form>
+						</div>
+					</div>
+					<div id="SearchContents03" class="area">
+						<div id="searchNumberPage" class="" title="ページ番号によるサイト内検索">
+							<form action="./search.php" method="post">
+								<label for="field_search_num_page" class="hide">お探しの情報は何でしょうか？</label>
+								<input id="field_search_num_page" type="text" name="id_no" placeholder="ページ番号入力" autocomplete="off">
+								<input id="btn_search_num_page" type="submit" value="検索" title="ボタンを押すと検索を開始します">
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--<a class="searchHelpPage" href="#">検索方法</a>-->
+			<!-- /#SearchBox --></div>
+		<!-- /#pageSearchBox --></div>
+	<!-- /#header --></header>
+	<div id="wrapper">
+
+
+		<nav id="topicpath">
+			<ol>
+				<li><a href="/">ホーム</a>&gt;</li>
+				<li></li>
+			</ol>
+		<!-- /#topicpath --></nav>
+
+		<main id="main">
+			<div id="mainContents">
+
+				<h1 id="pageTitle"><span class="innerTitle"></span></h1>
+<div id="errorDocumentBox">
+	<div id="errorDocumentBoxInner">
+		<p></p>
+	</div>
+</div>
+
+			<!-- /#mainContents --></div>
+
+			<div id="pageInfo">
+				<div id="pageInfoInner">
+					<ul>
+						<!--cms contents access-->
+						<li id="update">【更新日】<span>0年0月0日</span></li>
+						<li id="print" title="このページを印刷する"><a href="#">印刷する</a></li>
+					</ul>
+					<span id="pageTop"><a href="#container">PAGE TOP</a></span>
+				</div>
+			<!-- /#pageInfo --></div>
+
+<script>(function(){
+var w=window,d=document;
+var s="https://app.chatplus.jp/cp.js";
+d["__cp_d"]="https://app.chatplus.jp";
+d["__cp_c"]="492541d5_1";
+var a=d.createElement("script"), m=d.getElementsByTagName("script")[0];
+a.async=true,a.src=s,m.parentNode.insertBefore(a,m);})();</script>
+		<!-- /#main  --></main>
+	<!-- /#wrapper --></div>
+<!-- /#container --></div>
+<div id="footer">
+	<div id="footerContents">
+		<div id="footerInner">
+			<dl id="govAsou">
+				<dt>麻生庁舎</dt>
+				<dd>〒311-3892 茨城県行方市麻生1561-9</dd>
+				<dd>【電話番号】0299-72-0811<span>（代表）</span></dd>
+				<dd class="btnFooterMap"><a href="https://goo.gl/maps/zCYMd72jNgGGVWQNA" target="_blank">マップ</a></dd>
+			</dl>
+			<dl id="govKitaura">
+				<dt>北浦庁舎</dt>
+				<dd>〒311-1792 茨城県行方市山田2564-10</dd>
+				<dd>【電話番号】0291-35-2111</dd>
+				<dd class="btnFooterMap"><a href="https://goo.gl/maps/7rSEeEZQ6krVj9L97" target="_blank">マップ</a></dd>
+			</dl>
+			<dl id="govTamatsukuri">
+				<dt>玉造庁舎</dt>
+				<dd>〒311-3512 茨城県行方市玉造甲404</dd>
+				<dd>【電話番号】0299-55-0111</dd>
+				<dd class="btnFooterMap"><a href="https://goo.gl/maps/o6pdPy5r2Mzw22jb6" target="_blank">マップ</a></dd>
+			</dl>
+            <p>【開庁日時】 平日（月曜から金曜） 午前8時30分から午後5時15分まで</p>
+		<!-- /#footerInner --></div>
+		<div id="footerNav">
+			<ul>
+				<li><a href="./page/page014280.html">お問い合わせ</a></li>
+				<li><a href="./update.php">更新情報</a></li>
+				<li><a href="./page/dir000061.html">リンク集</a></li>
+				<li><a href="./page/dir000060.html">ホームページご利用ガイド</a></li>
+				<li><a href="./page/page002482.html">プライバシーポリシー</a></li>
+				<li><a href="./sitemap.php">サイトマップ</a></li>
+			</ul>
+		</div>
+    <!-- /#footerContents --></div>
+	<p id="copyright">&copy; City of Namegata.</p>
+	<div id="adBanner">
+		<div id="adBannerInner">
+			<div class="bosyuLink">
+				<a id="btn_bnr_close" href="#">閉じる</a>
+				<a id="bosyuBtn" href="./page/page000238.html">広告掲載について</a>
+			</div>
+		</div>
+	<!-- /#adBanner --></div>
+</div>
+<div id="viewPC2SP"><a href="https://www.city.namegata.ibaraki.jp/ua.php?type=10000&amp;code=0&amp;now_type=1">スマートフォン用ページで見る</a></div>
+<!--<script src="https://airwait.jp/js/corporate/airwait.js" data-airwait="key:FwqM5BXeoFBUGXLt18ILxnDM0ZNgdiUP" enable-log charset="utf-8"></script>-->
+</body>
+</html>

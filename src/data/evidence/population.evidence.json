@@ -6,16 +6,16 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=9",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "地域・年齢別人口.csv"
+    "original_filename": "11地域・年齢別人口.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:41.694Z",
+    "timestamp": "2026-03-29T21:31:24.449Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "f0686fbe75055969d055389c58d86e4aad43b544efaa89790c1a4cf63a7e3136",
-    "file_size_bytes": 9285,
+    "sha256": "f7e4549b0e467038ad2ac58e45d29667dee11dc5efe204610eeaca52e346f883",
+    "file_size_bytes": 9400,
     "row_count": 58,
     "column_count": 47
   },

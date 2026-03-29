@@ -6,17 +6,17 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=14",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593060221_od_224.csv"
+    "original_filename": "08公衆トイレ一覧.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:43.297Z",
+    "timestamp": "2026-03-29T21:31:26.430Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "5a103847ddcc062d42d7f522eac728f7de6117837eaf8a0d580579ba5c15e8e6",
-    "file_size_bytes": 3935,
-    "row_count": 17,
+    "sha256": "d3ac6135e2676c69267b37b0cb45eb7f8f4b029bc79421106c2ce334770a39bb",
+    "file_size_bytes": 4541,
+    "row_count": 18,
     "column_count": 29
   },
   "transformation": {

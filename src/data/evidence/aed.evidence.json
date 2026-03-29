@@ -6,17 +6,17 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=4",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593045235_od_224.csv"
+    "original_filename": "01AED設置個所一覧.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:39.430Z",
+    "timestamp": "2026-03-29T21:31:19.657Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "f5c53f206d10b28023f28d9b6506bc8a31ec2663c8c8600b34c75504ebf9caa9",
-    "file_size_bytes": 5089,
-    "row_count": 31,
+    "sha256": "b453a19d94884b67daf52c2b207b8132a9d193c3c05ddf8e8a9d23c48ae18c06",
+    "file_size_bytes": 5440,
+    "row_count": 33,
     "column_count": 18
   },
   "transformation": {

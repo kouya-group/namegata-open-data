@@ -1,309 +1,783 @@
 {
   "datasetId": "schools",
   "title": "行方市立幼稚園・小中学校（園児・児童生徒数）一覧",
-  "acquiredAt": "2026-03-23T20:53:45.156Z",
+  "acquiredAt": "2026-03-29T21:31:29.046Z",
   "sourceUrl": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=60",
   "sourcePageUrl": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=21",
-  "encoding": "shift_jis",
+  "encoding": "utf-8",
   "headers": [
-    "令和5年度児童生徒数",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
     ""
   ],
-  "rowCount": 26,
-  "columnCount": 9,
+  "rowCount": 256,
+  "columnCount": 1,
   "records": [
     {
-      "令和5年度児童生徒数": "※１段目は　児童生徒数（特別支援学級児童生徒含む）\n　２段目は　普通学級数（特別支援学級は含まない）",
-      "column_2": "",
-      "column_3": "",
-      "column_4": "",
-      "column_5": "",
-      "column_6": "",
-      "column_7": "令和5年5月1日 現在",
-      "column_8": "",
-      "column_9": ""
+      "column_1": "<!DOCTYPE html>"
     },
     {
-      "令和5年度児童生徒数": "校　名",
-      "column_2": "",
-      "column_3": "学　　　　年",
-      "column_4": "",
-      "column_5": "",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "合計"
+      "column_1": "<html lang=ja>"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "",
-      "column_3": "1年",
-      "column_4": "2年",
-      "column_5": "3年",
-      "column_6": "4年",
-      "column_7": "5年",
-      "column_8": "6年",
-      "column_9": ""
+      "column_1": "<head prefix=og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#>"
     },
     {
-      "令和5年度児童生徒数": "麻生小",
-      "column_2": "児童数",
-      "column_3": "45",
-      "column_4": "53",
-      "column_5": "42",
-      "column_6": "62",
-      "column_7": "50",
-      "column_8": "50",
-      "column_9": "302"
+      "column_1": "<meta http-equiv=Content-Type content=text/html; charset=UTF-8 />"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "2",
-      "column_4": "2",
-      "column_5": "2",
-      "column_6": "2",
-      "column_7": "2",
-      "column_8": "2",
-      "column_9": "12"
+      "column_1": "<meta http-equiv=Content-Style-Type content=text/css />"
     },
     {
-      "令和5年度児童生徒数": "麻生東小",
-      "column_2": "児童数",
-      "column_3": "28",
-      "column_4": "35",
-      "column_5": "36",
-      "column_6": "28",
-      "column_7": "41",
-      "column_8": "41",
-      "column_9": "209"
+      "column_1": "<meta http-equiv=Content-Script-Type content=text/javascript />"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "1",
-      "column_4": "1",
-      "column_5": "2",
-      "column_6": "1",
-      "column_7": "1",
-      "column_8": "1",
-      "column_9": "7"
+      "column_1": "<meta http-equiv=X-UA-Compatible content=IE=edge />"
     },
     {
-      "令和5年度児童生徒数": "北浦小",
-      "column_2": "児童数",
-      "column_3": "51",
-      "column_4": "44",
-      "column_5": "55",
-      "column_6": "56",
-      "column_7": "47",
-      "column_8": "50",
-      "column_9": "303"
+      "column_1": "<meta name=viewport content=width=1100 />"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "2",
-      "column_4": "2",
-      "column_5": "2",
-      "column_6": "2",
-      "column_7": "2",
-      "column_8": "2",
-      "column_9": "12"
+      "column_1": "<meta name=keywords content= />"
     },
     {
-      "令和5年度児童生徒数": "玉造小",
-      "column_2": "児童数",
-      "column_3": "76",
-      "column_4": "73",
-      "column_5": "76",
-      "column_6": "87",
-      "column_7": "94",
-      "column_8": "76",
-      "column_9": "482"
+      "column_1": "<meta name=description content=>"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "3",
-      "column_4": "3",
-      "column_5": "3",
-      "column_6": "3",
-      "column_7": "3",
-      "column_8": "2",
-      "column_9": "17"
+      "column_1": "<meta property=og:url content=>"
     },
     {
-      "令和5年度児童生徒数": "合　計",
-      "column_2": "",
-      "column_3": "200",
-      "column_4": "205",
-      "column_5": "209",
-      "column_6": "233",
-      "column_7": "232",
-      "column_8": "217",
-      "column_9": "1296"
+      "column_1": "<meta property=og:type content=article>"
     },
     {
-      "令和5年度児童生徒数": "校　名",
-      "column_2": "",
-      "column_3": "学　　　　年",
-      "column_4": "",
-      "column_5": "",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "合計"
+      "column_1": "<meta property=og:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "",
-      "column_3": "1年",
-      "column_4": "2年",
-      "column_5": "3年",
-      "column_6": "-",
-      "column_7": "",
-      "column_8": "",
-      "column_9": ""
+      "column_1": "<meta property=og:title content=>"
     },
     {
-      "令和5年度児童生徒数": "麻生中",
-      "column_2": "生徒数",
-      "column_3": "115",
-      "column_4": "96",
-      "column_5": "111",
-      "column_6": "-",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "322"
+      "column_1": "<meta property=og:description content=>"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "4",
-      "column_4": "3",
-      "column_5": "3",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "10"
+      "column_1": "<meta name=twitter:card content=summary>"
     },
     {
-      "令和5年度児童生徒数": "北浦中",
-      "column_2": "生徒数",
-      "column_3": "42",
-      "column_4": "55",
-      "column_5": "50",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "147"
+      "column_1": "<meta name=twitter:description content=>"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "1",
-      "column_4": "2",
-      "column_5": "2",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "5"
+      "column_1": "<meta name=twitter:title content=>"
     },
     {
-      "令和5年度児童生徒数": "玉造中",
-      "column_2": "生徒数",
-      "column_3": "74",
-      "column_4": "80",
-      "column_5": "81",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "235"
+      "column_1": "<meta name=twitter:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
     },
     {
-      "令和5年度児童生徒数": "",
-      "column_2": "クラス数",
-      "column_3": "2",
-      "column_4": "2",
-      "column_5": "2",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "6"
+      "column_1": "<title>&nbsp;|&nbsp;行方市公式ホームページ</title>"
     },
     {
-      "令和5年度児童生徒数": "合　計",
-      "column_2": "",
-      "column_3": "231",
-      "column_4": "231",
-      "column_5": "242",
-      "column_6": "-",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "704"
+      "column_1": "<base href=https://www.city.namegata.ibaraki.jp/>"
     },
     {
-      "令和5年度児童生徒数": "園　名",
-      "column_2": "",
-      "column_3": "4歳児",
-      "column_4": "5歳児",
-      "column_5": "-",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "合計"
+      "column_1": "<link rel=shortcut icon href=./favicon.ico />"
     },
     {
-      "令和5年度児童生徒数": "麻生幼",
-      "column_2": "園児数",
-      "column_3": "10",
-      "column_4": "19",
-      "column_5": "-",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "29"
+      "column_1": "<link rel=apple-touch-icon href=./web_clip_icon.png />"
     },
     {
-      "令和5年度児童生徒数": "北浦幼",
-      "column_2": "園児数",
-      "column_3": "6",
-      "column_4": "5",
-      "column_5": "",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "11"
+      "column_1": "<link rel=stylesheet href=./skin/default/css/import.css?250924 type=text/css media=all />"
     },
     {
-      "令和5年度児童生徒数": "玉造幼",
-      "column_2": "園児数",
-      "column_3": "10",
-      "column_4": "11",
-      "column_5": "",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "21"
+      "column_1": "<link rel=stylesheet href=./skin/common/css/print.css type=text/css media=print />"
     },
     {
-      "令和5年度児童生徒数": "合　計",
-      "column_2": "",
-      "column_3": "26",
-      "column_4": "35",
-      "column_5": "-",
-      "column_6": "",
-      "column_7": "",
-      "column_8": "",
-      "column_9": "61"
+      "column_1": "<script src=./skin/common/js/jquery.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.jg.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/functions.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/plugins.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/rwdImageMaps.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/colorbox/colorbox.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/slick.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/ready.common.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/gsearch.js></script>"
+    },
+    {
+      "column_1": "<script src=//typesquare.com/3/tsst/script/ja/typesquare.js?616e89de4180483d9fc215c7ac1e02d5 charset=utf-8 defer></script>"
+    },
+    {
+      "column_1": "<script src=https://cdn-eas.readspeaker.com/script/13059/webReader/webReader.js?pids=wr&amp;forceAdapter=ioshtml5&amp;disable=translation,lookup id=rs_req_Init></script>"
+    },
+    {
+      "column_1": "<style> #readspeaker_button1 { z-index: 100 !important; } </style>"
+    },
+    {
+      "column_1": "<!-- Google tag (gtag.js) -->"
+    },
+    {
+      "column_1": "<script async src=https://www.googletagmanager.com/gtag/js?id=G-GM9M67QTJT></script>"
+    },
+    {
+      "column_1": "<script>"
+    },
+    {
+      "column_1": "  window.dataLayer = window.dataLayer || [];"
+    },
+    {
+      "column_1": "  function gtag(){dataLayer.push(arguments);}"
+    },
+    {
+      "column_1": "  gtag('js'"
+    },
+    {
+      "column_1": "  gtag('config'"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=./count.php?type=10000&amp;code=0&amp;career=0 id=myTypeCode data-type=10000 data-code=0></script>"
+    },
+    {
+      "column_1": "</head>"
+    },
+    {
+      "column_1": "<body>"
+    },
+    {
+      "column_1": "<div id=container>"
+    },
+    {
+      "column_1": "\t<header id=header>"
+    },
+    {
+      "column_1": "\t\t<div id=headerContents>"
+    },
+    {
+      "column_1": "\t\t\t<div id=logoTitle><a href=./ title=行方市公式ホームページへ>行方市公式ホームページ</a></div>"
+    },
+    {
+      "column_1": "\t\t\t<span class=hide><a href=#wrapper>本文へ移動する</a></span>"
+    },
+    {
+      "column_1": "\t\t\t<div id=headerInner>"
+    },
+    {
+      "column_1": "            \t<a id=btn_sns href=./page/page006031.html>行方市公式SNS</a>"
+    },
+    {
+      "column_1": "            \t<span id=btnAccessibility>アクセシビリティ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=tools>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=toolsInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=sizeChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>文字サイズ</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=df><span tabindex=0>標準</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=zf><span tabindex=0>拡大</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=colorChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>背景色</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_default><a href=# title=背景を白(標準)にします>白</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_blue><a href=./skin/common/css/colorChanger/bg_blue.css title=背景を青色にします>青</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_yellow><a href=./skin/common/css/colorChanger/bg_yellow.css title=背景を黄色にします>黄</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_black><a href=./skin/common/css/colorChanger/bg_black.css title=背景を黒色にします>黒</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#tools --></div>"
+    },
+    {
+      "column_1": "                <a id=btnBrowserSupport href=#rsPlayer>音声読み上げ</a>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=rsPlayer>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=readspeaker_button1 class=rs_skip rsbtn rs_preserve>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<a href=//app-eas.readspeaker.com/cgi-bin/rsent?customerid=13059&amp;lang=ja_jp&amp;readid=wrapper&amp;url= title=音声で読み上げる rel=nofollow class=rsbtn_play accesskey=L>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<span class=rsbtn_left rsimg rspart><span class=rsbtn_text><span>読み上げる</span></span></span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<span class=rsbtn_right rsimg rsplay rspart></span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "                <div id=foreigners>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnForeigners tabindex=0>Language</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001813.html>English</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001814.html>简体中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001815.html>繁體中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001816.html>한국어</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001817.html>Português</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001818.html>Español</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001819.html>ไทย</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#foreigners --></div>"
+    },
+    {
+      "column_1": "            <!-- /#headerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#headerContents --></div>"
+    },
+    {
+      "column_1": "\t\t<nav id=gNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav01><a href=./page/dir009176.html>防災・安全</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav02><a href=./page/dir000002.html>生活</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav03><a href=./page/dir011526.html target=_blank>教育・文化・スポーツ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav04><a href=./page/dir009178.html>まちづくり</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav05><a href=./page/dir000004.html>事業者</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav06><a href=./page/dir000005.html>市政</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav07><a href=./page/dir015561.html>市制施行20周年</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t<!-- /#gNav --></nav>"
+    },
+    {
+      "column_1": "\t\t<div id=pageSearchBox>"
+    },
+    {
+      "column_1": "\t\t\t<div id=SearchBox>"
+    },
+    {
+      "column_1": "\t\t\t\t<h2>キーワードから探す</h2>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=SearchBoxInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul class=tab>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav01><a href=#SearchContents01><span class=arw>サイト内検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav02><a href=#SearchContents02><span class=arw>Google検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav03><a href=#SearchContents03><span class=arw>ページ番号検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents01 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchPage title=キーワード入力によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_page type=text name=keyword placeholder=キーワード入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents02 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=googleBoxPage>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form id=cse-search-box-top action=./search_google.php>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=cx value=449e6534bedd64e24>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=ie value=UTF-8>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=google_field_page type=text name=q size=31 placeholder=キーワード入力>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_google_search_page type=submit name=sa value=検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents03 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchNumberPage class= title=ページ番号によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_num_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_num_page type=text name=id_no placeholder=ページ番号入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_num_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--<a class=searchHelpPage href=#>検索方法</a>-->"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#SearchBox --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#pageSearchBox --></div>"
+    },
+    {
+      "column_1": "\t<!-- /#header --></header>"
+    },
+    {
+      "column_1": "\t<div id=wrapper>"
+    },
+    {
+      "column_1": "\t\t<nav id=topicpath>"
+    },
+    {
+      "column_1": "\t\t\t<ol>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=/>ホーム</a>&gt;</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li></li>"
+    },
+    {
+      "column_1": "\t\t\t</ol>"
+    },
+    {
+      "column_1": "\t\t<!-- /#topicpath --></nav>"
+    },
+    {
+      "column_1": "\t\t<main id=main>"
+    },
+    {
+      "column_1": "\t\t\t<div id=mainContents>"
+    },
+    {
+      "column_1": "\t\t\t\t<h1 id=pageTitle><span class=innerTitle></span></h1>"
+    },
+    {
+      "column_1": "<div id=errorDocumentBox>"
+    },
+    {
+      "column_1": "\t<div id=errorDocumentBoxInner>"
+    },
+    {
+      "column_1": "\t\t<p></p>"
+    },
+    {
+      "column_1": "\t</div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#mainContents --></div>"
+    },
+    {
+      "column_1": "\t\t\t<div id=pageInfo>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=pageInfoInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<!--cms contents access-->"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=update>【更新日】<span>0年0月0日</span></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=print title=このページを印刷する><a href=#>印刷する</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=pageTop><a href=#container>PAGE TOP</a></span>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#pageInfo --></div>"
+    },
+    {
+      "column_1": "<script>(function(){"
+    },
+    {
+      "column_1": "var w=window"
+    },
+    {
+      "column_1": "var s=https://app.chatplus.jp/cp.js;"
+    },
+    {
+      "column_1": "d[__cp_d]=https://app.chatplus.jp;"
+    },
+    {
+      "column_1": "d[__cp_c]=492541d5_1;"
+    },
+    {
+      "column_1": "var a=d.createElement(script)"
+    },
+    {
+      "column_1": "a.async=true"
+    },
+    {
+      "column_1": "\t\t<!-- /#main  --></main>"
+    },
+    {
+      "column_1": "\t<!-- /#wrapper --></div>"
+    },
+    {
+      "column_1": "<!-- /#container --></div>"
+    },
+    {
+      "column_1": "<div id=footer>"
+    },
+    {
+      "column_1": "\t<div id=footerContents>"
+    },
+    {
+      "column_1": "\t\t<div id=footerInner>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govAsou>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>麻生庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3892 茨城県行方市麻生1561-9</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-72-0811<span>（代表）</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/zCYMd72jNgGGVWQNA target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govKitaura>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>北浦庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-1792 茨城県行方市山田2564-10</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0291-35-2111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/7rSEeEZQ6krVj9L97 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govTamatsukuri>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>玉造庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3512 茨城県行方市玉造甲404</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-55-0111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/o6pdPy5r2Mzw22jb6 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "            <p>【開庁日時】 平日（月曜から金曜） 午前8時30分から午後5時15分まで</p>"
+    },
+    {
+      "column_1": "\t\t<!-- /#footerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<div id=footerNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page014280.html>お問い合わせ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./update.php>更新情報</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000061.html>リンク集</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000060.html>ホームページご利用ガイド</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page002482.html>プライバシーポリシー</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./sitemap.php>サイトマップ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "    <!-- /#footerContents --></div>"
+    },
+    {
+      "column_1": "\t<p id=copyright>&copy; City of Namegata.</p>"
+    },
+    {
+      "column_1": "\t<div id=adBanner>"
+    },
+    {
+      "column_1": "\t\t<div id=adBannerInner>"
+    },
+    {
+      "column_1": "\t\t\t<div class=bosyuLink>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=btn_bnr_close href=#>閉じる</a>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=bosyuBtn href=./page/page000238.html>広告掲載について</a>"
+    },
+    {
+      "column_1": "\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "\t<!-- /#adBanner --></div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "<div id=viewPC2SP><a href=https://www.city.namegata.ibaraki.jp/ua.php?type=10000&amp;code=0&amp;now_type=1>スマートフォン用ページで見る</a></div>"
+    },
+    {
+      "column_1": "<!--<script src=https://airwait.jp/js/corporate/airwait.js data-airwait=key:FwqM5BXeoFBUGXLt18ILxnDM0ZNgdiUP enable-log charset=utf-8></script>-->"
+    },
+    {
+      "column_1": "</body>"
+    },
+    {
+      "column_1": "</html>"
     }
   ]
 }

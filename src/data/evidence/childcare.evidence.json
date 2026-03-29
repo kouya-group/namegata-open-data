@@ -6,16 +6,16 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=10",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593045614_od_224.csv"
+    "original_filename": "13子育て施設.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:42.109Z",
+    "timestamp": "2026-03-29T21:31:24.961Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "a65b2595de8564d48dce055e32b4f68fe395a9b05edee5f9e455d4c32c404276",
-    "file_size_bytes": 2138,
+    "sha256": "e983f250205daf74f8677ba90517c335efea0d1a0efa3ad660b6c7bfa0512ce0",
+    "file_size_bytes": 2457,
     "row_count": 11,
     "column_count": 28
   },

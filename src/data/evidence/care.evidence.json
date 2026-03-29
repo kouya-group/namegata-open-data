@@ -6,17 +6,17 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=5",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593045325_od_224.csv"
+    "original_filename": "02介護サービス事業所一覧.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:39.958Z",
+    "timestamp": "2026-03-29T21:31:22.150Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "aafbcc1a167f32b37576d5f0feb7fa70f485c22e32982a5ec9561843c6b8a511",
-    "file_size_bytes": 5453,
-    "row_count": 25,
+    "sha256": "a8dee39fe46472f2d85224d0a10f515ca3a416f5a8c951ea493c1c47c497d36a",
+    "file_size_bytes": 5234,
+    "row_count": 22,
     "column_count": 22
   },
   "transformation": {

@@ -6,17 +6,17 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=6",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593046340_od_224.csv"
+    "original_filename": "03医療機関一覧.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:40.327Z",
+    "timestamp": "2026-03-29T21:31:22.665Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "a26602eeb70c66c05c12dee11d6548e210341b8e0d188195767f6eb59400cd23",
-    "file_size_bytes": 2893,
-    "row_count": 12,
+    "sha256": "8aba467c6964ada13680d417ccc9aa87a48a1a28f07f374aa74140c736c4732e",
+    "file_size_bytes": 2317,
+    "row_count": 9,
     "column_count": 16
   },
   "transformation": {

@@ -6,16 +6,16 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=15",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593153993_od_224.csv"
+    "original_filename": "12公共施設一覧.csv"
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:43.657Z",
+    "timestamp": "2026-03-29T21:31:26.929Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "f908d657f907e546de45c1df58f26e1a1f4f43348a263d08733403fc180bce22",
-    "file_size_bytes": 54475,
+    "sha256": "886ebe92a3eca9f177eb338c48b5fe73250faa1e8bcb2cc201934ed9396bd0f2",
+    "file_size_bytes": 55354,
     "row_count": 174,
     "column_count": 25
   },
