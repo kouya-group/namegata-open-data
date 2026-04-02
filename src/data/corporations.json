@@ -1,0 +1,201 @@
+{
+  "source": "行方市過疎地域持続的発展計画（令和3年度～令和7年度, 令和4年9月変更）、茨城県市町村データ（行方市）、国勢調査（令和2年）、経済センサス",
+  "acquiredAt": "2026-04-02T00:00:00+09:00",
+  "notes": "法人番号公表サイトAPI・gBizINFO APIは認証必須のため利用不可。過疎計画PDF・茨城県統計・国勢調査等の公開データから産業構造を再構成。個別法人リストは未取得。",
+  "summary": {
+    "total_establishments": null,
+    "total_establishments_note": "経済センサスの市区町村別事業所総数は認証付きe-Stat APIでのみ取得可能。以下の産業別データから推計すると、製造業89＋卸売小売業353＋その他＝推定1,200～1,500事業所程度（令和元年～平成28年時点の部分合算）",
+    "employment": {
+      "total_workers_15plus": 17584,
+      "employed": 15186,
+      "labor_force": 18308,
+      "census_year": 2020
+    },
+    "by_sector": [
+      {
+        "sector": "第一次産業",
+        "workers": 3923,
+        "pct": 22.4,
+        "year": 2020,
+        "trend": "減少（H22: 4,104 → H27: 4,361 → R2: 3,923）"
+      },
+      {
+        "sector": "第二次産業",
+        "workers": 4971,
+        "pct": 28.4,
+        "year": 2020,
+        "trend": "減少（H22: 5,260 → H27: 5,398 → R2: 4,971）"
+      },
+      {
+        "sector": "第三次産業",
+        "workers": 8590,
+        "pct": 49.1,
+        "year": 2020,
+        "trend": "減少（H22: 9,170 → H27: 9,305 → R2: 8,590）、全国平均72.8%を大幅に下回る"
+      }
+    ],
+    "by_industry": [
+      {
+        "industry": "農林水産業",
+        "category": "第一次産業",
+        "workers": 3923,
+        "pct": 22.4,
+        "year": 2020,
+        "details": "基幹産業。全国平均3.5%を大幅に上回る。農業就業者の6割が60歳以上、平均年齢60歳。年間80品目以上を東京圏に出荷。サツマイモ産出額日本一。"
+      },
+      {
+        "industry": "製造業",
+        "category": "第二次産業",
+        "establishments": 89,
+        "establishments_year": 2019,
+        "workers": 2987,
+        "workers_year": 2019,
+        "shipment_value_million_yen": 61975,
+        "shipment_year": 2019,
+        "trend": {
+          "H22": {"establishments": 116, "workers": 3131, "shipment_million_yen": 54297},
+          "R1": {"establishments": 89, "workers": 2987, "shipment_million_yen": 61975}
+        },
+        "note": "事業所数・従業者数は減少するも出荷額は増加。従業者4人以上の事業所が対象。"
+      },
+      {
+        "industry": "卸売業・小売業",
+        "category": "第三次産業",
+        "establishments": 353,
+        "establishments_year": 2016,
+        "workers": 1983,
+        "workers_year": 2016,
+        "sales_million_yen": 43206,
+        "sales_year": 2015,
+        "trend": {
+          "H19": {"establishments": 382, "workers": 2112, "sales_million_yen": 60713},
+          "H28": {"establishments": 353, "workers": 1983, "sales_million_yen": 43206}
+        },
+        "note": "事業所数・従業者数・年間商品販売額いずれも減少傾向。商店街的な商業集積はほとんど形成されていない。"
+      },
+      {
+        "industry": "建設業",
+        "category": "第二次産業",
+        "note": "第二次産業就業者4,971人のうち製造業2,987人を除く約2,000人が建設業等に従事（推計）"
+      },
+      {
+        "industry": "サービス業（その他第三次産業）",
+        "category": "第三次産業",
+        "note": "第三次産業総生産額の市内総生産に占める割合は令和元年度で58.3%（H27: 59.5%から減少）"
+      }
+    ],
+    "economic_indicators": {
+      "municipal_income_million_yen": 111734,
+      "per_capita_income_thousand_yen": 3608,
+      "fiscal_year": 2022,
+      "annual_commodity_sales_billion_yen": 41.3,
+      "annual_commodity_sales_year": 2020,
+      "manufacturing_shipment_billion_yen": 53.3,
+      "manufacturing_shipment_year": 2022,
+      "fiscal_strength_index": 0.44,
+      "fiscal_note": "大きな企業が少なく第一次産業中心の脆弱な税収構造"
+    },
+    "agriculture": {
+      "workers": 3923,
+      "workers_pct": 22.4,
+      "year": 2020,
+      "major_products": [
+        "サツマイモ（産出額日本一、日本農業賞大賞・農林水産祭天皇杯受賞）",
+        "じゃがいも",
+        "みず菜",
+        "セリ",
+        "米",
+        "野菜（80品目以上）",
+        "畜産（豚、牛、鶏、鶏卵）",
+        "水産（川魚等）"
+      ],
+      "characteristics": "温暖な気候、豊穣な土壌。年間通して安定的に首都圏へ食材供給。いも類部門産出額全国上位3位（92億円）。",
+      "challenges": "高齢化（就業者の6割が60歳以上）、15～40歳代の就業者減少、担い手不足、後継者不在による休耕田増加見込み",
+      "policy": "6次産業化推進計画策定、なめがたブランド構築、行方市農業基本計画策定"
+    },
+    "tourism": {
+      "visitors_ten_thousand": 64.9,
+      "visitors_year": 2020,
+      "trend": "増加傾向",
+      "attractions": [
+        "なめがたファーマーズヴィレッジ（サツマイモテーマパーク）",
+        "霞ヶ浦",
+        "つくば霞ヶ浦りんりんロード（サイクリング）",
+        "霞ヶ浦ふれあいランド",
+        "温浴施設・観光交流センター"
+      ],
+      "challenges": "夜間観光入込客が少ない、宿泊施設不足"
+    },
+    "industrial_parks": [
+      {
+        "name": "北浦複合団地",
+        "location": "行方市武田地区",
+        "total_area_ha": 192.7,
+        "sale_area_ha": 84.9,
+        "phases": {
+          "phase1_ha": 65.2,
+          "phase2_ha": 19.7
+        },
+        "land_price_yen_per_sqm": "12,500～12,800",
+        "zoning": "工業専用地域・準工業地域",
+        "incentives": [
+          "固定資産税3年間免除",
+          "法人事業税・不動産取得税3年間免除",
+          "工場立地等促進融資",
+          "企業立地促進法による支援"
+        ]
+      },
+      {
+        "name": "上山鉾田工業団地",
+        "location": "行方市上山地区"
+      }
+    ],
+    "promoted_industries": {
+      "area": "行方市全域",
+      "industries": ["製造業", "情報サービス業等", "農林水産物等販売業", "旅館業"],
+      "period": "令和3年4月1日～令和8年3月31日"
+    }
+  },
+  "corporations": [],
+  "corporations_note": "個別法人リストの取得には法人番号公表サイトのアプリケーションID（認証）が必要。gBizINFO APIも同様。Baseconnect等の商用DBでは閲覧可能だがAPI取得不可。行方市商工会（法人番号: 7050005006411）が地域の商工業者を統括。",
+  "data_sources": [
+    {
+      "name": "行方市過疎地域持続的発展計画（令和3年度～令和7年度）",
+      "url": "https://www.pref.ibaraki.jp/somu/zeimu/kikaku/tokurei/documents/namegata2022.pdf",
+      "type": "PDF",
+      "publisher": "茨城県行方市",
+      "date": "2022-09"
+    },
+    {
+      "name": "茨城県市町村データ（行方市）",
+      "url": "https://www.pref.ibaraki.jp/kikaku/tokei/fukyu/tokei/sugata/local/namegata.html",
+      "type": "Web",
+      "publisher": "茨城県企画部統計課"
+    },
+    {
+      "name": "国勢調査（令和2年）",
+      "url": "https://www.stat.go.jp/data/kokusei/2020/",
+      "type": "統計調査",
+      "publisher": "総務省統計局"
+    },
+    {
+      "name": "経済センサス-活動調査（令和3年）",
+      "url": "https://www.e-stat.go.jp/stat-search/database?page=1&toukei=00200553&tstat=000001145590",
+      "type": "統計調査",
+      "publisher": "総務省統計局・経済産業省",
+      "note": "市区町村別詳細データの取得にはe-Stat APIのアプリケーションIDが必要"
+    },
+    {
+      "name": "行方市公式ホームページ 統計資料",
+      "url": "https://www.city.namegata.ibaraki.jp/shisei/city-gaiyou/profile/profile-toukei/",
+      "type": "Web",
+      "publisher": "行方市"
+    },
+    {
+      "name": "行方企業立地ガイド",
+      "url": "https://www.city.namegata.ibaraki.jp/page/dir001573.html",
+      "type": "Web",
+      "publisher": "行方市"
+    }
+  ]
+}

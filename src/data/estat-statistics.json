@@ -1,0 +1,140 @@
+{
+  "source": "e-stat-dashboard-api + wikipedia",
+  "acquiredAt": "2026-04-02T19:49:00+09:00",
+  "api_endpoint": "https://dashboard.e-stat.go.jp/api/1.0/Json/getData",
+  "region_code": "08233",
+  "region_name": "行方市",
+  "prefecture": "茨城県",
+  "census_source": "国勢調査（e-Stat ダッシュボードAPI、API認証不要）",
+  "basic_info": {
+    "city_name": "行方市（なめがたし）",
+    "established": "2005-09-02",
+    "merged_from": ["麻生町", "北浦町", "玉造町"],
+    "area_km2": 222.48,
+    "lake_area_km2": 55.98,
+    "designated_depopulated_area": "2022-04-01",
+    "adjacent_cities": ["鹿嶋市", "潮来市", "かすみがうら市", "鉾田市", "小美玉市", "稲敷市", "美浦村"],
+    "offices": {
+      "麻生庁舎": "〒311-3892 茨城県行方市麻生1561-9",
+      "北浦庁舎": "〒311-1792 茨城県行方市山田2564-10",
+      "玉造庁舎": "〒311-3512 茨城県行方市玉造甲404"
+    }
+  },
+  "population_trend": {
+    "note": "e-Stat ダッシュボードAPI IndicatorCode=0201010000000010000, unit=人, source=国勢調査",
+    "data": [
+      { "year": 2005, "population": 40035 },
+      { "year": 2010, "population": 37611 },
+      { "year": 2015, "population": 34909 },
+      { "year": 2020, "population": 32185 }
+    ]
+  },
+  "population_by_age": {
+    "age_0_14": {
+      "indicator_code": "0201010010000010010",
+      "label": "総人口（0〜14歳）",
+      "data": [
+        { "year": 2005, "population": 4999 },
+        { "year": 2010, "population": 4341 },
+        { "year": 2015, "population": 3796 },
+        { "year": 2020, "population": 3215 }
+      ]
+    },
+    "age_15_64": {
+      "indicator_code": "0201010010000010020",
+      "label": "総人口（15〜64歳）",
+      "data": [
+        { "year": 2005, "population": 24741 },
+        { "year": 2010, "population": 22858 },
+        { "year": 2015, "population": 20103 },
+        { "year": 2020, "population": 17362 }
+      ]
+    },
+    "age_65_plus": {
+      "indicator_code": "0201010010000010030",
+      "label": "総人口（65歳以上）",
+      "data": [
+        { "year": 2005, "population": 10295 },
+        { "year": 2010, "population": 10383 },
+        { "year": 2015, "population": 11001 },
+        { "year": 2020, "population": 11604 }
+      ]
+    }
+  },
+  "japanese_population": {
+    "indicator_code": "0201020000000010000",
+    "label": "日本人人口（総数）",
+    "note": "総人口との差が外国人人口に相当",
+    "data": [
+      { "year": 2005, "population": 39250 },
+      { "year": 2010, "population": 36761 },
+      { "year": 2015, "population": 34159 },
+      { "year": 2020, "population": 31252 }
+    ]
+  },
+  "foreign_population_derived": {
+    "note": "総人口 − 日本人人口 で算出",
+    "data": [
+      { "year": 2005, "population": 785 },
+      { "year": 2010, "population": 850 },
+      { "year": 2015, "population": 750 },
+      { "year": 2020, "population": 933 }
+    ]
+  },
+  "derived_statistics": {
+    "note": "以下は取得データから算出した参考値",
+    "aging_rate_percent": [
+      { "year": 2005, "rate": 25.7 },
+      { "year": 2010, "rate": 27.6 },
+      { "year": 2015, "rate": 31.5 },
+      { "year": 2020, "rate": 36.1 }
+    ],
+    "youth_rate_percent": [
+      { "year": 2005, "rate": 12.5 },
+      { "year": 2010, "rate": 11.5 },
+      { "year": 2015, "rate": 10.9 },
+      { "year": 2020, "rate": 10.0 }
+    ],
+    "population_density_per_km2": [
+      { "year": 2005, "density": 180.0 },
+      { "year": 2010, "density": 169.1 },
+      { "year": 2015, "density": 156.9 },
+      { "year": 2020, "density": 144.7 }
+    ],
+    "population_decline_rate_percent": [
+      { "period": "2005-2010", "rate": -6.1 },
+      { "period": "2010-2015", "rate": -7.2 },
+      { "period": "2015-2020", "rate": -7.8 }
+    ]
+  },
+  "industry": {
+    "source": "wikipedia",
+    "agriculture": {
+      "designated_brand_products": ["いちご", "水菜", "エシャレット", "キャベツ", "わさび菜"],
+      "major_crops": ["さつまいも"],
+      "livestock": ["養豚"]
+    },
+    "fishery": {
+      "note": "霞ヶ浦での鯉の養殖が盛ん",
+      "ports": ["白浜漁港", "麻生漁港", "小高漁港", "五町田漁港", "荒宿漁港", "手賀漁港", "高須漁港"]
+    },
+    "commercial": {
+      "major_chains": ["カインズ玉造店", "西松屋行方玉造店", "ベイシア玉造店", "セイミヤモール麻生店", "コメリ（麻生店・北浦店・玉造店）"]
+    },
+    "financial_institutions": ["常陽銀行", "水戸信用金庫", "佐原信用金庫", "筑波銀行", "なめがたしおさい農業協同組合"]
+  },
+  "geography": {
+    "source": "wikipedia",
+    "description": "東京都心から北東約70km、水戸市から南約40km。東の北浦、西の霞ヶ浦に挟まれた南北に長い市域。内陸部は行方台地（標高約30m前後の丘陵台地）",
+    "symbols": {
+      "tree": "イチョウ（銀杏）",
+      "flower": "ヤマユリ（山百合）",
+      "bird": "シラサギ（白鷺）"
+    }
+  },
+  "api_reproducibility": {
+    "total_population_query": "curl 'https://dashboard.e-stat.go.jp/api/1.0/Json/getData?IndicatorCode=0201010000000010000&RegionCode=08233'",
+    "age_breakdown_query": "curl 'https://dashboard.e-stat.go.jp/api/1.0/Json/getData?IndicatorCode=0201010010000010010,0201010010000010020,0201010010000010030&RegionCode=08233'",
+    "note": "API認証不要。RegionCode=08233は行方市の全国地方公共団体コード"
+  }
+}
