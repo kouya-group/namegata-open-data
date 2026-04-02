@@ -1,0 +1,156 @@
+{
+  "source": "e-Stat 経済センサス-活動調査 平成24年 (statsDataId=0003085699)",
+  "acquiredAt": "2026-04-02",
+  "area": "行方市 (08233)",
+  "org_total": "総数",
+  "industries": [
+    {
+      "name": "A～B農林漁業",
+      "establishments": 30,
+      "workers": 540,
+      "sales_million_yen": 2398
+    },
+    {
+      "name": "C鉱業，採石業，砂利採取業",
+      "establishments": 4,
+      "workers": 45,
+      "sales_million_yen": 816
+    },
+    {
+      "name": "D建設業",
+      "establishments": 300,
+      "workers": 1290,
+      "sales_million_yen": null
+    },
+    {
+      "name": "E製造業",
+      "establishments": 194,
+      "workers": 3366,
+      "sales_million_yen": 50296
+    },
+    {
+      "name": "G情報通信業",
+      "establishments": 2,
+      "workers": 6,
+      "sales_million_yen": null
+    },
+    {
+      "name": "G1情報通信業（通信業，放送業，映像・音声・文字情報制作業）",
+      "establishments": 1,
+      "workers": 2,
+      "sales_million_yen": null
+    },
+    {
+      "name": "G2情報通信業（情報サービス業，インターネット附随サービス業）",
+      "establishments": 1,
+      "workers": 4,
+      "sales_million_yen": null
+    },
+    {
+      "name": "H運輸業，郵便業",
+      "establishments": 45,
+      "workers": 711,
+      "sales_million_yen": null
+    },
+    {
+      "name": "I卸売業，小売業",
+      "establishments": 343,
+      "workers": 2066,
+      "sales_million_yen": 42267
+    },
+    {
+      "name": "J金融業，保険業",
+      "establishments": 21,
+      "workers": 245,
+      "sales_million_yen": null
+    },
+    {
+      "name": "K不動産業，物品賃貸業",
+      "establishments": 24,
+      "workers": 56,
+      "sales_million_yen": 417
+    },
+    {
+      "name": "L学術研究，専門・技術サービス業",
+      "establishments": 36,
+      "workers": 110,
+      "sales_million_yen": 969
+    },
+    {
+      "name": "M宿泊業，飲食サービス業",
+      "establishments": 107,
+      "workers": 531,
+      "sales_million_yen": 1899
+    },
+    {
+      "name": "N生活関連サービス業，娯楽業",
+      "establishments": 143,
+      "workers": 459,
+      "sales_million_yen": 2812
+    },
+    {
+      "name": "O教育，学習支援業",
+      "establishments": 24,
+      "workers": 100,
+      "sales_million_yen": null
+    },
+    {
+      "name": "O1教育，学習支援業（学校教育）",
+      "establishments": 2,
+      "workers": 19,
+      "sales_million_yen": null
+    },
+    {
+      "name": "O2教育，学習支援業（その他の教育，学習支援業）",
+      "establishments": 22,
+      "workers": 81,
+      "sales_million_yen": 375
+    },
+    {
+      "name": "P医療，福祉",
+      "establishments": 58,
+      "workers": 1044,
+      "sales_million_yen": 8445
+    },
+    {
+      "name": "Q複合サービス事業",
+      "establishments": 20,
+      "workers": 120,
+      "sales_million_yen": null
+    },
+    {
+      "name": "Q1複合サービス事業（郵便局）",
+      "establishments": 15,
+      "workers": 68,
+      "sales_million_yen": null
+    },
+    {
+      "name": "Q2複合サービス事業（協同組合）",
+      "establishments": 5,
+      "workers": 52,
+      "sales_million_yen": 547
+    },
+    {
+      "name": "Rサービス業（他に分類されないもの）",
+      "establishments": 119,
+      "workers": 342,
+      "sales_million_yen": null
+    },
+    {
+      "name": "R1サービス業（政治・経済・文化団体，宗教）",
+      "establishments": 40,
+      "workers": 77,
+      "sales_million_yen": null
+    },
+    {
+      "name": "R2サービス業（政治・経済・文化団体，宗教を除く）",
+      "establishments": 79,
+      "workers": 265,
+      "sales_million_yen": 1688
+    },
+    {
+      "name": "F電気・ガス・熱供給・水道業",
+      "sales_million_yen": null
+    }
+  ]
+}
