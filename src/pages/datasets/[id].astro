@@ -505,7 +505,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
               <div class="category-card">
                 <h3>{categoryHeader} 分布</h3>
                 <div class="chart-canvas-wrap">
-                  <canvas id="category-chart"></canvas>
+                  <canvas id="category-chart" role="img" aria-label="カテゴリ別件数分布の横棒グラフ"></canvas>
                 </div>
                 <noscript>
                   <div class="category-bars">
@@ -626,7 +626,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
           <h3 class="chart-subtitle">年齢階層別人口（男女計）</h3>
           <div class="chart-canvas-wrap chart-canvas-wide">
-            <canvas id="age-chart"></canvas>
+            <canvas id="age-chart" role="img" aria-label="年齢階層別人口の棒グラフ"></canvas>
           </div>
           <noscript>
             <div class="bar-chart">
@@ -675,7 +675,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
             <>
               <h3 class="chart-subtitle">地域別人口（上位 {topRegionPopulationRows.length}）</h3>
               <div class="chart-canvas-wrap chart-canvas-wide">
-                <canvas id="region-chart"></canvas>
+                <canvas id="region-chart" role="img" aria-label="地域別人口の横棒グラフ"></canvas>
               </div>
               <noscript>
                 <div class="bar-chart region-bar-chart">
@@ -956,23 +956,26 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
             const ctx = document.getElementById('category-chart');
             if (ctx) {
               new Chart(ctx, {
-                type: 'doughnut',
+                type: 'bar',
                 data: {
                   labels: categoryDistribution.map(d => d.label),
                   datasets: [{
+                    label: '件数',
                     data: categoryDistribution.map(d => d.count),
                     backgroundColor: PALETTE.slice(0, categoryDistribution.length),
                     borderWidth: 0,
+                    borderRadius: 3,
                   }],
                 },
                 options: {
+                  indexAxis: 'y',
                   responsive: true,
                   plugins: {
-                    legend: {
-                      display: true,
-                      position: 'bottom',
-                      labels: { boxWidth: 10, padding: 8, font: { size: 10 } },
-                    },
+                    legend: { display: false },
+                  },
+                  scales: {
+                    x: { beginAtZero: true, grid: { color: COLORS.grid }, title: { display: true, text: '件数', font: { size: 9 }, color: '#7a7a90' } },
+                    y: { grid: { display: false } },
                   },
                 },
               });
@@ -1059,7 +1062,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .header-category {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     letter-spacing: 0.12em;
     color: var(--accent-green);
   }
@@ -1096,7 +1099,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .quick-stats .label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     letter-spacing: 0.08em;
     color: var(--text-dim);
   }
@@ -1119,7 +1122,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
     border-radius: 6px;
     padding: 0.28rem 0.6rem;
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
   }
 
@@ -1196,7 +1199,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
     border-radius: 8px;
     color: var(--text-secondary);
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 
   .map-canvas :global(.leaflet-control-layers-separator) {
@@ -1243,7 +1246,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .category-label {
     color: var(--text-secondary);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     line-height: 1.3;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1266,7 +1269,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .category-count {
     font-family: var(--font-mono);
-    font-size: 0.67rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
     text-align: right;
   }
@@ -1274,7 +1277,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
   .category-note {
     margin-top: 0.6rem;
     color: var(--text-dim);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 
   .chart-card h2 {
@@ -1300,7 +1303,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .summary-grid .label {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     letter-spacing: 0.08em;
     color: var(--text-dim);
   }
@@ -1330,7 +1333,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .population-meta dt {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     color: var(--text-dim);
     letter-spacing: 0.04em;
   }
@@ -1366,7 +1369,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .bar-label {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
   }
 
@@ -1387,7 +1390,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .bar-value {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
     text-align: right;
   }
@@ -1445,7 +1448,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   th {
     font-family: var(--font-mono);
-    font-size: 0.66rem;
+    font-size: 0.7rem;
     background: var(--bg-card);
     position: sticky;
     top: 0;
@@ -1499,7 +1502,7 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
 
   .excluded-points-table {
     min-width: 560px;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 
   .excluded-points-table th,

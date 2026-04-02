@@ -24,8 +24,8 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
 <section class="section precip-section">
   <div class="container">
     <div class="precip-header">
-      <h2 class="precip-title">PRECIPITATION ANALYSIS</h2>
-      <p class="precip-sub">行方市 {period.years}年間降水量実績とトレンド分析</p>
+      <h2 class="precip-title">降水量分析</h2>
+      <p class="precip-sub">PRECIPITATION ANALYSIS — 行方市 {period.years}年間降水量実績とトレンド分析</p>
     </div>
 
     <div class="precip-summary card">
@@ -71,14 +71,14 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
       <div class="card chart-panel">
         <h3>年間降水量推移とトレンド</h3>
         <div class="chart-wrap">
-          <canvas id="yearly-precip-chart"></canvas>
+          <canvas id="yearly-precip-chart" role="img" aria-label="年間降水量推移とトレンドの棒グラフ・折れ線グラフ"></canvas>
         </div>
       </div>
 
       <div class="card chart-panel">
         <h3>月別平年値（{period.years}年平均）</h3>
         <div class="chart-wrap">
-          <canvas id="monthly-normal-chart"></canvas>
+          <canvas id="monthly-normal-chart" role="img" aria-label="月別平年降水量の棒グラフ"></canvas>
         </div>
       </div>
     </div>
@@ -170,6 +170,7 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
               borderColor: 'rgba(249, 115, 22, 0.8)',
               backgroundColor: 'transparent',
               borderWidth: 2,
+              borderDash: [8, 4],
               pointRadius: 0,
               tension: 0,
               order: 1,
@@ -187,8 +188,8 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
           },
           scales: {
             y: {
-              beginAtZero: false,
-              title: { display: true, text: 'mm', font: { size: 9 }, color: '#5a5a6e' },
+              beginAtZero: true,
+              title: { display: true, text: 'mm', font: { size: 9 }, color: '#7a7a90' },
               grid: { color: '#1e1e2e' },
             },
             x: {
@@ -222,7 +223,7 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
           scales: {
             y: {
               beginAtZero: true,
-              title: { display: true, text: 'mm', font: { size: 9 }, color: '#5a5a6e' },
+              title: { display: true, text: 'mm', font: { size: 9 }, color: '#7a7a90' },
               grid: { color: '#1e1e2e' },
             },
             x: { grid: { display: false } },
@@ -279,7 +280,7 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
 
   .summary-grid .label {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     letter-spacing: 0.08em;
     color: var(--text-dim);
   }
@@ -345,7 +346,7 @@ const trendSign = trend.slope_mm_per_year > 0 ? '+' : '';
   }
 
   .precip-method dd a { color: var(--text-secondary); }
-  .precip-method .mono { font-family: var(--font-mono); font-size: 0.65rem; }
+  .precip-method .mono { font-family: var(--font-mono); font-size: 0.7rem; }
 
   @media (max-width: 768px) {
     .precip-charts {
