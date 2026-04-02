@@ -1,0 +1,120 @@
+{
+  "acquiredAt": "2026-04-02T10:00:00Z",
+  "source": "jgrants-portal",
+  "apiEndpoint": "https://api.jgrants-portal.go.jp/exp/v1/public/subsidies",
+  "searchKeywords": ["茨城県", "茨城県 中小企業"],
+  "note": "行方市単独でのヒットは0件。茨城県全体で27件中、茨城県に特に関連する11件を抽出。現在受付中の補助金は0件（2026-04-02時点）。",
+  "totalHits": 27,
+  "subsidies": [
+    {
+      "id": "a0WJ200000CDW2iMAH",
+      "name": "S-00007527",
+      "title": "令和７年度 第３回BCP実践促進助成金 連携型（R73BCPREN）",
+      "target_area": "茨城県 / 栃木県 / 群馬県 / 埼玉県 / 千葉県 / 東京都 / 神奈川県 / 山梨県",
+      "acceptance_start": "2026-01-07T00:00:00.000Z",
+      "acceptance_end": "2026-01-14T08:00:00.000Z",
+      "amount": "上限1,500万円",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDW2iMAH"
+    },
+    {
+      "id": "a0WJ200000CDUhcMAH",
+      "name": "S-00007195",
+      "title": "令和７年度 第２回サイバーセキュリティ対策促進助成金（R72CYB）",
+      "target_area": "茨城県 / 栃木県 / 群馬県 / 埼玉県 / 千葉県 / 東京都 / 神奈川県 / 山梨県",
+      "acceptance_start": "2025-09-10T00:00:00.000Z",
+      "acceptance_end": "2025-09-17T08:00:00.000Z",
+      "amount": "上限1,500万円",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDUhcMAH"
+    },
+    {
+      "id": "a0WJ200000CDUhdMAH",
+      "name": "S-00007196",
+      "title": "令和７年度 第２回BCP実践促進助成金 連携型（R72BCPREN）",
+      "target_area": "茨城県 / 栃木県 / 群馬県 / 埼玉県 / 千葉県 / 東京都 / 神奈川県 / 山梨県",
+      "acceptance_start": "2025-09-10T00:00:00.000Z",
+      "acceptance_end": "2025-09-17T08:00:00.000Z",
+      "amount": "上限1,500万円",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDUhdMAH"
+    },
+    {
+      "id": "a0WJ200000CDPiEMAX",
+      "name": "S-00006819",
+      "title": "【茨城県】令和７年度茨城県中小企業等海外展開支援事業（海外出願支援事業）",
+      "target_area": "茨城県",
+      "acceptance_start": "2025-05-08T23:30:00.000Z",
+      "acceptance_end": "2025-06-20T08:00:00.000Z",
+      "amount": "上限300万円",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDPiEMAX"
+    },
+    {
+      "id": "a0W2x000003QX9IEAW",
+      "name": "S-00000774",
+      "title": "【茨城県商工会連合会】令和２年度補正予算 小規模事業者持続化補助金＜コロナ特別対応型＞ 第３回受付締切",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-07-15T08:00:00.000Z",
+      "acceptance_end": "2020-08-07T14:59:59.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QX9IEAW"
+    },
+    {
+      "id": "a0W2x000003QX7hEAG",
+      "name": "S-00000675",
+      "title": "【茨城県商工会連合会】令和元年度補正予算 小規模事業者持続化補助金＜一般型＞ 第４回受付締切",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-10-30T06:00:00.000Z",
+      "acceptance_end": "2021-02-05T14:59:59.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QX7hEAG"
+    },
+    {
+      "id": "a0W2x000003QX77EAG",
+      "name": "S-00000639",
+      "title": "【茨城県商工会連合会】令和２年度補正予算 小規模事業者持続化補助金＜コロナ特別対応型＞ 第４回受付締切",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-08-17T06:00:00.000Z",
+      "acceptance_end": "2020-10-02T14:59:59.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QX77EAG"
+    },
+    {
+      "id": "a0W2x000003QX5qEAG",
+      "name": "S-00000560",
+      "title": "【茨城県商工会連合会】令和元年度補正予算 小規模事業者持続化補助金＜一般型＞ 第２回受付締切",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-03-31T15:00:00.000Z",
+      "acceptance_end": "2020-06-05T14:59:59.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QX5qEAG"
+    },
+    {
+      "id": "a0W2x000003QX4pEAG",
+      "name": "S-00000497",
+      "title": "【茨城県商工会連合会】令和２年度補正予算 小規模事業者持続化補助金＜コロナ特別対応型＞ 第５回受付締切",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-10-12T06:00:00.000Z",
+      "acceptance_end": "2020-12-10T14:59:59.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QX4pEAG"
+    },
+    {
+      "id": "a0W2x000003QWzqEAG",
+      "name": "S-00000188",
+      "title": "【関東経済産業局】令和2年度「商店街活性化・観光消費創出事業」",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-01-31T06:00:00.000Z",
+      "acceptance_end": "2020-02-28T08:00:00.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QWzqEAG"
+    },
+    {
+      "id": "a0W2x000003QX3rEAG",
+      "name": "S-00000437",
+      "title": "【関東経済産業局】令和元年度「インバウンド需要拡大推進事業（地域消費拡大推進事業）」（追加募集）",
+      "target_area": "全国（茨城県含む）",
+      "acceptance_start": "2020-11-04T06:00:00.000Z",
+      "acceptance_end": "2020-11-24T08:00:00.000Z",
+      "amount": "未公開",
+      "url": "https://www.jgrants-portal.go.jp/subsidy/a0W2x000003QX3rEAG"
+    }
+  ]
+}

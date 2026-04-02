@@ -1,0 +1,213 @@
+---
+import { buildBasePath } from '../utils/base-path';
+import populationData from '../data/processed/population.json';
+import medicalData from '../data/processed/medical.json';
+import geocoded from '../data/geocoded-districts.json';
+import cityData from '../data/city-statistics.json';
+
+const chartJsUrl = buildBasePath(import.meta.env.BASE_URL, 'chart.min.js');
+const leafletJsUrl = buildBasePath(import.meta.env.BASE_URL, 'leaflet.js');
+const leafletCssUrl = buildBasePath(import.meta.env.BASE_URL, 'leaflet.css');
+const boundaryUrl = buildBasePath(import.meta.env.BASE_URL, 'data/namegata-boundary.geojson');
+
+const { current_stats: stats } = cityData;
+
+// 地区データ: 人口 + 座標
+const districts = populationData.records
+  .map((r: any) => {
+    const name = r['地域名'];
+    const geo = (geocoded as Record<string, {lat:number;lon:number}>)[name];
+    if (!geo) return null;
+    const pop = parseInt(String(r['総人口']).replace(/,/g, ''), 10) || 0;
+    return { name, population: pop, lat: geo.lat, lon: geo.lon };
+  })
+  .filter(Boolean) as { name: string; population: number; lat: number; lon: number }[];
+
+// 医療施設（座標付き）
+const facilities = medicalData.records.map((r: any) => ({
+  name: r['名称'],
+  type: r['医療機関の種類'],
+  address: r['住所'],
+  lat: parseFloat(r['緯度']),
+  lon: parseFloat(r['経度']),
+  subjects: r['診療科目'],
+})).filter(f => !isNaN(f.lat) && !isNaN(f.lon));
+
+const totalPop = districts.reduce((s, d) => s + d.population, 0);
+const totalFacilities = facilities.length;
+const popPerFacility = Math.round(totalPop / totalFacilities);
+const avgDensity = Math.round(totalPop / stats.area_km2);
+---
+
+<section class="section cross-section">
+  <div class="container">
+    <div class="cross-header">
+      <h2 class="cross-title">クロス分析</h2>
+      <p class="cross-sub">CROSS ANALYSIS — 複数データの掛け合わせで見える地域特性</p>
+    </div>
+
+    <!-- 指標サマリー -->
+    <div class="cross-summary card">
+      <div class="summary-grid">
+        <div>
+          <span class="label">人口</span>
+          <strong>{totalPop.toLocaleString()}</strong>
+          <span class="sub">人</span>
+        </div>
+        <div>
+          <span class="label">医療施設</span>
+          <strong>{totalFacilities}</strong>
+          <span class="sub">施設</span>
+        </div>
+        <div>
+          <span class="label">市民 / 施設</span>
+          <strong>{popPerFacility.toLocaleString()}</strong>
+          <span class="sub">人</span>
+        </div>
+        <div>
+          <span class="label">平均人口密度</span>
+          <strong>{avgDensity}</strong>
+          <span class="sub">人/km²</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 地図: 人口 × 医療施設 -->
+    <div class="card map-card">
+      <h3>地区別人口と医療施設の分布</h3>
+      <p class="map-desc">円の大きさ = 地区人口　赤点 = 医療施設</p>
+      <div id="cross-map" class="cross-map" role="img" aria-label="行方市58地区の人口分布と12医療施設の位置を示す地図"></div>
+    </div>
+
+    <details class="evidence-section">
+      <summary>データソース・手法</summary>
+      <dl class="method-list">
+        <dt>人口データ</dt>
+        <dd>{populationData.rowCount}地区（{populationData.acquiredAt?.slice(0, 10)}取得）</dd>
+        <dt>医療施設</dt>
+        <dd>{medicalData.rowCount}施設（{medicalData.acquiredAt?.slice(0, 10)}取得）</dd>
+        <dt>地区座標</dt>
+        <dd>国土地理院ジオコーディングAPI</dd>
+        <dt>市域境界</dt>
+        <dd>国土数値情報 行政区域データ（デジタル庁 policy-dashboard-assets経由）</dd>
+      </dl>
+    </details>
+  </div>
+</section>
+
+<link rel="stylesheet" href={leafletCssUrl} />
+<script src={leafletJsUrl}></script>
+<script src={chartJsUrl}></script>
+
+<script define:vars={{ districts, facilities, boundaryUrl }}>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const el = document.getElementById('cross-map');
+    if (!el || typeof L === 'undefined') return;
+
+    const map = L.map(el, { zoomControl: true, scrollWheelZoom: false }).setView([36.06, 140.47], 11.5);
+
+    // 白地図タイル（国土地理院 淡色）
+    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
+      attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>',
+      maxZoom: 18,
+    }).addTo(map);
+
+    // 行方市境界線
+    try {
+      const res = await fetch(boundaryUrl);
+      const boundary = await res.json();
+      L.geoJSON(boundary, {
+        style: {
+          color: '#3b82f6',
+          weight: 2.5,
+          fillColor: '#3b82f6',
+          fillOpacity: 0.04,
+          dashArray: '6 3',
+        },
+      }).addTo(map);
+    } catch (e) { /* boundary optional */ }
+
+    // 人口バブル（58地区）
+    const maxPop = Math.max(...districts.map(d => d.population));
+    districts.forEach(d => {
+      const r = Math.sqrt(d.population / maxPop) * 1200;
+      L.circleMarker([d.lat, d.lon], {
+        radius: Math.max(r, 3),
+        fillColor: '#3b82f6',
+        fillOpacity: 0.35,
+        color: '#3b82f6',
+        weight: 1,
+      }).addTo(map).bindPopup(
+        '<strong>' + d.name + '</strong><br>' + d.population.toLocaleString() + ' 人'
+      );
+
+      // 大きい地区のみラベル
+      if (d.population >= 1000) {
+        L.marker([d.lat, d.lon], {
+          icon: L.divIcon({
+            className: 'district-label',
+            html: '<span>' + d.name + '</span>',
+            iconSize: [60, 16],
+            iconAnchor: [30, -6],
+          }),
+        }).addTo(map);
+      }
+    });
+
+    // 医療施設マーカー
+    facilities.forEach(f => {
+      L.circleMarker([f.lat, f.lon], {
+        radius: 6,
+        fillColor: '#ef4444',
+        fillOpacity: 0.9,
+        color: '#fff',
+        weight: 2,
+      }).addTo(map).bindPopup(
+        '<strong>' + f.name + '</strong><br>' +
+        '<span style="font-size:0.85em;color:#666">' + f.type + '</span><br>' +
+        '<span style="font-size:0.85em">' + f.address + '</span>'
+      );
+    });
+  });
+</script>
+
+<style>
+  .cross-section { padding: var(--section-gap) 0; }
+  .cross-header { margin-bottom: 1.5rem; }
+  .cross-title { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 700; color: var(--text-primary); }
+  .cross-sub { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); margin-top: 0.2rem; letter-spacing: 0.06em; }
+
+  .cross-summary { margin-bottom: 1.5rem; }
+  .summary-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; text-align: center;
+  }
+  .summary-grid .label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; color: var(--text-dim); }
+  .summary-grid strong { display: block; font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin: 0.2rem 0; }
+  .summary-grid .sub { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); }
+
+  .map-card h3 { font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); margin-bottom: 0.2rem; }
+  .map-desc { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); margin-bottom: 0.6rem; }
+  .cross-map { width: 100%; height: 480px; border-radius: 6px; background: var(--bg-raised); }
+
+  :global(.district-label) { background: none !important; border: none !important; }
+  :global(.district-label span) {
+    font-family: var(--font-mono); font-size: 0.65rem; color: #e8e8ed;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.7);
+    white-space: nowrap;
+  }
+
+  .evidence-section { margin-top: 1rem; }
+  .evidence-section summary { cursor: pointer; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); list-style: none; }
+  .evidence-section summary::-webkit-details-marker { display: none; }
+  .evidence-section summary::before { content: '▸ '; }
+  .evidence-section[open] summary::before { content: '▾ '; }
+  .method-list { margin-top: 0.5rem; font-size: 0.78rem; color: var(--text-secondary); }
+  .method-list dt { font-weight: 600; margin-top: 0.4rem; font-family: var(--font-mono); }
+  .method-list dd { margin-left: 0; margin-top: 0.1rem; font-family: var(--font-mono); font-size: 0.7rem; }
+
+  @media (max-width: 768px) {
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .cross-map { height: 350px; }
+  }
+</style>
