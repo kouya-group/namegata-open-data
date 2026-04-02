@@ -108,13 +108,13 @@ const naturalDecrease = stats.deaths - stats.births;
       <div class="card chart-panel">
         <h3>土地利用構成（{stats.land_use.date?.slice(0, 4) ?? ''}年）</h3>
         <div class="chart-wrap chart-wrap-small">
-          <canvas id="land-use-chart" role="img" aria-label="土地利用構成の横棒グラフ"></canvas>
+          <canvas id="land-use-chart" role="img" aria-label="土地利用構成のドーナツグラフ"></canvas>
         </div>
       </div>
       <div class="card chart-panel">
         <h3>産業別就業構成（2020年）</h3>
         <div class="chart-wrap chart-wrap-small">
-          <canvas id="industry-chart" role="img" aria-label="産業別就業構成の横棒グラフ"></canvas>
+          <canvas id="industry-chart" role="img" aria-label="産業別就業構成のドーナツグラフ"></canvas>
         </div>
       </div>
     </div>
@@ -220,25 +220,18 @@ const naturalDecrease = stats.deaths - stats.births;
     const landCtx = document.getElementById('land-use-chart');
     if (landCtx) {
       new Chart(landCtx, {
-        type: 'bar',
+        type: 'doughnut',
         data: {
           labels: ['農地', '山林', '宅地', 'その他'],
           datasets: [{
-            label: '%',
             data: [stats.land_use.agriculture_pct, stats.land_use.forest_pct, stats.land_use.residential_pct, stats.land_use.other_pct],
             backgroundColor: ['#22c55e', '#15803d', '#3b82f6', '#6b7280'],
             borderWidth: 0,
-            borderRadius: 3,
           }],
         },
         options: {
-          indexAxis: 'y',
           responsive: true,
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { beginAtZero: true, grid: { color: '#1e1e2e' }, title: { display: true, text: '%', font: { size: 9 }, color: '#7a7a90' } },
-            y: { grid: { display: false } },
-          },
+          plugins: { legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 6, font: { size: 10 }, color: '#9898a8' } } },
         },
       });
     }
@@ -246,25 +239,18 @@ const naturalDecrease = stats.deaths - stats.births;
     const indCtx = document.getElementById('industry-chart');
     if (indCtx) {
       new Chart(indCtx, {
-        type: 'bar',
+        type: 'doughnut',
         data: {
           labels: ['第1次', '第2次', '第3次'],
           datasets: [{
-            label: '%',
             data: [stats.industry_primary_pct, stats.industry_secondary_pct, stats.industry_tertiary_pct],
             backgroundColor: ['#22c55e', '#f97316', '#3b82f6'],
             borderWidth: 0,
-            borderRadius: 3,
           }],
         },
         options: {
-          indexAxis: 'y',
           responsive: true,
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { beginAtZero: true, grid: { color: '#1e1e2e' }, title: { display: true, text: '%', font: { size: 9 }, color: '#7a7a90' } },
-            y: { grid: { display: false } },
-          },
+          plugins: { legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 6, font: { size: 10 }, color: '#9898a8' } } },
         },
       });
     }
