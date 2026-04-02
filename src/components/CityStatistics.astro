@@ -2,6 +2,8 @@
 import { buildBasePath } from '../utils/base-path';
 import cityData from '../data/city-statistics.json';
 import incomeData from '../data/income-agriculture.json';
+import estatData from '../data/estat-statistics.json';
+import corpData from '../data/corporations.json';
 import evidence from '../data/evidence/city-statistics.evidence.json';
 import incomeEvidence from '../data/evidence/income-agriculture.evidence.json';
 
@@ -10,6 +12,14 @@ const chartJsUrl = buildBasePath(import.meta.env.BASE_URL, 'chart.min.js');
 const { current_stats: stats, population_projection: projection } = cityData;
 const projections = projection.projections;
 const { tax, agriculture } = incomeData;
+
+// e-Stat 国勢調査実績
+const censusData = estatData.population_trend.data;
+const agingRates = estatData.derived_statistics.aging_rate_percent;
+
+// 経済データ
+const economicIndicators = corpData.summary.economic_indicators;
+const bySector = corpData.summary.by_sector;
 const topAgriItems = agriculture.items
   .filter((i: any) => i.item !== i.department && i.amount_10million_yen > 0)
   .sort((a: any, b: any) => b.amount_10million_yen - a.amount_10million_yen)
@@ -69,9 +79,9 @@ const naturalDecrease = stats.deaths - stats.births;
 
     <div class="projection-section">
       <div class="card chart-panel">
-        <h3>将来推計人口（社人研 2023年推計）</h3>
+        <h3>人口推移と将来推計（国勢調査実績 + 社人研推計）</h3>
         <div class="chart-wrap">
-          <canvas id="population-projection-chart" role="img" aria-label="将来推計人口の棒グラフ（実績と推計）"></canvas>
+          <canvas id="population-projection-chart" role="img" aria-label="国勢調査実績と将来推計人口の棒グラフ"></canvas>
         </div>
       </div>
 
@@ -147,6 +157,37 @@ const naturalDecrease = stats.deaths - stats.births;
       </div>
     </div>
 
+    <!-- 経済指標（e-Stat + 過疎計画） -->
+    <div class="economy-section">
+      <div class="card">
+        <h3>経済指標（令和4年度）</h3>
+        <div class="econ-grid">
+          <div>
+            <span class="label">製造品出荷額</span>
+            <strong>{economicIndicators.manufacturing_shipment_billion_yen} 億円</strong>
+          </div>
+          <div>
+            <span class="label">年間商品販売額</span>
+            <strong>{economicIndicators.annual_commodity_sales_billion_yen} 億円</strong>
+          </div>
+          <div>
+            <span class="label">1人あたり所得</span>
+            <strong>{(economicIndicators.per_capita_income_thousand_yen / 10).toFixed(0)} 万円</strong>
+          </div>
+          <div>
+            <span class="label">財政力指数</span>
+            <strong>{economicIndicators.fiscal_strength_index}</strong>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>高齢化率の推移（国勢調査）</h3>
+        <div class="chart-wrap chart-wrap-small">
+          <canvas id="aging-rate-chart" role="img" aria-label="高齢化率の推移を示す折れ線グラフ"></canvas>
+        </div>
+      </div>
+    </div>
+
     <details class="card evidence-section">
       <summary>出典・エビデンス</summary>
       <dl>
@@ -170,7 +211,7 @@ const naturalDecrease = stats.deaths - stats.births;
 </section>
 
 <script is:inline src={chartJsUrl}></script>
-<script is:inline define:vars={{ projections, stats, topAgriItems }}>
+<script is:inline define:vars={{ projections, stats, topAgriItems, censusData }}>
   if (typeof Chart !== 'undefined') {
     Chart.defaults.color = '#9898a8';
     Chart.defaults.borderColor = '#1e1e2e';
@@ -179,35 +220,39 @@ const naturalDecrease = stats.deaths - stats.births;
 
     const projCtx = document.getElementById('population-projection-chart');
     if (projCtx) {
-      const actuals = projections.filter(p => p.is_actual);
-      const forecasts = projections.filter(p => !p.is_actual);
+      // e-Stat国勢調査実績（2005, 2010）+ 社人研データを結合
+      const censusOnly = censusData.filter(c => !projections.some(p => p.year === c.year));
+      const allYears = [
+        ...censusOnly.map(c => ({ year: c.year, total: c.population, is_actual: true, source: 'census' })),
+        ...projections.map(p => ({ year: p.year, total: p.total, is_actual: p.is_actual, source: 'ipss' })),
+      ].sort((a, b) => a.year - b.year);
+
       new Chart(projCtx, {
         type: 'bar',
         data: {
-          labels: projections.map(p => p.year + '年'),
+          labels: allYears.map(p => p.year + '年'),
           datasets: [
             {
-              label: '実績',
-              data: projections.map(p => p.is_actual ? p.total : null),
+              label: '国勢調査実績',
+              data: allYears.map(p => p.is_actual ? p.total : null),
               backgroundColor: 'rgba(59, 130, 246, 0.7)',
               borderRadius: 3,
               borderWidth: 0,
             },
             {
-              label: '推計',
-              data: projections.map(p => !p.is_actual ? p.total : null),
+              label: '社人研推計',
+              data: allYears.map(p => !p.is_actual ? p.total : null),
               backgroundColor: 'rgba(249, 115, 22, 0.5)',
               borderRadius: 3,
               borderWidth: 1,
               borderColor: 'rgba(249, 115, 22, 0.7)',
-              borderDash: [4, 4],
             },
           ],
         },
         options: {
           responsive: true,
           plugins: {
-            legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 8, font: { size: 10 } } },
+            legend: { display: true, position: 'bottom', labels: { boxWidth: 10, padding: 8, font: { size: 10 }, color: '#9898a8' } },
           },
           scales: {
             y: { beginAtZero: true, grid: { color: '#1e1e2e' }, title: { display: true, text: '人', font: { size: 9 }, color: '#7a7a90' } },
@@ -280,6 +325,42 @@ const naturalDecrease = stats.deaths - stats.births;
         },
       });
     }
+
+    // 高齢化率チャート
+    const agingCtx = document.getElementById('aging-rate-chart');
+    if (agingCtx) {
+      const agingRates = [
+        { year: 2005, rate: 25.7 },
+        { year: 2010, rate: 27.6 },
+        { year: 2015, rate: 31.5 },
+        { year: 2020, rate: 36.1 },
+      ];
+      new Chart(agingCtx, {
+        type: 'line',
+        data: {
+          labels: agingRates.map(d => d.year + '年'),
+          datasets: [{
+            label: '高齢化率 (%)',
+            data: agingRates.map(d => d.rate),
+            borderColor: '#f97316',
+            backgroundColor: 'rgba(249, 115, 22, 0.1)',
+            fill: true,
+            tension: 0.3,
+            pointRadius: 4,
+            pointBackgroundColor: '#f97316',
+            borderWidth: 2,
+          }],
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: false, min: 20, max: 45, grid: { color: '#1e1e2e' }, title: { display: true, text: '%', font: { size: 9 }, color: '#7a7a90' } },
+            x: { grid: { display: false } },
+          },
+        },
+      });
+    }
   }
 </script>
 
@@ -335,6 +416,13 @@ const naturalDecrease = stats.deaths - stats.births;
   .land-use-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
   .income-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
   .income-section h3 { font-size: 0.78rem; font-family: var(--font-mono); margin-bottom: 0.5rem; color: var(--text-secondary); }
+
+  .economy-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .economy-section h3 { font-size: 0.78rem; font-family: var(--font-mono); margin-bottom: 0.5rem; color: var(--text-secondary); }
+  .econ-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .econ-grid div { display: flex; flex-direction: column; gap: 0.1rem; }
+  .econ-grid .label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; color: var(--text-dim); }
+  .econ-grid strong { font-family: var(--font-mono); font-size: 0.95rem; color: var(--text-primary); }
   .rank-badge { font-size: 0.7rem; color: var(--accent-green); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 4px; padding: 0.1rem 0.4rem; margin-left: 0.3rem; }
   .agri-total { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: var(--accent-green); margin-bottom: 0.5rem; }
   .agri-total .sub { font-size: 0.7rem; color: var(--text-dim); font-weight: 400; }
@@ -352,6 +440,7 @@ const naturalDecrease = stats.deaths - stats.births;
     .projection-section { grid-template-columns: 1fr; }
     .land-use-row { grid-template-columns: 1fr; }
     .income-section { grid-template-columns: 1fr; }
+    .economy-section { grid-template-columns: 1fr; }
     .evidence-section dl { grid-template-columns: 1fr; }
   }
 </style>
