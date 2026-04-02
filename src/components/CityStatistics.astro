@@ -4,6 +4,7 @@ import cityData from '../data/city-statistics.json';
 import incomeData from '../data/income-agriculture.json';
 import estatData from '../data/estat-statistics.json';
 import corpData from '../data/corporations.json';
+import censusEcon from '../data/economic-census.json';
 import evidence from '../data/evidence/city-statistics.evidence.json';
 import incomeEvidence from '../data/evidence/income-agriculture.evidence.json';
 
@@ -20,6 +21,13 @@ const agingRates = estatData.derived_statistics.aging_rate_percent;
 // 経済データ
 const economicIndicators = corpData.summary.economic_indicators;
 const bySector = corpData.summary.by_sector;
+
+// 経済センサス 産業別事業所数（上位8）
+const topIndustries = censusEcon.industries
+  .filter((i: any) => i.establishments && i.establishments > 0 && !i.name.includes('～'))
+  .sort((a: any, b: any) => (b.establishments || 0) - (a.establishments || 0))
+  .slice(0, 8)
+  .map((i: any) => ({ name: i.name.replace(/^[A-Z]\d?/, '').replace(/^～?[A-Z]/, ''), est: i.establishments, workers: i.workers }));
 const topAgriItems = agriculture.items
   .filter((i: any) => i.item !== i.department && i.amount_10million_yen > 0)
   .sort((a: any, b: any) => b.amount_10million_yen - a.amount_10million_yen)
@@ -188,6 +196,14 @@ const naturalDecrease = stats.deaths - stats.births;
       </div>
     </div>
 
+    <!-- 産業別事業所数（経済センサス） -->
+    <div class="card" style="margin-bottom: 1rem;">
+      <h3>産業別事業所数（経済センサス 平成24年・上位8産業）</h3>
+      <div class="chart-wrap">
+        <canvas id="industry-census-chart" role="img" aria-label="産業別事業所数の横棒グラフ"></canvas>
+      </div>
+    </div>
+
     <details class="card evidence-section">
       <summary>出典・エビデンス</summary>
       <dl>
@@ -211,7 +227,7 @@ const naturalDecrease = stats.deaths - stats.births;
 </section>
 
 <script is:inline src={chartJsUrl}></script>
-<script is:inline define:vars={{ projections, stats, topAgriItems, censusData }}>
+<script is:inline define:vars={{ projections, stats, topAgriItems, censusData, topIndustries }}>
   if (typeof Chart !== 'undefined') {
     Chart.defaults.color = '#9898a8';
     Chart.defaults.borderColor = '#1e1e2e';
@@ -357,6 +373,33 @@ const naturalDecrease = stats.deaths - stats.births;
           scales: {
             y: { beginAtZero: false, min: 20, max: 45, grid: { color: '#1e1e2e' }, title: { display: true, text: '%', font: { size: 9 }, color: '#7a7a90' } },
             x: { grid: { display: false } },
+          },
+        },
+      });
+    }
+
+    // 産業別事業所数チャート
+    const indCensusCtx = document.getElementById('industry-census-chart');
+    if (indCensusCtx && topIndustries.length > 0) {
+      new Chart(indCensusCtx, {
+        type: 'bar',
+        data: {
+          labels: topIndustries.map(i => i.name),
+          datasets: [{
+            label: '事業所数',
+            data: topIndustries.map(i => i.est),
+            backgroundColor: 'rgba(59, 130, 246, 0.7)',
+            borderWidth: 0,
+            borderRadius: 3,
+          }],
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { beginAtZero: true, grid: { color: '#1e1e2e' }, title: { display: true, text: '事業所数', font: { size: 9 }, color: '#7a7a90' } },
+            y: { grid: { display: false }, ticks: { font: { size: 10 } } },
           },
         },
       });
