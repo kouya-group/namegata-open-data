@@ -93,8 +93,6 @@ const avgDensity = Math.round(totalPop / stats.area_km2);
         <dd>国土数値情報 行政区域データ（デジタル庁 policy-dashboard-assets経由）</dd>
       </dl>
     </details>
-<link rel="stylesheet" href={leafletCssUrl} />
-<script is:inline src={leafletJsUrl}></script>
 <script is:inline src={chartJsUrl}></script>
 
   </div>
@@ -105,16 +103,14 @@ const avgDensity = Math.round(totalPop / stats.area_km2);
     const el = document.getElementById('cross-map');
     if (!el || typeof L === 'undefined') return;
 
-    var map = L.map(el, { zoomControl: true, scrollWheelZoom: false }).setView([36.06, 140.47], 11.5);
+    var map = L.map(el, { zoomControl: true, scrollWheelZoom: false }).setView([36.06, 140.47], 11);
 
-    // 白地図タイル（国土地理院 淡色）
-    L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
-      attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>',
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 18,
     }).addTo(map);
 
-    // タイル読み込みのためサイズ再計算
-    setTimeout(function() { map.invalidateSize(); }, 200);
+    setTimeout(function() { map.invalidateSize(); }, 300);
 
     // 行方市境界線（ビルド時にインライン化済み）
     if (boundaryGeoJson && boundaryGeoJson.features) {
