@@ -822,7 +822,8 @@ const hasCharts = hasCategoryChart || (isPopulationDataset && ageDistribution.le
             return;
           }
 
-          element.innerHTML = `<p class="map-error-text">${message}</p>`;
+          const safe = String(message).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+          element.innerHTML = `<p class="map-error-text">${safe}</p>`;
         };
 
         const sanitizeHtml = value =>
