@@ -4,11 +4,12 @@ import populationData from '../data/processed/population.json';
 import medicalData from '../data/processed/medical.json';
 import geocoded from '../data/geocoded-districts.json';
 import cityData from '../data/city-statistics.json';
+import fs from 'node:fs';
 
 const chartJsUrl = buildBasePath(import.meta.env.BASE_URL, 'chart.min.js');
 const leafletJsUrl = buildBasePath(import.meta.env.BASE_URL, 'leaflet.js');
 const leafletCssUrl = buildBasePath(import.meta.env.BASE_URL, 'leaflet.css');
-const boundaryUrl = buildBasePath(import.meta.env.BASE_URL, 'data/namegata-boundary.geojson');
+const boundaryGeoJson = JSON.parse(fs.readFileSync('public/data/namegata-boundary.geojson', 'utf-8'));
 
 const { current_stats: stats } = cityData;
 
@@ -92,19 +93,19 @@ const avgDensity = Math.round(totalPop / stats.area_km2);
         <dd>国土数値情報 行政区域データ（デジタル庁 policy-dashboard-assets経由）</dd>
       </dl>
     </details>
+<link rel="stylesheet" href={leafletCssUrl} />
+<script is:inline src={leafletJsUrl}></script>
+<script is:inline src={chartJsUrl}></script>
+
   </div>
 </section>
 
-<link rel="stylesheet" href={leafletCssUrl} />
-<script src={leafletJsUrl}></script>
-<script src={chartJsUrl}></script>
-
-<script define:vars={{ districts, facilities, boundaryUrl }}>
-  document.addEventListener('DOMContentLoaded', async () => {
+<script is:inline define:vars={{ districts, facilities, boundaryGeoJson }}>
+  document.addEventListener('DOMContentLoaded', function() {
     const el = document.getElementById('cross-map');
     if (!el || typeof L === 'undefined') return;
 
-    const map = L.map(el, { zoomControl: true, scrollWheelZoom: false }).setView([36.06, 140.47], 11.5);
+    var map = L.map(el, { zoomControl: true, scrollWheelZoom: false }).setView([36.06, 140.47], 11.5);
 
     // 白地図タイル（国土地理院 淡色）
     L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {
@@ -112,20 +113,20 @@ const avgDensity = Math.round(totalPop / stats.area_km2);
       maxZoom: 18,
     }).addTo(map);
 
-    // 行方市境界線
-    try {
-      const res = await fetch(boundaryUrl);
-      const boundary = await res.json();
-      L.geoJSON(boundary, {
+    // タイル読み込みのためサイズ再計算
+    setTimeout(function() { map.invalidateSize(); }, 200);
+
+    // 行方市境界線（ビルド時にインライン化済み）
+    if (boundaryGeoJson && boundaryGeoJson.features) {
+      L.geoJSON(boundaryGeoJson, {
         style: {
-          color: '#3b82f6',
-          weight: 2.5,
+          color: '#60a5fa',
+          weight: 3,
           fillColor: '#3b82f6',
-          fillOpacity: 0.04,
-          dashArray: '6 3',
+          fillOpacity: 0.08,
         },
       }).addTo(map);
-    } catch (e) { /* boundary optional */ }
+    }
 
     // 人口バブル（58地区）
     const maxPop = Math.max(...districts.map(d => d.population));
@@ -188,7 +189,8 @@ const avgDensity = Math.round(totalPop / stats.area_km2);
 
   .map-card h3 { font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); margin-bottom: 0.2rem; }
   .map-desc { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim); margin-bottom: 0.6rem; }
-  .cross-map { width: 100%; height: 480px; border-radius: 6px; background: var(--bg-raised); }
+  .cross-map { width: 100%; height: 480px; }
+  .cross-map :global(.leaflet-container) { background: #1a1a24; border-radius: 6px; }
 
   :global(.district-label) { background: none !important; border: none !important; }
   :global(.district-label span) {
@@ -208,6 +210,6 @@ const avgDensity = Math.round(totalPop / stats.area_km2);
 
   @media (max-width: 768px) {
     .summary-grid { grid-template-columns: repeat(2, 1fr); }
-    .cross-map { height: 350px; }
+    .cross-map { height: 300px; }
   }
 </style>
