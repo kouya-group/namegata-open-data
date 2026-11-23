@@ -1,460 +1,807 @@
 {
   "datasetId": "tourism",
   "title": "観光施設一覧",
-  "acquiredAt": "2026-03-23T20:53:42.931Z",
+  "acquiredAt": "2026-11-23T01:23:48.250Z",
   "sourceUrl": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=34",
   "sourcePageUrl": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=13",
-  "encoding": "shift_jis",
+  "encoding": "utf-8",
   "headers": [
-    "都道府県コード又は\n市区町村コード",
-    "NO",
-    "都道府県名",
-    "市区町村名",
-    "名称",
-    "名称_カナ",
-    "名称_英語",
-    "POIコード",
-    "住所",
-    "方書",
-    "緯度",
-    "経度",
-    "利用可能曜日",
-    "開始時間",
-    "終了時間",
-    "利用可能日時特記事項",
-    "料金（基本）",
-    "料金（詳細）",
-    "説明",
-    "説明_英語",
-    "アクセス方法",
-    "駐車場情報",
-    "バリアフリー情報",
-    "連絡先名称",
-    "連絡先電話番号",
-    "連絡先内線番号",
-    "画像",
-    "画像_ライセンス",
-    "URL",
-    "備考"
+    ""
   ],
-  "rowCount": 13,
-  "columnCount": 30,
+  "rowCount": 264,
+  "columnCount": 1,
   "records": [
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "1",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "霞ケ浦ふれあいランド",
-      "名称_カナ": "カスミガウラフレアイランド",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市玉造甲1234",
-      "方書": "",
-      "緯度": "36.096741",
-      "経度": "140.403483",
-      "利用可能曜日": "火・水・木・金・土・日曜日",
-      "開始時間": "9時30分",
-      "終了時間": "16時30分",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "大人300円\n小人150円",
-      "料金（詳細）": "大人（高校生～）\n小人（4歳～中学生）\n幼児（3歳以下無料）",
-      "説明": "霞ケ浦大橋たもとにそびえる虹の塔がシンボルの施設です。ボルダリングやレンタサイクルなど親子で楽しめるレジャーが充実しています。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約40分\n潮来ＩＣ→国道355号経由で約50分\n\n\n\n",
-      "駐車場情報": "有",
-      "バリアフリー情報": "有",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-55-3927",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/dir000922.html",
-      "備考": ""
+      "column_1": "<!DOCTYPE html>"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "2",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "観光物産館こいこい",
-      "名称_カナ": "カンコウブッサンカンコイコイ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市玉造甲1963-5",
-      "方書": "",
-      "緯度": "36.095464",
-      "経度": "140.402513",
-      "利用可能曜日": "月・火・水・木・金・土・日曜日",
-      "開始時間": "9時",
-      "終了時間": "18時",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "霞ケ浦大橋のたもとにある物産館です。行方市の新鮮な野菜や地元の名産品を販売の他、フードコートなど、憩いの場としてもご利用いただけます。施設内のウッドデッキからの展望は絶景です。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約40分\n潮来ＩＣ→国道355号経由で約50分\n\n\n\n",
-      "駐車場情報": "有",
-      "バリアフリー情報": "有",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-36-2781",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "www.namegata-koikoi.com/ ",
-      "備考": ""
+      "column_1": "<html lang=ja>"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "3",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "麻生温泉白帆の湯",
-      "名称_カナ": "アソウオンセンシラホノユ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市麻生421-3",
-      "方書": "",
-      "緯度": "35.987226",
-      "経度": "140.475101",
-      "利用可能曜日": "月・火・木・金・土・日曜日",
-      "開始時間": "10時",
-      "終了時間": "21時",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "大人740円\n子供310円\n大人530円（17時～\n子供210円(17時～",
-      "料金（詳細）": "",
-      "説明": "霞ケ浦を一望できる展望風呂が自慢です。筑波山はもちろん、冬の空気が澄んだ時期には富士山も眺めることのできる日帰り温泉です。隣接の天王崎観光交流センターコテラスではカフェや新鮮地場野菜、お土産に地元の名産品もご用意されています。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約60分\n潮来ＩＣ→国道355号経由で約30分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "有",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-80-6622",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://shirahonoyu.com/ ",
-      "備考": ""
+      "column_1": "<head prefix=og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#>"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "4",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "北浦温泉北浦荘",
-      "名称_カナ": "キタウラオンセンキタウラソウ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市山田121",
-      "方書": "",
-      "緯度": "36.085406",
-      "経度": "140.537384",
-      "利用可能曜日": "火・水・木・金・日曜日",
-      "開始時間": "10時",
-      "終了時間": "21時",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "大人420円\n子供210円\n行方市内310円",
-      "料金（詳細）": "大人（中学生含む）\n子供（小学生・障害者）\n行方市内（65歳以上）",
-      "説明": "北浦湖畔、鹿行大橋のたもとに位置する日帰り温泉です。多様な効能を持つナトリウム炭酸水素塩泉、源泉かけ流しで地元の人に人気となっています。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号経由で約60分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "有",
-      "連絡先名称": "",
-      "連絡先電話番号": "0291-35-2821",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page007929.html",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Type content=text/html; charset=UTF-8 />"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "5",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "なめがたファーマーズヴィレッジ",
-      "名称_カナ": "ナメガタファーマーズヴィレッジ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市宇崎1561",
-      "方書": "",
-      "緯度": "36.022891",
-      "経度": "140.546446",
-      "利用可能曜日": "月・火・水・木・金・土・日曜日",
-      "開始時間": "10時",
-      "終了時間": "21時",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "大人900円\n子供700円",
-      "料金（詳細）": "大人(中学生以上）\n子供（4歳以上）\n3歳以下（無料）",
-      "説明": "廃校となった小学校の校舎をリニューアルして建てられました。食べて、育てて、学んで、自然をいっぱい感じる農と食の体験型テーマパークです。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→約70分\n潮来ＩＣ→約20分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "有",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-87-1130",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.namegata-fv.jp/facilities/museum.html ",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Style-Type content=text/css />"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "6",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "大塲家郷土屋敷",
-      "名称_カナ": "オオバケキョウドヤシキ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市玉造甲4533-3",
-      "方書": "",
-      "緯度": "36.108832",
-      "経度": "140.416311",
-      "利用可能曜日": "火・水・木・土曜日",
-      "開始時間": "10時",
-      "終了時間": "16時",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "大人300円\n(団体20名以上は150円）\n子供200円\n(団体20名以上は250円）",
-      "料金（詳細）": "大人（一般）\n子供（小・中・高校生）\n",
-      "説明": "寛永年間（1624～44年）に建てられたとされるように、伝統的な茅葺き住宅。大塲家は代々水戸藩の大山守を務め、時には庄屋や御留川の川守も兼帯していました。映画「桜田門外ノ変」のロケ地としても使用されています。茨城県指定有形文化財です。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約45分\n潮来ＩＣ→国道355号経由で約50分\n",
-      "駐車場情報": "有",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-55-3230",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "www.ohbakegoushiyashiki.com/ ",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Script-Type content=text/javascript />"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "7",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "麻生家老屋敷",
-      "名称_カナ": "アソウカロウヤシキ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市麻生1153-1",
-      "方書": "",
-      "緯度": "35.988504",
-      "経度": "140.486728",
-      "利用可能曜日": "木・金・土・日曜日",
-      "開始時間": "9時",
-      "終了時間": "16時",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "無料",
-      "料金（詳細）": "",
-      "説明": "江戸時代の麻生藩家老畑家の武家屋敷。豪壮な入母屋造の茅葺き屋根が特徴です。茨城県指定有形文化財です。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約60分\n潮来ＩＣ→国道355号経由で約30分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-72-1971",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page001414.html ",
-      "備考": ""
+      "column_1": "<meta http-equiv=X-UA-Compatible content=IE=edge />"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "8",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "三昧塚古墳",
-      "名称_カナ": "サンマイヅカコフン",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市沖洲467-1",
-      "方書": "",
-      "緯度": "36.154855",
-      "経度": "140.365987",
-      "利用可能曜日": "",
-      "開始時間": "",
-      "終了時間": "",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "茨城県行方市沖洲にある前方後円墳です。沖洲古墳群を構成する古墳の一つで、行方市指定史跡。出土品は国の重要文化財に指定されています。",
-      "説明_英語": "",
-      "アクセス方法": "潮来ＩＣ→国道355号経由で約80分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page001406.html ",
-      "備考": ""
+      "column_1": "<meta name=viewport content=width=1100 />"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "9",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "西蓮寺",
-      "名称_カナ": "サイレンジ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市西連寺504",
-      "方書": "",
-      "緯度": "36.071962",
-      "経度": "140.439182",
-      "利用可能曜日": "",
-      "開始時間": "",
-      "終了時間": "",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "天台宗の寺院。俗に常陸の高野山ともいわれる。山門と相輪木棠は国の重要文化財。木造薬師如来坐像は茨城県指定有形文化財である。県指定天然記念物の樹齢1000年以上の２本の大銀杏や七日七夜、昼夜不断に読経する常行三昧絵が人気の観光スポットです。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約60分\n潮来ＩＣ→国道355号経由で約45分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "0299-56-0107",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page001412.html",
-      "備考": ""
+      "column_1": "<meta name=keywords content= />"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "10",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "春日神社",
-      "名称_カナ": "カスガジンジャ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市青沼492-1",
-      "方書": "",
-      "緯度": "36.033283",
-      "経度": "140.516322",
-      "利用可能曜日": "",
-      "開始時間": "",
-      "終了時間": "",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "平安初期、奈良の春日大社から分社している創建されたと伝わる。毎年11月23日に五穀豊穣を願う「どぶろく祭り」が人気であり、酒類免許を取得している全国的にも珍しい神社です。",
-      "説明_英語": "",
-      "アクセス方法": "潮来ＩＣ→約30分",
-      "駐車場情報": "無",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/map.php?code=226 ",
-      "備考": ""
+      "column_1": "<meta name=description content=>"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "11",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "化蘇沼稲荷神社",
-      "名称_カナ": "ケソヌマイナリジンジャ",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市内宿157-1",
-      "方書": "",
-      "緯度": "36.112915",
-      "経度": "140.500128",
-      "利用可能曜日": "",
-      "開始時間": "",
-      "終了時間": "",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "文明10年（1478年）、当時の領主大掾氏が武田の地の守護神として創祀し、天文3年（1534年）に武田通信公が再建しました。古くから続く巫女舞の奉納神事や奉納相撲があり別名「関取稲荷」と呼ばれています。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号経由\nで約60分",
-      "駐車場情報": "有",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page001747.html ",
-      "備考": ""
+      "column_1": "<meta property=og:url content=>"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "12",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "八坂神社（麻生）",
-      "名称_カナ": "ヤサカジンジャ（アソウ）",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市麻生420",
-      "方書": "",
-      "緯度": "35.986917",
-      "経度": "140.475185",
-      "利用可能曜日": "",
-      "開始時間": "",
-      "終了時間": "",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "行方市の天王崎に位置する八坂神社は麻生藩の観光総鎮守神社でした。現在では行方市の無形民俗文化財に指定され、毎年7月下旬に境内で行われるスサノウノミコトがヤマタノオロチと戦う馬出しまつりが有名です。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号→\n霞ケ浦大橋経由で約60分\n潮来ＩＣ→国道355号経由で約35分",
-      "駐車場情報": "無",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page001415.html ",
-      "備考": ""
+      "column_1": "<meta property=og:type content=article>"
     },
     {
-      "都道府県コード又は_市区町村コード": "82333",
-      "NO": "13",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "八坂神社（北浦）",
-      "名称_カナ": "ヤサカジンジャ（キタウラ）",
-      "名称_英語": "",
-      "POIコード": "",
-      "住所": "行方市山田1284",
-      "方書": "",
-      "緯度": "36.073901",
-      "経度": "140.526851",
-      "利用可能曜日": "",
-      "開始時間": "",
-      "終了時間": "",
-      "利用可能日時特記事項": "",
-      "料金（基本）": "",
-      "料金（詳細）": "",
-      "説明": "市指定無形文化財。山田の産土神（うぶすなかみ）の祭礼で五穀豊穣、疫病退散の願いとして毎年7月下旬に神輿があばれまわる事で有名な山田祇園まつりが執り行われる。",
-      "説明_英語": "",
-      "アクセス方法": "土浦北ＩＣ→国道354号経由\nで約60分",
-      "駐車場情報": "無",
-      "バリアフリー情報": "無",
-      "連絡先名称": "",
-      "連絡先電話番号": "",
-      "連絡先内線番号": "",
-      "画像": "",
-      "画像_ライセンス": "",
-      "URL": "https://www.city.namegata.ibaraki.jp/page/page001340.html ",
-      "備考": ""
+      "column_1": "<meta property=og:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
+    },
+    {
+      "column_1": "<meta property=og:title content=>"
+    },
+    {
+      "column_1": "<meta property=og:description content=>"
+    },
+    {
+      "column_1": "<meta name=twitter:card content=summary>"
+    },
+    {
+      "column_1": "<meta name=twitter:description content=>"
+    },
+    {
+      "column_1": "<meta name=twitter:title content=>"
+    },
+    {
+      "column_1": "<meta name=twitter:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
+    },
+    {
+      "column_1": "<title>&nbsp;|&nbsp;行方市公式ホームページ</title>"
+    },
+    {
+      "column_1": "<base href=https://www.city.namegata.ibaraki.jp/>"
+    },
+    {
+      "column_1": "<link rel=shortcut icon href=./favicon.ico />"
+    },
+    {
+      "column_1": "<link rel=apple-touch-icon href=./web_clip_icon.png />"
+    },
+    {
+      "column_1": "<link rel=stylesheet href=./skin/default/css/import.css?250924 type=text/css media=all />"
+    },
+    {
+      "column_1": "<link rel=stylesheet href=./skin/common/css/print.css type=text/css media=print />"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.jg.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/functions.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/plugins.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/rwdImageMaps.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/colorbox/colorbox.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/slick.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/ready.common.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/gsearch.js></script>"
+    },
+    {
+      "column_1": "<script src=//typesquare.com/3/tsst/script/ja/typesquare.js?616e89de4180483d9fc215c7ac1e02d5 charset=utf-8 defer></script>"
+    },
+    {
+      "column_1": "<!--"
+    },
+    {
+      "column_1": "<script src=https://cdn-eas.readspeaker.com/script/13059<!--/webReader/webReader.js?pids=wr&amp;forceAdapter=ioshtml5&amp;disable=translation,lookup id=rs_req_Init></script>"
+    },
+    {
+      "column_1": "<style> #readspeaker_button1 { z-index: 100 !important; } </style>"
+    },
+    {
+      "column_1": "-->"
+    },
+    {
+      "column_1": "<!-- Google tag (gtag.js) -->"
+    },
+    {
+      "column_1": "<script async src=https://www.googletagmanager.com/gtag/js?id=G-GM9M67QTJT></script>"
+    },
+    {
+      "column_1": "<script>"
+    },
+    {
+      "column_1": "  window.dataLayer = window.dataLayer || [];"
+    },
+    {
+      "column_1": "  function gtag(){dataLayer.push(arguments);}"
+    },
+    {
+      "column_1": "  gtag('js'"
+    },
+    {
+      "column_1": "  gtag('config'"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=https://tsutaeru.cloud/assets/snippet/js/tsutaeru.js?api_key=75d89a96-3250-47b9-a5d9-beab399b8668></script>"
+    },
+    {
+      "column_1": "<script src=https://tsutaeru.cloud/assets/snippet/js/tsutaeru_mo.js></script>"
+    },
+    {
+      "column_1": "<script> "
+    },
+    {
+      "column_1": "__tsutaeruMO.init({"
+    },
+    {
+      "column_1": "\taccess_token: 'f165c9c6-9d6b-41bb-8c03-ad80842ffc02'"
+    },
+    {
+      "column_1": "});"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=./count.php?type=10000&amp;code=0&amp;career=0 id=myTypeCode data-type=10000 data-code=0></script>"
+    },
+    {
+      "column_1": "</head>"
+    },
+    {
+      "column_1": "<body>"
+    },
+    {
+      "column_1": "<div id=container>"
+    },
+    {
+      "column_1": "\t<header id=header>"
+    },
+    {
+      "column_1": "\t\t<div id=headerContents>"
+    },
+    {
+      "column_1": "\t\t\t<div id=logoTitle><a href=./ title=行方市公式ホームページへ>行方市公式ホームページ</a></div>"
+    },
+    {
+      "column_1": "\t\t\t<span class=hide><a href=#wrapper>本文へ移動する</a></span>"
+    },
+    {
+      "column_1": "\t\t\t<div id=headerInner>"
+    },
+    {
+      "column_1": "            \t<a id=btn_sns href=./page/page006031.html>行方市公式SNS</a>"
+    },
+    {
+      "column_1": "            \t<span id=btnAccessibility>アクセシビリティ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=tools>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=toolsInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=sizeChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>文字サイズ</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=df><span tabindex=0>標準</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=zf><span tabindex=0>拡大</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=colorChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>背景色</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_default><a href=# title=背景を白(標準)にします>白</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_blue><a href=./skin/common/css/colorChanger/bg_blue.css title=背景を青色にします>青</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_yellow><a href=./skin/common/css/colorChanger/bg_yellow.css title=背景を黄色にします>黄</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_black><a href=./skin/common/css/colorChanger/bg_black.css title=背景を黒色にします>黒</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#tools --></div>"
+    },
+    {
+      "column_1": "                <div id=browserSupportPlayer>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnBrowserSupportPlayer tabindex=0>音声読み上げ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<script>_tsutaeru.speech.button();</script>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<span id=btnBrowserSupportRuby title=閲覧しているページにふりがなを振ります tabindex=0>ルビ振り</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<span id=btnGentle tabindex=0>やさしい日本語</span>"
+    },
+    {
+      "column_1": "                <div id=foreigners>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnForeigners tabindex=0>Language</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001813.html>English</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001814.html>简体中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001815.html>繁體中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001816.html>한국어</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001817.html>Português</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001818.html>Español</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001819.html>ไทย</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#foreigners --></div>"
+    },
+    {
+      "column_1": "            <!-- /#headerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#headerContents --></div>"
+    },
+    {
+      "column_1": "\t\t<nav id=gNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav01><a href=./page/dir009176.html>防災・安全</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav02><a href=./page/dir000002.html>生活</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav03><a href=./page/dir011526.html target=_blank>教育・文化・スポーツ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav04><a href=./page/dir009178.html>まちづくり</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav05><a href=./page/dir000004.html>事業者</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav06><a href=./page/dir000005.html>市政</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav07><a href=./<!--page/dir015561.html>市制施行20周年</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t-->"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t<!-- /#gNav --></nav>"
+    },
+    {
+      "column_1": "\t\t<div id=pageSearchBox>"
+    },
+    {
+      "column_1": "\t\t\t<div id=SearchBox>"
+    },
+    {
+      "column_1": "\t\t\t\t<h2>キーワードから探す</h2>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=SearchBoxInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul class=tab>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav01><a href=#SearchContents01><span class=arw>サイト内検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav02><a href=#SearchContents02><span class=arw>Google検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav03><a href=#SearchContents03><span class=arw>ページ番号検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents01 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchPage title=キーワード入力によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_page type=text name=keyword placeholder=キーワード入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents02 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=googleBoxPage>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form id=cse-search-box-top action=./search_google.php>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=cx value=449e6534bedd64e24>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=ie value=UTF-8>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=google_field_page type=text name=q size=31 placeholder=キーワード入力>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_google_search_page type=submit name=sa value=検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents03 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchNumberPage class= title=ページ番号によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_num_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_num_page type=text name=id_no placeholder=ページ番号入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_num_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--<a class=searchHelpPage href=#>検索方法</a>-->"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#SearchBox --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#pageSearchBox --></div>"
+    },
+    {
+      "column_1": "\t<!-- /#header --></header>"
+    },
+    {
+      "column_1": "\t<div id=wrapper>"
+    },
+    {
+      "column_1": "\t\t<nav id=topicpath>"
+    },
+    {
+      "column_1": "\t\t\t<ol>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=/>ホーム</a>&gt;</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li></li>"
+    },
+    {
+      "column_1": "\t\t\t</ol>"
+    },
+    {
+      "column_1": "\t\t<!-- /#topicpath --></nav>"
+    },
+    {
+      "column_1": "\t\t<main id=main>"
+    },
+    {
+      "column_1": "\t\t\t<div id=mainContents>"
+    },
+    {
+      "column_1": "\t\t\t\t<h1 id=pageTitle><span class=innerTitle></span></h1>"
+    },
+    {
+      "column_1": "<div id=errorDocumentBox>"
+    },
+    {
+      "column_1": "\t<div id=errorDocumentBoxInner>"
+    },
+    {
+      "column_1": "\t\t<p></p>"
+    },
+    {
+      "column_1": "\t</div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#mainContents --></div>"
+    },
+    {
+      "column_1": "\t\t\t<div id=pageInfo>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=pageInfoInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<!--cms contents access-->"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=update>【更新日】<span>0年0月0日</span></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=print title=このページを印刷する><a href=#>印刷する</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=pageTop><a href=#container>PAGE TOP</a></span>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#pageInfo --></div>"
+    },
+    {
+      "column_1": "<script>(function(){"
+    },
+    {
+      "column_1": "var w=window"
+    },
+    {
+      "column_1": "var s=https://app.chatplus.jp/cp.js;"
+    },
+    {
+      "column_1": "d[__cp_d]=https://app.chatplus.jp;"
+    },
+    {
+      "column_1": "d[__cp_c]=492541d5_1;"
+    },
+    {
+      "column_1": "var a=d.createElement(script)"
+    },
+    {
+      "column_1": "a.async=true"
+    },
+    {
+      "column_1": "\t\t<!-- /#main  --></main>"
+    },
+    {
+      "column_1": "\t<!-- /#wrapper --></div>"
+    },
+    {
+      "column_1": "<!-- /#container --></div>"
+    },
+    {
+      "column_1": "<div id=footer>"
+    },
+    {
+      "column_1": "\t<div id=footerContents>"
+    },
+    {
+      "column_1": "\t\t<div id=footerInner>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govAsou>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>麻生庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3892 茨城県行方市麻生1561-9</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-72-0811<span>（代表）</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/zCYMd72jNgGGVWQNA target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govKitaura>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>北浦庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-1792 茨城県行方市山田2564-10</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0291-35-2111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/7rSEeEZQ6krVj9L97 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govTamatsukuri>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>玉造庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3512 茨城県行方市玉造甲404</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-55-0111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/o6pdPy5r2Mzw22jb6 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "            <p>【開庁日時】 平日（月曜から金曜） 午前8時30分から午後5時15分まで</p>"
+    },
+    {
+      "column_1": "\t\t<!-- /#footerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<div id=footerNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page014280.html>お問い合わせ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./update.php>更新情報</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000061.html>リンク集</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000060.html>ホームページご利用ガイド</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page002482.html>プライバシーポリシー</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./sitemap.php>サイトマップ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "    <!-- /#footerContents --></div>"
+    },
+    {
+      "column_1": "\t<p id=copyright>&copy; City of Namegata.</p>"
+    },
+    {
+      "column_1": "\t<div id=adBanner>"
+    },
+    {
+      "column_1": "\t\t<div id=adBannerInner>"
+    },
+    {
+      "column_1": "\t\t\t<div class=bosyuLink>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=btn_bnr_close href=#>閉じる</a>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=bosyuBtn href=./page/page000238.html>広告掲載について</a>"
+    },
+    {
+      "column_1": "\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "\t<!-- /#adBanner --></div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "<div id=viewPC2SP><a href=https://www.city.namegata.ibaraki.jp/ua.php?type=10000&amp;code=0&amp;now_type=1>スマートフォン用ページで見る</a></div>"
+    },
+    {
+      "column_1": "<!--<script src=https://airwait.jp/js/corporate/airwait.js data-airwait=key:FwqM5BXeoFBUGXLt18ILxnDM0ZNgdiUP enable-log charset=utf-8></script>-->"
+    },
+    {
+      "column_1": "</body>"
+    },
+    {
+      "column_1": "</html>"
     }
   ]
 }

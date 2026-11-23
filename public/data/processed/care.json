@@ -1,636 +1,807 @@
 {
   "datasetId": "care",
   "title": "介護サービス事業所一覧",
-  "acquiredAt": "2026-03-23T20:53:39.958Z",
+  "acquiredAt": "2026-11-23T01:23:43.869Z",
   "sourceUrl": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=19",
   "sourcePageUrl": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=5",
-  "encoding": "shift_jis",
+  "encoding": "utf-8",
   "headers": [
-    "都道府県コード又は市区町村コード",
-    "NO",
-    "都道府県名",
-    "市区町村名",
-    "介護サービス事業所名称",
-    "介護サービス事業所名称_カナ",
-    "実施サービス",
-    "住所",
-    "方書",
-    "緯度",
-    "経度",
-    "電話番号",
-    "内線番号",
-    "FAX番号",
-    "法人番号",
-    "法人の名称",
-    "事業所番号",
-    "利用可能曜日",
-    "利用可能曜日特記事項",
-    "定員",
-    "URL",
-    "備考"
+    ""
   ],
-  "rowCount": 25,
-  "columnCount": 22,
+  "rowCount": 264,
+  "columnCount": 1,
   "records": [
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "1",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "特別養護老人ホーム　朝霞荘",
-      "介護サービス事業所名称_カナ": "トクベツヨウゴロウジンホームアサカソウ",
-      "実施サービス": "介護老人福祉施設等",
-      "住所": "茨城県行方市麻生1088-1",
-      "方書": "",
-      "緯度": "35.990342",
-      "経度": "140.482978",
-      "電話番号": "0299-72-1610",
-      "内線番号": "",
-      "FAX番号": "0299-72-2672",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　親和会",
-      "事業所番号": "873700116",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<!DOCTYPE html>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "2",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "特別養護老人ホーム　あそうの郷",
-      "介護サービス事業所名称_カナ": "トクベツヨウゴロウジンホームアソウノサト",
-      "実施サービス": "介護老人福祉施設等",
-      "住所": "茨城県行方市青沼981-2",
-      "方書": "",
-      "緯度": "36.026139",
-      "経度": "140.513206",
-      "電話番号": "0299-73-0311",
-      "内線番号": "",
-      "FAX番号": "0299-73-0322",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　愛和会",
-      "事業所番号": "873700553",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<html lang=ja>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "3",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "特別養護老人ホーム　きたうら",
-      "介護サービス事業所名称_カナ": "トクベツヨウゴロウジンホームキタウラ",
-      "実施サービス": "介護老人福祉施設等",
-      "住所": "茨城県行方市山田3339-6",
-      "方書": "",
-      "緯度": "36.081417",
-      "経度": "140.517508",
-      "電話番号": "0291-35-3080",
-      "内線番号": "",
-      "FAX番号": "0291-35-3185",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　清栄会",
-      "事業所番号": "873700298",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<head prefix=og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "4",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "特別養護老人ホーム　玉寿荘",
-      "介護サービス事業所名称_カナ": "トクベツヨウゴロウジンホームギョクジュソウ",
-      "実施サービス": "介護老人福祉施設等",
-      "住所": "茨城県行方市手賀1854-1",
-      "方書": "",
-      "緯度": "36.084872",
-      "経度": "140.43365",
-      "電話番号": "0299-55-3636",
-      "内線番号": "",
-      "FAX番号": "0299-55-3511",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　常山会",
-      "事業所番号": "895300010",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Type content=text/html; charset=UTF-8 />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "5",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "老人保健施設　リヒトハウス北浦",
-      "介護サービス事業所名称_カナ": "ロウジンホケンシセツリヒトハウスキタウラ",
-      "実施サービス": "介護老人保健施設　等",
-      "住所": "茨城県行方市繁昌1712-1",
-      "方書": "",
-      "緯度": "36.056868",
-      "経度": "140.519137",
-      "電話番号": "0291-35-0471",
-      "内線番号": "",
-      "FAX番号": "0291-35-0470",
-      "法人番号": "",
-      "法人の名称": "医療法人　社団　光会",
-      "事業所番号": "853780021",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Style-Type content=text/css />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "6",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "老人保健施設　かすみがうら",
-      "介護サービス事業所名称_カナ": "ロウジンホケンシセツカスミガウラ",
-      "実施サービス": "介護老人保健施設等",
-      "住所": "茨城県行方市若海793-5",
-      "方書": "",
-      "緯度": "36.123071",
-      "経度": "140.433763",
-      "電話番号": "0299-55-0122",
-      "内線番号": "",
-      "FAX番号": "0299-55-1147",
-      "法人番号": "",
-      "法人の名称": "医療法人　青藍会",
-      "事業所番号": "853780039",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Script-Type content=text/javascript />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "7",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "行方市地域包括支援センター",
-      "介護サービス事業所名称_カナ": "ナメガタシチイキホウカツシエンセンター",
-      "実施サービス": "居宅介護支援",
-      "住所": "茨城県行方市玉造甲478-1",
-      "方書": "",
-      "緯度": "36.102803",
-      "経度": "140.414694",
-      "電話番号": "0299-55-0114",
-      "内線番号": "",
-      "FAX番号": "0299-55-3243",
-      "法人番号": "",
-      "法人の名称": "行方市",
-      "事業所番号": "805300019",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta http-equiv=X-UA-Compatible content=IE=edge />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "8",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "水郷医師会訪問看護ステーション",
-      "介護サービス事業所名称_カナ": "スイゴウイシカイホウモンカンゴステーション",
-      "実施サービス": "居宅介護支援　等",
-      "住所": "茨城県行方市麻生1570-1",
-      "方書": "",
-      "緯度": "35.990906",
-      "経度": "140.489784",
-      "電話番号": "0299-72-3524",
-      "内線番号": "",
-      "FAX番号": "0299-72-3526",
-      "法人番号": "",
-      "法人の名称": "一般社団法人茨城県水郷医師会",
-      "事業所番号": "863790010",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=viewport content=width=1100 />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "9",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "白十字訪問看護ステーション",
-      "介護サービス事業所名称_カナ": "ハクジュウジカホウモンカンゴステーション",
-      "実施サービス": "居宅介護支援　等",
-      "住所": "茨城県行方市麻生3290-12",
-      "方書": "",
-      "緯度": "36.019482",
-      "経度": "140.498425",
-      "電話番号": "0299-80-6601",
-      "内線番号": "",
-      "FAX番号": "0299-80-6601",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　白十字会",
-      "事業所番号": "873700264",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=keywords content= />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "10",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "袰居宅介護支援事業所",
-      "介護サービス事業所名称_カナ": "ホロキョタクカイゴシエンジギョウショ",
-      "実施サービス": "居宅介護支援",
-      "住所": "茨城県行方市麻生115-3",
-      "方書": "",
-      "緯度": "35.985539",
-      "経度": "140.485899",
-      "電話番号": "0299-94-8550",
-      "内線番号": "",
-      "FAX番号": "0299-94-8552",
-      "法人番号": "",
-      "法人の名称": "有限会社　ケアーさくら",
-      "事業所番号": "875300246",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=description content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "11",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "地域生活サポートセンター希来",
-      "介護サービス事業所名称_カナ": "チイキセイカツサポートセンターキキ",
-      "実施サービス": "地域密着型通所介護　等",
-      "住所": "茨城県行方市麻生3288-50",
-      "方書": "",
-      "緯度": "36.017909",
-      "経度": "140.498573",
-      "電話番号": "0299-95-8035",
-      "内線番号": "",
-      "FAX番号": "0299-95-8036",
-      "法人番号": "",
-      "法人の名称": "合同会社　希来ケアサポート",
-      "事業所番号": "895300028",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta property=og:url content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "12",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "デイサービス　すみれ",
-      "介護サービス事業所名称_カナ": "デイサービススミレ",
-      "実施サービス": "地域密着型通所介護",
-      "住所": "茨城県行方市麻生615-8",
-      "方書": "",
-      "緯度": "35.997767",
-      "経度": "140.471832",
-      "電話番号": "0299-94-2405",
-      "内線番号": "",
-      "FAX番号": "0299-94-2406",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　菫福祉会",
-      "事業所番号": "895300036",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta property=og:type content=article>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "13",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "デイサービス　ひなたぼっこ",
-      "介護サービス事業所名称_カナ": "デイサービス　ヒナタボッコ",
-      "実施サービス": "地域密着型通所介護　等",
-      "住所": "茨城県行方市岡468-7",
-      "方書": "",
-      "緯度": "36.027217",
-      "経度": "140.534184",
-      "電話番号": "0299-73-0777",
-      "内線番号": "",
-      "FAX番号": "0299-73-0881",
-      "法人番号": "",
-      "法人の名称": "有限会社　ひなた",
-      "事業所番号": "875300063",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta property=og:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "14",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "デイサービス　ぽっかぽか",
-      "介護サービス事業所名称_カナ": "デイサービス　ポッカポカ",
-      "実施サービス": "居宅通所介護　等",
-      "住所": "茨城県行方市繁昌642-1",
-      "方書": "",
-      "緯度": "36.062733",
-      "経度": "140.521792",
-      "電話番号": "0291-32-8151",
-      "内線番号": "",
-      "FAX番号": "0291-33-1056",
-      "法人番号": "",
-      "法人の名称": "有限会社　ホームヘルプたいよう",
-      "事業所番号": "875300113",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta property=og:title content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "15",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "デイサービス　ここいち玉造",
-      "介護サービス事業所名称_カナ": "デイサービス　ココイチタマツクリ",
-      "実施サービス": "地域密着型通所介護",
-      "住所": "茨城県行方市玉造甲476-1",
-      "方書": "",
-      "緯度": "36.103076",
-      "経度": "140.415167",
-      "電話番号": "0299-35-6650",
-      "内線番号": "",
-      "FAX番号": "0299-35-6651",
-      "法人番号": "",
-      "法人の名称": "株式会社　いっしん",
-      "事業所番号": "875300121",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta property=og:description content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "16",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "みづ帆",
-      "介護サービス事業所名称_カナ": "ミヅホ",
-      "実施サービス": "通所介護",
-      "住所": "茨城県行方市麻生121-5",
-      "方書": "",
-      "緯度": "35.984947",
-      "経度": "140.484784",
-      "電話番号": "299-72-2331",
-      "内線番号": "",
-      "FAX番号": "0299-72-2501",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　親和会",
-      "事業所番号": "875300147",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=twitter:card content=summary>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "17",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "通所事業所さくら",
-      "介護サービス事業所名称_カナ": "ツウショジギョウショサクラ",
-      "実施サービス": "地域密着型通所介護",
-      "住所": "茨城県行方市南95-7",
-      "方書": "",
-      "緯度": "36.017023",
-      "経度": "140.468119",
-      "電話番号": "0299-94-8551",
-      "内線番号": "",
-      "FAX番号": "0299-94-8552",
-      "法人番号": "",
-      "法人の名称": "有限会社　ケアーさくら",
-      "事業所番号": "875300170",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=twitter:description content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "18",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "行方市社会福祉協議会",
-      "介護サービス事業所名称_カナ": "ナメガタシシャカイフクシキョウギカイ",
-      "実施サービス": "居宅介護支援　等",
-      "住所": "茨城県行方市玉造甲478-1",
-      "方書": "",
-      "緯度": "36.102803",
-      "経度": "140.414694",
-      "電話番号": "0299-36-2020",
-      "内線番号": "",
-      "FAX番号": "0299-55-4545",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人行方市社会福祉協議会",
-      "事業所番号": "875300048",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=twitter:title content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "19",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "グループホーム　さくら荘",
-      "介護サービス事業所名称_カナ": "グループホームサクラソウ",
-      "実施サービス": "地域密着型ｻｰﾋﾞｽ",
-      "住所": "茨城県行方市南95-5",
-      "方書": "",
-      "緯度": "36.017035",
-      "経度": "140.468109",
-      "電話番号": "0299-77-0011",
-      "内線番号": "",
-      "FAX番号": "0299-77-0661",
-      "法人番号": "",
-      "法人の名称": "有限会社　ケアーさくら",
-      "事業所番号": "873700520",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<meta name=twitter:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "20",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "グループホーム　いっしん館麻生",
-      "介護サービス事業所名称_カナ": "グループホームイッシンカンアソウ",
-      "実施サービス": "地域密着型ｻｰﾋﾞｽ",
-      "住所": "茨城県行方市石神1685-1",
-      "方書": "",
-      "緯度": "36.00949",
-      "経度": "140.509166",
-      "電話番号": "0299-80-7560",
-      "内線番号": "",
-      "FAX番号": "0299-80-7561",
-      "法人番号": "",
-      "法人の名称": "株式会社　いっしん",
-      "事業所番号": "873700504",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<title>&nbsp;|&nbsp;行方市公式ホームページ</title>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "21",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "グループホーム　ほたるの里",
-      "介護サービス事業所名称_カナ": "グループホームホタルノサト",
-      "実施サービス": "地域密着型ｻｰﾋﾞｽ等",
-      "住所": "茨城県行方市山田104-21",
-      "方書": "",
-      "緯度": "36.087789",
-      "経度": "140.534757",
-      "電話番号": "0291-34-6662",
-      "内線番号": "",
-      "FAX番号": "0291-34-6776",
-      "法人番号": "",
-      "法人の名称": "有限会社　熊野屋商事",
-      "事業所番号": "873700413",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<base href=https://www.city.namegata.ibaraki.jp/>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "22",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "グループホーム　ひまわり",
-      "介護サービス事業所名称_カナ": "グループホームヒマワリ",
-      "実施サービス": "地域密着型ｻｰﾋﾞｽ等",
-      "住所": "茨城県行方市玉造甲422",
-      "方書": "",
-      "緯度": "36.103757",
-      "経度": "140.414123",
-      "電話番号": "0299-35-6012",
-      "内線番号": "",
-      "FAX番号": "0299-55-6013",
-      "法人番号": "",
-      "法人の名称": "有限会社　松本薬局",
-      "事業所番号": "873700454",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<link rel=shortcut icon href=./favicon.ico />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "23",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "グループホーム　いっしん館玉造",
-      "介護サービス事業所名称_カナ": "グループホームイッシンカンタマツクリ",
-      "実施サービス": "地域密着型ｻｰﾋﾞｽ",
-      "住所": "茨城県行方市玉造甲476-1",
-      "方書": "",
-      "緯度": "36.103076",
-      "経度": "140.415167",
-      "電話番号": "0299-35-6201",
-      "内線番号": "",
-      "FAX番号": "0299-35-6202",
-      "法人番号": "",
-      "法人の名称": "株式会社　いっしん",
-      "事業所番号": "873700488",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<link rel=apple-touch-icon href=./web_clip_icon.png />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "24",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "グループホーム　玉造の里",
-      "介護サービス事業所名称_カナ": "グループホームタマツクリサト",
-      "実施サービス": "地域密着型ｻｰﾋﾞｽ",
-      "住所": "茨城県行方市芹沢1652-10",
-      "方書": "",
-      "緯度": "36.134818",
-      "経度": "140.433614",
-      "電話番号": "0299-55-2831",
-      "内線番号": "",
-      "FAX番号": "0299-55-3781",
-      "法人番号": "",
-      "法人の名称": "社会福祉法人　聖隷会",
-      "事業所番号": "873700512",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<link rel=stylesheet href=./skin/default/css/import.css?250924 type=text/css media=all />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "25",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "介護サービス事業所名称": "かすみウェルフェアｻｰﾋﾞｽ",
-      "介護サービス事業所名称_カナ": "カスミウェルフェアサービス",
-      "実施サービス": "福祉用具貸与",
-      "住所": "茨城県行方市矢幡1881-12",
-      "方書": "",
-      "緯度": "36.000813",
-      "経度": "140.529608",
-      "電話番号": "0299-73-0300",
-      "内線番号": "",
-      "FAX番号": "0299-73-0133",
-      "法人番号": "",
-      "法人の名称": "マツザキマテリアル株式会社",
-      "事業所番号": "873700462",
-      "利用可能曜日": "",
-      "利用可能曜日特記事項": "",
-      "定員": "",
-      "URL": "",
-      "備考": ""
+      "column_1": "<link rel=stylesheet href=./skin/common/css/print.css type=text/css media=print />"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.jg.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/functions.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/plugins.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/rwdImageMaps.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/colorbox/colorbox.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/slick.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/ready.common.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/gsearch.js></script>"
+    },
+    {
+      "column_1": "<script src=//typesquare.com/3/tsst/script/ja/typesquare.js?616e89de4180483d9fc215c7ac1e02d5 charset=utf-8 defer></script>"
+    },
+    {
+      "column_1": "<!--"
+    },
+    {
+      "column_1": "<script src=https://cdn-eas.readspeaker.com/script/13059<!--/webReader/webReader.js?pids=wr&amp;forceAdapter=ioshtml5&amp;disable=translation,lookup id=rs_req_Init></script>"
+    },
+    {
+      "column_1": "<style> #readspeaker_button1 { z-index: 100 !important; } </style>"
+    },
+    {
+      "column_1": "-->"
+    },
+    {
+      "column_1": "<!-- Google tag (gtag.js) -->"
+    },
+    {
+      "column_1": "<script async src=https://www.googletagmanager.com/gtag/js?id=G-GM9M67QTJT></script>"
+    },
+    {
+      "column_1": "<script>"
+    },
+    {
+      "column_1": "  window.dataLayer = window.dataLayer || [];"
+    },
+    {
+      "column_1": "  function gtag(){dataLayer.push(arguments);}"
+    },
+    {
+      "column_1": "  gtag('js'"
+    },
+    {
+      "column_1": "  gtag('config'"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=https://tsutaeru.cloud/assets/snippet/js/tsutaeru.js?api_key=75d89a96-3250-47b9-a5d9-beab399b8668></script>"
+    },
+    {
+      "column_1": "<script src=https://tsutaeru.cloud/assets/snippet/js/tsutaeru_mo.js></script>"
+    },
+    {
+      "column_1": "<script> "
+    },
+    {
+      "column_1": "__tsutaeruMO.init({"
+    },
+    {
+      "column_1": "\taccess_token: 'f165c9c6-9d6b-41bb-8c03-ad80842ffc02'"
+    },
+    {
+      "column_1": "});"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=./count.php?type=10000&amp;code=0&amp;career=0 id=myTypeCode data-type=10000 data-code=0></script>"
+    },
+    {
+      "column_1": "</head>"
+    },
+    {
+      "column_1": "<body>"
+    },
+    {
+      "column_1": "<div id=container>"
+    },
+    {
+      "column_1": "\t<header id=header>"
+    },
+    {
+      "column_1": "\t\t<div id=headerContents>"
+    },
+    {
+      "column_1": "\t\t\t<div id=logoTitle><a href=./ title=行方市公式ホームページへ>行方市公式ホームページ</a></div>"
+    },
+    {
+      "column_1": "\t\t\t<span class=hide><a href=#wrapper>本文へ移動する</a></span>"
+    },
+    {
+      "column_1": "\t\t\t<div id=headerInner>"
+    },
+    {
+      "column_1": "            \t<a id=btn_sns href=./page/page006031.html>行方市公式SNS</a>"
+    },
+    {
+      "column_1": "            \t<span id=btnAccessibility>アクセシビリティ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=tools>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=toolsInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=sizeChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>文字サイズ</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=df><span tabindex=0>標準</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=zf><span tabindex=0>拡大</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=colorChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>背景色</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_default><a href=# title=背景を白(標準)にします>白</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_blue><a href=./skin/common/css/colorChanger/bg_blue.css title=背景を青色にします>青</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_yellow><a href=./skin/common/css/colorChanger/bg_yellow.css title=背景を黄色にします>黄</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_black><a href=./skin/common/css/colorChanger/bg_black.css title=背景を黒色にします>黒</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#tools --></div>"
+    },
+    {
+      "column_1": "                <div id=browserSupportPlayer>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnBrowserSupportPlayer tabindex=0>音声読み上げ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<script>_tsutaeru.speech.button();</script>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<span id=btnBrowserSupportRuby title=閲覧しているページにふりがなを振ります tabindex=0>ルビ振り</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<span id=btnGentle tabindex=0>やさしい日本語</span>"
+    },
+    {
+      "column_1": "                <div id=foreigners>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnForeigners tabindex=0>Language</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001813.html>English</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001814.html>简体中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001815.html>繁體中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001816.html>한국어</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001817.html>Português</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001818.html>Español</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001819.html>ไทย</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#foreigners --></div>"
+    },
+    {
+      "column_1": "            <!-- /#headerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#headerContents --></div>"
+    },
+    {
+      "column_1": "\t\t<nav id=gNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav01><a href=./page/dir009176.html>防災・安全</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav02><a href=./page/dir000002.html>生活</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav03><a href=./page/dir011526.html target=_blank>教育・文化・スポーツ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav04><a href=./page/dir009178.html>まちづくり</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav05><a href=./page/dir000004.html>事業者</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav06><a href=./page/dir000005.html>市政</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav07><a href=./<!--page/dir015561.html>市制施行20周年</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t-->"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t<!-- /#gNav --></nav>"
+    },
+    {
+      "column_1": "\t\t<div id=pageSearchBox>"
+    },
+    {
+      "column_1": "\t\t\t<div id=SearchBox>"
+    },
+    {
+      "column_1": "\t\t\t\t<h2>キーワードから探す</h2>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=SearchBoxInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul class=tab>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav01><a href=#SearchContents01><span class=arw>サイト内検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav02><a href=#SearchContents02><span class=arw>Google検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav03><a href=#SearchContents03><span class=arw>ページ番号検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents01 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchPage title=キーワード入力によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_page type=text name=keyword placeholder=キーワード入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents02 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=googleBoxPage>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form id=cse-search-box-top action=./search_google.php>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=cx value=449e6534bedd64e24>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=ie value=UTF-8>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=google_field_page type=text name=q size=31 placeholder=キーワード入力>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_google_search_page type=submit name=sa value=検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents03 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchNumberPage class= title=ページ番号によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_num_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_num_page type=text name=id_no placeholder=ページ番号入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_num_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--<a class=searchHelpPage href=#>検索方法</a>-->"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#SearchBox --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#pageSearchBox --></div>"
+    },
+    {
+      "column_1": "\t<!-- /#header --></header>"
+    },
+    {
+      "column_1": "\t<div id=wrapper>"
+    },
+    {
+      "column_1": "\t\t<nav id=topicpath>"
+    },
+    {
+      "column_1": "\t\t\t<ol>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=/>ホーム</a>&gt;</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li></li>"
+    },
+    {
+      "column_1": "\t\t\t</ol>"
+    },
+    {
+      "column_1": "\t\t<!-- /#topicpath --></nav>"
+    },
+    {
+      "column_1": "\t\t<main id=main>"
+    },
+    {
+      "column_1": "\t\t\t<div id=mainContents>"
+    },
+    {
+      "column_1": "\t\t\t\t<h1 id=pageTitle><span class=innerTitle></span></h1>"
+    },
+    {
+      "column_1": "<div id=errorDocumentBox>"
+    },
+    {
+      "column_1": "\t<div id=errorDocumentBoxInner>"
+    },
+    {
+      "column_1": "\t\t<p></p>"
+    },
+    {
+      "column_1": "\t</div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#mainContents --></div>"
+    },
+    {
+      "column_1": "\t\t\t<div id=pageInfo>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=pageInfoInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<!--cms contents access-->"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=update>【更新日】<span>0年0月0日</span></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=print title=このページを印刷する><a href=#>印刷する</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=pageTop><a href=#container>PAGE TOP</a></span>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#pageInfo --></div>"
+    },
+    {
+      "column_1": "<script>(function(){"
+    },
+    {
+      "column_1": "var w=window"
+    },
+    {
+      "column_1": "var s=https://app.chatplus.jp/cp.js;"
+    },
+    {
+      "column_1": "d[__cp_d]=https://app.chatplus.jp;"
+    },
+    {
+      "column_1": "d[__cp_c]=492541d5_1;"
+    },
+    {
+      "column_1": "var a=d.createElement(script)"
+    },
+    {
+      "column_1": "a.async=true"
+    },
+    {
+      "column_1": "\t\t<!-- /#main  --></main>"
+    },
+    {
+      "column_1": "\t<!-- /#wrapper --></div>"
+    },
+    {
+      "column_1": "<!-- /#container --></div>"
+    },
+    {
+      "column_1": "<div id=footer>"
+    },
+    {
+      "column_1": "\t<div id=footerContents>"
+    },
+    {
+      "column_1": "\t\t<div id=footerInner>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govAsou>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>麻生庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3892 茨城県行方市麻生1561-9</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-72-0811<span>（代表）</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/zCYMd72jNgGGVWQNA target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govKitaura>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>北浦庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-1792 茨城県行方市山田2564-10</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0291-35-2111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/7rSEeEZQ6krVj9L97 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govTamatsukuri>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>玉造庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3512 茨城県行方市玉造甲404</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-55-0111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/o6pdPy5r2Mzw22jb6 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "            <p>【開庁日時】 平日（月曜から金曜） 午前8時30分から午後5時15分まで</p>"
+    },
+    {
+      "column_1": "\t\t<!-- /#footerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<div id=footerNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page014280.html>お問い合わせ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./update.php>更新情報</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000061.html>リンク集</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000060.html>ホームページご利用ガイド</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page002482.html>プライバシーポリシー</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./sitemap.php>サイトマップ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "    <!-- /#footerContents --></div>"
+    },
+    {
+      "column_1": "\t<p id=copyright>&copy; City of Namegata.</p>"
+    },
+    {
+      "column_1": "\t<div id=adBanner>"
+    },
+    {
+      "column_1": "\t\t<div id=adBannerInner>"
+    },
+    {
+      "column_1": "\t\t\t<div class=bosyuLink>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=btn_bnr_close href=#>閉じる</a>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=bosyuBtn href=./page/page000238.html>広告掲載について</a>"
+    },
+    {
+      "column_1": "\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "\t<!-- /#adBanner --></div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "<div id=viewPC2SP><a href=https://www.city.namegata.ibaraki.jp/ua.php?type=10000&amp;code=0&amp;now_type=1>スマートフォン用ページで見る</a></div>"
+    },
+    {
+      "column_1": "<!--<script src=https://airwait.jp/js/corporate/airwait.js data-airwait=key:FwqM5BXeoFBUGXLt18ILxnDM0ZNgdiUP enable-log charset=utf-8></script>-->"
+    },
+    {
+      "column_1": "</body>"
+    },
+    {
+      "column_1": "</html>"
     }
   ]
 }
