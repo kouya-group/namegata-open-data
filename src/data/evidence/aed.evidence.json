@@ -6,18 +6,18 @@
     "detail_page_url": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=4",
     "publisher": "行方市",
     "license": "CC BY 2.1 JP",
-    "original_filename": "1593045235_od_224.csv"
+    "original_filename": null
   },
   "acquisition": {
-    "timestamp": "2026-03-23T20:53:39.430Z",
+    "timestamp": "2026-11-23T01:23:41.564Z",
     "method": "HTTP GET (fetch)",
     "agent": "namegata-open-data/fetch-data v0.1.0"
   },
   "integrity": {
-    "sha256": "f5c53f206d10b28023f28d9b6506bc8a31ec2663c8c8600b34c75504ebf9caa9",
-    "file_size_bytes": 5089,
-    "row_count": 31,
-    "column_count": 18
+    "sha256": "5591b6017620b267646e524bfb3bb4406a1d90b0301927c0dbf15589f711cf4c",
+    "file_size_bytes": 12280,
+    "row_count": 264,
+    "column_count": 1
   },
   "transformation": {
     "description": "CSV (Shift_JIS/UTF-8) を UTF-8 で読み込み、JSONへ変換。",

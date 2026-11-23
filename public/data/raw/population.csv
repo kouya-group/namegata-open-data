@@ -1,59 +1,272 @@
-“s“¹•{Œ§ƒR[ƒh–”‚ÍŽs‹æ’¬‘ºƒR[ƒh,’nˆæƒR[ƒh,“s“¹•{Œ§–¼,Žs‹æ’¬‘º–¼,’²¸”NŒŽ“ú,’nˆæ–¼,‘lŒû,’j«,—«,0-4Î‚Ì’j«,5-9Î‚Ì’j«,10-14Î‚Ì’j«,15-19Î‚Ì’j«,20-24Î‚Ì’j«,25-29Î‚Ì’j«,30-34Î‚Ì’j«,35-39Î‚Ì’j«,40-44Î‚Ì’j«,45-49Î‚Ì’j«,50-54Î‚Ì’j«,55-59Î‚Ì’j«,60-64Î‚Ì’j«,65-69Î‚Ì’j«,70-74Î‚Ì’j«,75-79Î‚Ì’j«,80-84Î‚Ì’j«,85Î‚Ì’j«ˆÈã,0-4Î‚Ì—«,5-9Î‚Ì—«,10-14Î‚Ì—«,15-19Î‚Ì—«,20-24Î‚Ì—«,25-29Î‚Ì—«,30-34Î‚Ì—«,35-39Î‚Ì—«,40-44Î‚Ì—«,45-49Î‚Ì—«,50-54Î‚Ì—«,55-59Î‚Ì—«,60-64Î‚Ì—«,65-69Î‚Ì—«,70-74Î‚Ì—«,75-79Î‚Ì—«,80-84Î‚Ì—«,85Î‚Ì—«ˆÈã,¢‘Ñ”,”õl
-82333,1,ˆïéŒ§,s•ûŽs,2021/2/26,•x“c,748,372,376,9,6,13,13,20,10,15,20,27,25,24,29,26,45,37,23,14,16,8,7,11,19,9,14,8,12,18,21,22,23,28,43,36,31,24,42,281,
-82333,2,ˆïéŒ§,s•ûŽs,2021/2/26,‘e–Ñ,196,100,96,1,2,5,4,4,3,0,6,4,7,9,11,10,12,7,5,4,6,1,1,2,3,1,5,3,4,7,5,4,5,9,10,8,6,7,15,80,
-82333,3,ˆïéŒ§,s•ûŽs,2021/2/26,–ƒ¶,"2,910","1,429","1,481",47,48,55,46,58,54,83,70,96,107,103,88,125,124,129,94,60,42,22,49,55,58,49,63,64,72,85,84,87,95,102,124,134,114,93,131,"1,192",
-82333,4,ˆïéŒ§,s•ûŽs,2021/2/26,–î”¦,663,335,328,6,11,25,21,10,6,12,27,25,17,17,28,27,30,30,21,11,11,9,14,12,18,7,12,10,15,22,17,13,24,22,42,23,20,17,31,216,
-82333,5,ˆïéŒ§,s•ûŽs,2021/2/26,Î_,579,304,275,8,19,20,15,17,14,23,9,16,15,19,17,26,25,25,10,12,14,4,11,12,8,8,7,17,10,15,18,16,17,23,20,22,12,18,37,192,
-82333,6,ˆïéŒ§,s•ûŽs,2021/2/26,ª¬‰®,284,149,135,4,1,6,13,10,10,8,5,7,8,9,12,6,15,14,7,11,3,4,2,1,5,8,4,3,4,8,8,12,8,12,12,14,8,11,11,109,
-82333,7,ˆïéŒ§,s•ûŽs,2021/2/26,‘ ì,267,142,125,2,2,6,4,6,7,8,12,9,10,9,8,15,11,16,3,2,12,1,4,3,2,3,5,2,6,6,6,7,9,11,18,11,7,8,16,114,
-82333,8,ˆïéŒ§,s•ûŽs,2021/2/26,”’•l,407,205,202,6,9,6,3,10,6,6,16,16,13,15,11,18,27,14,12,2,15,3,9,8,12,5,13,11,9,10,7,9,7,22,23,13,8,9,24,145,
-82333,9,ˆïéŒ§,s•ûŽs,2021/2/26,‰Fè,382,198,184,5,9,6,8,4,6,8,16,15,12,15,14,13,26,19,11,6,5,6,5,7,6,11,5,5,8,14,10,9,10,14,25,15,9,10,15,135,
-82333,10,ˆïéŒ§,s•ûŽs,2021/2/26,‰ª,202,92,110,2,3,2,1,2,5,1,9,10,3,4,7,11,10,13,4,3,2,5,2,6,1,1,1,4,5,9,6,3,6,13,15,9,3,4,17,72,
-82333,11,ˆïéŒ§,s•ûŽs,2021/2/26,ÂÀ,594,267,327,9,10,14,16,13,6,10,14,18,21,18,21,16,21,26,12,10,12,9,14,20,20,7,7,13,21,25,20,14,14,21,31,32,17,12,30,224,
-82333,12,ˆïéŒ§,s•ûŽs,2021/2/26,ŽlŽ­,563,271,292,7,9,10,14,10,9,13,12,16,17,18,17,30,24,25,16,13,11,6,17,6,9,22,14,16,13,13,14,17,17,26,22,27,13,12,28,226,
-82333,13,ˆïéŒ§,s•ûŽs,2021/2/26,™•½,108,50,58,1,2,0,0,2,2,2,3,3,3,2,6,3,5,8,2,1,5,1,3,3,2,2,2,0,2,1,1,2,2,6,6,9,2,5,9,48,
-82333,14,ˆïéŒ§,s•ûŽs,2021/2/26,¬–q,294,152,142,2,5,7,8,7,5,8,7,10,9,11,10,14,10,22,7,3,7,3,11,5,12,4,3,5,6,9,10,8,6,8,14,17,9,7,5,101,
-82333,15,ˆïéŒ§,s•ûŽs,2021/2/26,”Â•ô,39,22,17,0,1,0,1,1,1,1,0,2,0,2,2,2,2,2,2,1,2,0,1,0,1,0,3,0,1,0,0,3,0,0,0,2,1,2,3,17,
-82333,16,ˆïéŒ§,s•ûŽs,2021/2/26,V‹{,279,124,155,3,4,7,3,5,4,6,4,9,8,12,14,9,6,13,7,6,4,4,2,8,11,7,4,7,4,6,17,7,5,11,11,14,7,14,16,101,
-82333,17,ˆïéŒ§,s•ûŽs,2021/2/26,“VŠ|,237,121,116,0,6,11,5,4,3,5,6,7,8,8,9,8,15,8,7,6,5,3,3,6,7,3,3,4,3,7,9,5,4,12,7,11,6,10,13,74,
-82333,18,ˆïéŒ§,s•ûŽs,2021/2/26,âÄ“c,172,85,87,2,1,4,5,3,1,5,2,3,3,9,7,12,5,7,5,8,3,2,1,2,4,0,1,2,2,2,10,5,8,6,6,5,11,10,10,60,
-82333,19,ˆïéŒ§,s•ûŽs,2021/2/26,‰—‰º,606,302,304,13,16,20,7,6,6,16,20,21,25,14,15,25,28,32,14,11,13,15,14,13,14,12,10,12,22,18,13,9,19,31,24,15,18,17,28,217,
-82333,20,ˆïéŒ§,s•ûŽs,2021/2/26,s•û,516,260,256,8,9,13,10,6,14,12,13,15,14,14,16,31,36,15,12,10,12,3,7,7,5,6,7,11,15,7,25,14,20,29,18,19,11,17,35,199,
-82333,21,ˆïéŒ§,s•ûŽs,2021/2/26,‘DŽq,142,77,65,4,1,2,4,0,3,7,4,6,3,2,2,9,8,8,3,6,5,1,5,4,0,0,0,3,7,1,4,2,4,10,7,3,2,5,7,53,
-82333,22,ˆïéŒ§,s•ûŽs,2021/2/26,ŒÜ’¬“c,300,149,151,4,2,5,8,4,7,7,12,9,6,6,11,11,19,19,5,8,6,4,4,3,6,4,3,5,9,6,6,11,6,14,20,11,11,11,17,107,
-82333,23,ˆïéŒ§,s•ûŽs,2021/2/26,“‡•À,671,330,341,6,12,11,14,17,11,11,22,19,25,18,21,28,30,34,15,16,20,9,12,15,20,14,10,12,21,16,21,24,20,20,27,38,17,17,28,232,
-82333,24,ˆïéŒ§,s•ûŽs,2021/2/26,“ì,510,254,256,10,9,9,9,8,15,17,15,10,16,16,18,20,18,27,12,9,16,6,7,6,6,8,9,13,17,10,14,16,15,21,18,24,19,21,26,190,
-82333,25,ˆïéŒ§,s•ûŽs,2021/2/26,‹´–å,150,75,75,1,0,7,3,3,2,1,0,9,3,6,7,5,6,9,6,3,4,0,4,1,5,4,3,2,0,5,6,3,4,3,8,9,4,5,9,59,
-82333,26,ˆïéŒ§,s•ûŽs,2021/2/26,¬‚,846,423,423,9,11,12,6,30,44,36,29,21,19,17,23,40,40,38,16,15,17,9,10,18,19,18,23,20,27,21,18,23,31,38,33,32,16,29,38,332,
-82333,27,ˆïéŒ§,s•ûŽs,2021/2/26,ˆäŠL,474,233,241,5,6,6,16,13,6,10,11,20,19,16,13,21,22,14,15,9,11,2,9,8,10,35,5,4,9,15,17,12,12,13,20,28,9,16,17,191,
-82333,1001,ˆïéŒ§,s•ûŽs,2021/2/26,‹gì,334,167,167,1,3,7,5,13,12,5,9,10,14,7,11,13,17,16,7,4,13,1,5,6,7,4,10,6,7,7,7,9,15,13,15,12,7,12,24,123,
-82333,1002,ˆïéŒ§,s•ûŽs,2021/2/26,”É¹,873,438,435,6,7,15,14,14,19,27,19,34,38,34,21,28,42,46,29,20,25,5,12,16,18,17,15,13,16,20,32,24,19,25,53,48,34,25,43,330,
-82333,1003,ˆïéŒ§,s•ûŽs,2021/2/26,’†ª,294,161,133,4,4,6,4,10,7,11,9,11,12,13,6,8,21,15,6,9,5,7,4,5,7,4,3,5,9,5,9,5,11,6,12,9,10,7,15,106,
-82333,1004,ˆïéŒ§,s•ûŽs,2021/2/26,ŽR“c,"1,346",657,689,18,30,22,25,32,36,34,33,36,40,42,41,46,56,57,47,26,36,13,23,35,29,27,21,21,32,41,42,36,47,47,42,71,43,37,82,549,
-82333,1005,ˆïéŒ§,s•ûŽs,2021/2/26,sŒË,686,339,347,9,14,15,15,17,11,20,26,20,25,11,21,29,39,33,10,15,9,6,11,22,15,12,12,12,33,16,24,17,15,28,37,25,12,20,30,255,
-82333,1006,ˆïéŒ§,s•ûŽs,2021/2/26,¬”¦,859,451,408,12,14,11,18,22,14,24,28,32,22,19,26,47,47,54,19,18,24,9,5,12,16,13,18,13,21,16,25,22,33,36,45,30,20,28,46,315,
-82333,1007,ˆïéŒ§,s•ûŽs,2021/2/26,“ì‚‰ª,337,181,156,4,1,3,4,15,17,6,11,12,9,8,13,16,21,18,9,5,9,6,6,4,6,10,7,3,10,9,6,4,11,12,20,14,6,6,16,139,
-82333,1008,ˆïéŒ§,s•ûŽs,2021/2/26,–k‚‰ª,168,88,80,5,2,1,2,3,7,7,4,6,8,5,4,5,10,11,5,1,2,3,1,3,5,2,2,3,4,1,7,4,4,5,12,9,4,3,8,63,
-82333,1009,ˆïéŒ§,s•ûŽs,2021/2/26,—¼h,377,189,188,9,3,7,7,6,10,8,8,16,7,16,13,14,23,16,9,8,9,5,1,4,5,7,6,9,9,12,11,15,10,16,18,21,6,12,21,151,
-82333,1010,ˆïéŒ§,s•ûŽs,2021/2/26,“àh,536,302,234,4,12,4,14,22,17,31,22,25,20,23,13,21,21,18,15,14,6,10,6,7,5,16,4,12,11,8,17,13,17,19,17,19,21,13,19,242,
-82333,1011,ˆïéŒ§,s•ûŽs,2021/2/26,¬“c,211,112,99,3,3,6,8,4,4,4,9,8,9,6,8,6,7,9,5,7,6,1,2,6,9,5,2,2,3,4,9,4,9,7,5,10,5,6,10,72,
-82333,1012,ˆïéŒ§,s•ûŽs,2021/2/26,ŽO˜a,538,280,258,7,10,6,11,16,13,11,26,18,12,15,18,22,26,24,13,17,15,7,8,6,13,13,9,8,17,6,18,21,14,17,26,17,21,15,22,189,
-82333,1013,ˆïéŒ§,s•ûŽs,2021/2/26,’·–ì],217,105,112,5,1,2,2,5,5,10,7,8,3,5,7,6,20,13,4,1,1,0,6,3,3,5,4,2,6,7,7,4,8,12,12,8,3,3,19,99,
-82333,1014,ˆïéŒ§,s•ûŽs,2021/2/26,ŽŸ–Ø,528,261,267,3,11,8,11,18,15,19,26,15,15,7,12,15,39,19,12,8,8,8,9,5,16,17,14,22,24,9,8,13,12,22,25,20,13,8,22,241,
-82333,1015,ˆïéŒ§,s•ûŽs,2021/2/26,¬ŠÑ,"1,423",684,739,16,24,22,37,39,26,45,44,45,46,36,40,59,56,57,35,30,27,22,23,21,34,36,41,57,59,33,29,39,47,64,49,55,27,43,60,575,
-82333,2001,ˆïéŒ§,s•ûŽs,2021/2/26,rh,262,130,132,3,2,4,7,4,3,3,10,10,5,7,7,11,20,13,7,6,8,4,7,7,8,1,2,7,12,7,5,5,6,7,13,13,3,11,14,86,
-82333,2002,ˆïéŒ§,s•ûŽs,2021/2/26,“¡ˆä,261,137,124,4,4,9,10,7,2,7,10,8,7,6,5,9,13,22,5,5,4,0,3,9,8,2,0,2,9,10,8,6,4,16,13,14,3,7,10,94,
-82333,2003,ˆïéŒ§,s•ûŽs,2021/2/26,ˆäã“¡ˆä,92,44,48,2,3,2,0,2,1,7,2,3,1,1,3,3,7,2,2,0,3,4,2,1,0,4,2,2,2,2,1,4,2,7,4,4,1,1,5,32,
-82333,2004,ˆïéŒ§,s•ûŽs,2021/2/26,ˆäã,541,254,287,6,2,5,5,9,13,18,10,10,17,14,19,28,30,27,18,11,12,12,13,4,9,6,9,14,13,18,9,8,24,28,25,27,15,17,36,193,
-82333,2005,ˆïéŒ§,s•ûŽs,2021/2/26,¼˜@Ž›,504,246,258,2,6,9,10,8,4,15,14,10,22,14,21,19,26,27,15,11,13,7,10,8,13,11,6,10,9,12,16,15,19,23,19,24,11,17,28,199,
-82333,2006,ˆïéŒ§,s•ûŽs,2021/2/26,Žè‰ê,"1,653",840,813,24,32,28,37,40,39,36,43,53,59,45,48,76,79,73,41,28,59,20,24,21,32,27,25,34,51,34,29,50,55,70,82,64,47,50,98,603,
-82333,2007,ˆïéŒ§,s•ûŽs,2021/2/26,‹Ê‘¢b,"3,631","1,800","1,831",51,70,102,84,89,85,103,107,121,132,113,107,130,128,157,90,68,63,70,75,87,85,93,64,85,97,110,112,121,126,119,138,137,92,73,147,"1,449",
-82333,2008,ˆïéŒ§,s•ûŽs,2021/2/26,‹Ê‘¢‰³,315,159,156,5,4,8,7,9,4,9,6,13,8,7,14,8,23,12,4,9,9,4,5,10,8,4,0,10,14,5,7,5,5,17,12,14,11,9,16,117,
-82333,2009,ˆïéŒ§,s•ûŽs,2021/2/26,”P–Ø,215,109,106,2,3,1,2,13,5,5,5,8,4,11,8,10,5,11,5,6,5,0,2,7,3,1,3,6,3,7,8,5,4,12,11,9,6,6,13,89,
-82333,2010,ˆïéŒ§,s•ûŽs,2021/2/26,‹Ú‘ò,"1,441",732,709,24,23,29,46,28,23,33,49,50,70,52,57,57,53,66,31,16,25,17,24,37,33,25,21,33,38,47,50,38,49,56,48,77,35,31,50,611,
-82333,2011,ˆïéŒ§,s•ûŽs,2021/2/26,ŽáŠC,310,150,160,4,10,7,7,9,8,5,6,7,10,11,10,14,14,12,4,7,5,3,6,10,5,10,11,7,5,11,9,13,11,8,13,8,7,7,16,116,
-82333,2012,ˆïéŒ§,s•ûŽs,2021/2/26,’J“‡,268,129,139,8,2,3,6,5,6,12,10,2,10,7,8,10,14,7,9,6,4,8,2,1,4,8,6,7,8,1,9,4,11,14,7,10,11,10,18,111,
-82333,2013,ˆïéŒ§,s•ûŽs,2021/2/26,•l,854,440,414,11,16,16,15,33,29,23,28,31,26,28,26,17,34,46,30,19,12,10,16,15,18,14,14,12,21,30,22,18,21,29,37,50,29,16,42,350,
-82333,2014,ˆïéŒ§,s•ûŽs,2021/2/26,”ª–ØŽª,398,203,195,4,2,3,10,17,9,6,10,14,19,16,12,12,15,24,8,10,12,3,12,7,12,11,8,1,9,9,14,14,8,12,15,16,15,14,15,155,
-82333,2015,ˆïéŒ§,s•ûŽs,2021/2/26,‰H¶,657,338,319,9,13,7,10,22,17,26,12,16,15,25,27,28,29,29,17,20,16,9,10,12,10,14,12,13,20,13,13,16,34,22,25,27,15,24,30,267,
-82333,2016,ˆïéŒ§,s•ûŽs,2021/2/26,‰«F,458,240,218,7,4,7,8,8,3,8,21,14,14,14,18,17,28,30,15,12,12,1,7,13,7,5,7,5,12,7,11,8,7,24,24,20,15,13,32,200,
+
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=1100" />
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta property="og:url" content="">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.city.namegata.ibaraki.jp/web_clip_icon.png">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:image" content="https://www.city.namegata.ibaraki.jp/web_clip_icon.png">
+<title>&nbsp;|&nbsp;è¡Œæ–¹å¸‚å…¬å¼ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</title>
+<base href="https://www.city.namegata.ibaraki.jp/">
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="apple-touch-icon" href="./web_clip_icon.png" />
+<link rel="stylesheet" href="./skin/default/css/import.css?250924" type="text/css" media="all" />
+<link rel="stylesheet" href="./skin/common/css/print.css" type="text/css" media="print" />
+<script src="./skin/common/js/jquery.js"></script>
+<script src="./skin/common/js/jquery.jg.js"></script>
+<script src="./skin/common/js/functions.js"></script>
+<script src="./skin/common/js/plugins.js"></script>
+<script src="./skin/common/js/rwdImageMaps.js"></script>
+<script src="./skin/common/js/colorbox/colorbox.js"></script>
+<script src="./skin/common/js/slick.js"></script>
+<script src="./skin/common/js/ready.common.js"></script>
+<script src="./skin/common/js/gsearch.js"></script>
+<script src="//typesquare.com/3/tsst/script/ja/typesquare.js?616e89de4180483d9fc215c7ac1e02d5" charset="utf-8" defer></script>
+<!--
+<script src="https://cdn-eas.readspeaker.com/script/13059<!--/webReader/webReader.js?pids=wr&amp;forceAdapter=ioshtml5&amp;disable=translation,lookup" id="rs_req_Init"></script>
+<style> #readspeaker_button1 { z-index: 100 !important; } </style>
+-->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM9M67QTJT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GM9M67QTJT');
+</script>
+<script src="https://tsutaeru.cloud/assets/snippet/js/tsutaeru.js?api_key=75d89a96-3250-47b9-a5d9-beab399b8668"></script>
+<script src="https://tsutaeru.cloud/assets/snippet/js/tsutaeru_mo.js"></script>
+<script> 
+__tsutaeruMO.init({
+	access_token: 'f165c9c6-9d6b-41bb-8c03-ad80842ffc02'
+});
+</script>
+<script src="./count.php?type=10000&amp;code=0&amp;career=0" id="myTypeCode" data-type="10000" data-code="0"></script>
+</head>
+<body>
+<div id="container">
+	<header id="header">
+		<div id="headerContents">
+			<div id="logoTitle"><a href="./" title="è¡Œæ–¹å¸‚å…¬å¼ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã¸">è¡Œæ–¹å¸‚å…¬å¼ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸</a></div>
+			<span class="hide"><a href="#wrapper">æœ¬æ–‡ã¸ç§»å‹•ã™ã‚‹</a></span>
+			<div id="headerInner">
+            	<a id="btn_sns" href="./page/page006031.html">è¡Œæ–¹å¸‚å…¬å¼SNS</a>
+            	<span id="btnAccessibility">ã‚¢ã‚¯ã‚»ã‚·ãƒ“ãƒªãƒ†ã‚£</span>
+				<div id="tools">
+					<div id="toolsInner">
+						<dl id="sizeChanger">
+							<dt>æ–‡å­—ã‚µã‚¤ã‚º</dt>
+							<dd id="df"><span tabindex="0">æ¨™æº–</span></dd>
+							<dd id="zf"><span tabindex="0">æ‹¡å¤§</span></dd>
+						</dl>
+						<dl id="colorChanger">
+							<dt>èƒŒæ™¯è‰²</dt>
+							<dd id="bg_default"><a href="#" title="èƒŒæ™¯ã‚’ç™½(æ¨™æº–)ã«ã—ã¾ã™">ç™½</a></dd>
+							<dd id="bg_blue"><a href="./skin/common/css/colorChanger/bg_blue.css" title="èƒŒæ™¯ã‚’é’è‰²ã«ã—ã¾ã™">é’</a></dd>
+							<dd id="bg_yellow"><a href="./skin/common/css/colorChanger/bg_yellow.css" title="èƒŒæ™¯ã‚’é»„è‰²ã«ã—ã¾ã™">é»„</a></dd>
+							<dd id="bg_black"><a href="./skin/common/css/colorChanger/bg_black.css" title="èƒŒæ™¯ã‚’é»’è‰²ã«ã—ã¾ã™">é»’</a></dd>
+						</dl>
+					</div>
+				<!-- /#tools --></div>
+                <div id="browserSupportPlayer">
+					<span id="btnBrowserSupportPlayer" tabindex="0">éŸ³å£°èª­ã¿ä¸Šã’</span>
+					<script>_tsutaeru.speech.button();</script>
+				</div>
+				<span id="btnBrowserSupportRuby" title="é–²è¦§ã—ã¦ã„ã‚‹ãƒšãƒ¼ã‚¸ã«ãµã‚ŠãŒãªã‚’æŒ¯ã‚Šã¾ã™" tabindex="0">ãƒ«ãƒ“æŒ¯ã‚Š</span>
+				<span id="btnGentle" tabindex="0">ã‚„ã•ã—ã„æ—¥æœ¬èªž</span>
+                <div id="foreigners">
+					<span id="btnForeigners" tabindex="0">Language</span>
+					<ul>
+						<li><a href="./page/page001813.html">English</a></li>
+						<li><a href="./page/page001814.html">ç®€ä½“ä¸­æ–‡</a></li>
+						<li><a href="./page/page001815.html">ç¹é«”ä¸­æ–‡</a></li>
+						<li><a href="./page/page001816.html">í•œêµ­ì–´</a></li>
+						<li><a href="./page/page001817.html">PortuguÃªs</a></li>
+						<li><a href="./page/page001818.html">EspaÃ±ol</a></li>
+						<li><a href="./page/page001819.html">à¹„à¸—à¸¢</a></li>
+					</ul>
+				<!-- /#foreigners --></div>
+            <!-- /#headerInner --></div>
+		<!-- /#headerContents --></div>
+		<nav id="gNav">
+			<ul>
+				<li class="nav01"><a href="./page/dir009176.html">é˜²ç½ãƒ»å®‰å…¨</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav02"><a href="./page/dir000002.html">ç”Ÿæ´»</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav03"><a href="./page/dir011526.html" target="_blank">æ•™è‚²ãƒ»æ–‡åŒ–ãƒ»ã‚¹ãƒãƒ¼ãƒ„</a></li>
+				<li class="nav04"><a href="./page/dir009178.html">ã¾ã¡ã¥ãã‚Š</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav05"><a href="./page/dir000004.html">äº‹æ¥­è€…</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<li class="nav06"><a href="./page/dir000005.html">å¸‚æ”¿</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				<!--
+				<li class="nav07"><a href="./<!--page/dir015561.html">å¸‚åˆ¶æ–½è¡Œ20å‘¨å¹´</a>
+					<div class="gNavBox">
+						<div class="gNavBoxInner"></div>
+					</div>
+				</li>
+				-->
+			</ul>
+		<!-- /#gNav --></nav>
+		<div id="pageSearchBox">
+			<div id="SearchBox">
+				<h2>ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‹ã‚‰æŽ¢ã™</h2>
+				<div id="SearchBoxInner">
+					<ul class="tab">
+						<li class="nav01"><a href="#SearchContents01"><span class="arw">ã‚µã‚¤ãƒˆå†…æ¤œç´¢</span></a></li>
+						<li class="nav02"><a href="#SearchContents02"><span class="arw">Googleæ¤œç´¢</span></a></li>
+						<li class="nav03"><a href="#SearchContents03"><span class="arw">ãƒšãƒ¼ã‚¸ç•ªå·æ¤œç´¢</span></a></li>
+					</ul>
+					<div id="SearchContents01" class="area">
+						<div id="searchPage" title="ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å…¥åŠ›ã«ã‚ˆã‚‹ã‚µã‚¤ãƒˆå†…æ¤œç´¢">
+							<form action="./search.php" method="post">
+								<label for="field_search_page" class="hide">ãŠæŽ¢ã—ã®æƒ…å ±ã¯ä½•ã§ã—ã‚‡ã†ã‹ï¼Ÿ</label>
+								<input id="field_search_page" type="text" name="keyword" placeholder="ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å…¥åŠ›" autocomplete="off">
+								<input id="btn_search_page" type="submit" value="æ¤œç´¢" title="ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨æ¤œç´¢ã‚’é–‹å§‹ã—ã¾ã™">
+							</form>
+						</div>
+					</div>
+					<div id="SearchContents02" class="area">
+						<div id="googleBoxPage">
+							<form id="cse-search-box-top" action="./search_google.php">
+								<input type="hidden" name="cx" value="449e6534bedd64e24">
+								<input type="hidden" name="ie" value="UTF-8">
+								<input id="google_field_page" type="text" name="q" size="31" placeholder="ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å…¥åŠ›">
+								<input id="btn_google_search_page" type="submit" name="sa" value="æ¤œç´¢">
+							</form>
+						</div>
+					</div>
+					<div id="SearchContents03" class="area">
+						<div id="searchNumberPage" class="" title="ãƒšãƒ¼ã‚¸ç•ªå·ã«ã‚ˆã‚‹ã‚µã‚¤ãƒˆå†…æ¤œç´¢">
+							<form action="./search.php" method="post">
+								<label for="field_search_num_page" class="hide">ãŠæŽ¢ã—ã®æƒ…å ±ã¯ä½•ã§ã—ã‚‡ã†ã‹ï¼Ÿ</label>
+								<input id="field_search_num_page" type="text" name="id_no" placeholder="ãƒšãƒ¼ã‚¸ç•ªå·å…¥åŠ›" autocomplete="off">
+								<input id="btn_search_num_page" type="submit" value="æ¤œç´¢" title="ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨æ¤œç´¢ã‚’é–‹å§‹ã—ã¾ã™">
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--<a class="searchHelpPage" href="#">æ¤œç´¢æ–¹æ³•</a>-->
+			<!-- /#SearchBox --></div>
+		<!-- /#pageSearchBox --></div>
+	<!-- /#header --></header>
+	<div id="wrapper">
+
+
+		<nav id="topicpath">
+			<ol>
+				<li><a href="/">ãƒ›ãƒ¼ãƒ </a>&gt;</li>
+				<li></li>
+			</ol>
+		<!-- /#topicpath --></nav>
+
+		<main id="main">
+			<div id="mainContents">
+
+				<h1 id="pageTitle"><span class="innerTitle"></span></h1>
+<div id="errorDocumentBox">
+	<div id="errorDocumentBoxInner">
+		<p></p>
+	</div>
+</div>
+
+			<!-- /#mainContents --></div>
+
+			<div id="pageInfo">
+				<div id="pageInfoInner">
+					<ul>
+						<!--cms contents access-->
+						<li id="update">ã€æ›´æ–°æ—¥ã€‘<span>0å¹´0æœˆ0æ—¥</span></li>
+						<li id="print" title="ã“ã®ãƒšãƒ¼ã‚¸ã‚’å°åˆ·ã™ã‚‹"><a href="#">å°åˆ·ã™ã‚‹</a></li>
+					</ul>
+					<span id="pageTop"><a href="#container">PAGE TOP</a></span>
+				</div>
+			<!-- /#pageInfo --></div>
+
+<script>(function(){
+var w=window,d=document;
+var s="https://app.chatplus.jp/cp.js";
+d["__cp_d"]="https://app.chatplus.jp";
+d["__cp_c"]="492541d5_1";
+var a=d.createElement("script"), m=d.getElementsByTagName("script")[0];
+a.async=true,a.src=s,m.parentNode.insertBefore(a,m);})();</script>
+		<!-- /#main  --></main>
+	<!-- /#wrapper --></div>
+<!-- /#container --></div>
+<div id="footer">
+	<div id="footerContents">
+		<div id="footerInner">
+			<dl id="govAsou">
+				<dt>éº»ç”ŸåºèˆŽ</dt>
+				<dd>ã€’311-3892 èŒ¨åŸŽçœŒè¡Œæ–¹å¸‚éº»ç”Ÿ1561-9</dd>
+				<dd>ã€é›»è©±ç•ªå·ã€‘0299-72-0811<span>ï¼ˆä»£è¡¨ï¼‰</span></dd>
+				<dd class="btnFooterMap"><a href="https://goo.gl/maps/zCYMd72jNgGGVWQNA" target="_blank">ãƒžãƒƒãƒ—</a></dd>
+			</dl>
+			<dl id="govKitaura">
+				<dt>åŒ—æµ¦åºèˆŽ</dt>
+				<dd>ã€’311-1792 èŒ¨åŸŽçœŒè¡Œæ–¹å¸‚å±±ç”°2564-10</dd>
+				<dd>ã€é›»è©±ç•ªå·ã€‘0291-35-2111</dd>
+				<dd class="btnFooterMap"><a href="https://goo.gl/maps/7rSEeEZQ6krVj9L97" target="_blank">ãƒžãƒƒãƒ—</a></dd>
+			</dl>
+			<dl id="govTamatsukuri">
+				<dt>çŽ‰é€ åºèˆŽ</dt>
+				<dd>ã€’311-3512 èŒ¨åŸŽçœŒè¡Œæ–¹å¸‚çŽ‰é€ ç”²404</dd>
+				<dd>ã€é›»è©±ç•ªå·ã€‘0299-55-0111</dd>
+				<dd class="btnFooterMap"><a href="https://goo.gl/maps/o6pdPy5r2Mzw22jb6" target="_blank">ãƒžãƒƒãƒ—</a></dd>
+			</dl>
+            <p>ã€é–‹åºæ—¥æ™‚ã€‘ å¹³æ—¥ï¼ˆæœˆæ›œã‹ã‚‰é‡‘æ›œï¼‰ åˆå‰8æ™‚30åˆ†ã‹ã‚‰åˆå¾Œ5æ™‚15åˆ†ã¾ã§</p>
+		<!-- /#footerInner --></div>
+		<div id="footerNav">
+			<ul>
+				<li><a href="./page/page014280.html">ãŠå•ã„åˆã‚ã›</a></li>
+				<li><a href="./update.php">æ›´æ–°æƒ…å ±</a></li>
+				<li><a href="./page/dir000061.html">ãƒªãƒ³ã‚¯é›†</a></li>
+				<li><a href="./page/dir000060.html">ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ã”åˆ©ç”¨ã‚¬ã‚¤ãƒ‰</a></li>
+				<li><a href="./page/page002482.html">ãƒ—ãƒ©ã‚¤ãƒã‚·ãƒ¼ãƒãƒªã‚·ãƒ¼</a></li>
+				<li><a href="./sitemap.php">ã‚µã‚¤ãƒˆãƒžãƒƒãƒ—</a></li>
+			</ul>
+		</div>
+    <!-- /#footerContents --></div>
+	<p id="copyright">&copy; City of Namegata.</p>
+	<div id="adBanner">
+		<div id="adBannerInner">
+			<div class="bosyuLink">
+				<a id="btn_bnr_close" href="#">é–‰ã˜ã‚‹</a>
+				<a id="bosyuBtn" href="./page/page000238.html">åºƒå‘ŠæŽ²è¼‰ã«ã¤ã„ã¦</a>
+			</div>
+		</div>
+	<!-- /#adBanner --></div>
+</div>
+<div id="viewPC2SP"><a href="https://www.city.namegata.ibaraki.jp/ua.php?type=10000&amp;code=0&amp;now_type=1">ã‚¹ãƒžãƒ¼ãƒˆãƒ•ã‚©ãƒ³ç”¨ãƒšãƒ¼ã‚¸ã§è¦‹ã‚‹</a></div>
+<!--<script src="https://airwait.jp/js/corporate/airwait.js" data-airwait="key:FwqM5BXeoFBUGXLt18ILxnDM0ZNgdiUP" enable-log charset="utf-8"></script>-->
+</body>
+</html>

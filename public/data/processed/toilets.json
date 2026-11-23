@@ -1,570 +1,807 @@
 {
   "datasetId": "toilets",
   "title": "公衆トイレ一覧",
-  "acquiredAt": "2026-03-23T20:53:43.297Z",
+  "acquiredAt": "2026-11-23T01:23:48.857Z",
   "sourceUrl": "https://www.city.namegata.ibaraki.jp/opendata_download.php?code=36",
   "sourcePageUrl": "https://www.city.namegata.ibaraki.jp/opendata.php?mode=detail&code=14",
-  "encoding": "shift_jis",
+  "encoding": "utf-8",
   "headers": [
-    "都道府県コード又は市区町村コード",
-    "NO",
-    "都道府県名",
-    "市区町村名",
-    "名称",
-    "名称_カナ",
-    "名称_英語",
-    "住所",
-    "設置位置",
-    "緯度",
-    "経度",
-    "男性トイレ\n総数",
-    "男性トイレ数\n（小便器）",
-    "男性トイレ数\n（和式）",
-    "男性トイレ数\n（洋式）",
-    "女性トイレ\n総数",
-    "女性トイレ数\n（和式）",
-    "女性トイレ数\n（洋式）",
-    "男女共用トイレ\n総数",
-    "男女共用トイレ数\n（和式）",
-    "男女共用トイレ数\n（洋式）",
-    "多機能トイレ数",
-    "車椅子使用者用\nトイレ有無",
-    "乳幼児用設備\n設置トイレ有無",
-    "オストメイト設置\nトイレ有無",
-    "利用開始時間",
-    "利用終了時間",
-    "利用可能時間特記事項",
-    "備考"
+    ""
   ],
-  "rowCount": 17,
-  "columnCount": 29,
+  "rowCount": 264,
+  "columnCount": 1,
   "records": [
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "1",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "羽黒山公園",
-      "名称_カナ": "ハグロヤマコウエン",
-      "名称_英語": "",
-      "住所": "茨城県行方市麻生967",
-      "設置位置": "駐車場奥",
-      "緯度": "35.990338",
-      "経度": "140.479565",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "2",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<!DOCTYPE html>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "2",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "行方市天王崎公園",
-      "名称_カナ": "ナメガタシテンノウザキコウエン",
-      "名称_英語": "",
-      "住所": "茨城県行方市麻生字天王崎，西浜　地先",
-      "設置位置": "風の塔",
-      "緯度": "35.987951",
-      "経度": "140.474587",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "0",
-      "女性トイレ数_（洋式）": "2",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "有",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": "風の塔"
+      "column_1": "<html lang=ja>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "3",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "白浜ウォーキングセンター",
-      "名称_カナ": "シラハマウォーキングセンター",
-      "名称_英語": "",
-      "住所": "茨城県行方市白浜82",
-      "設置位置": "建物脇",
-      "緯度": "36.024217",
-      "経度": "140.555289",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "3",
-      "女性トイレ数_（和式）": "2",
-      "女性トイレ数_（洋式）": "1",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "有",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<head prefix=og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "4",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "ふるさと自然の道",
-      "名称_カナ": "フルサトシゼンノミチ",
-      "名称_英語": "",
-      "住所": "茨城県行方市岡575-1",
-      "設置位置": "岡農村集落センター敷地内",
-      "緯度": "36.023128",
-      "経度": "140.53491",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "1",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Type content=text/html; charset=UTF-8 />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "5",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "行方市高須崎公園（芝生広場丘）",
-      "名称_カナ": "ナメガタシタカスザキコウエン（シバフヒロバオカ）",
-      "名称_英語": "",
-      "住所": "茨城県行方市玉造甲1970",
-      "設置位置": "芝生広場丘上",
-      "緯度": "36.094973",
-      "経度": "140.403085",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "2",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "",
-      "利用終了時間": "",
-      "利用可能時間特記事項": "休止中",
-      "備考": "故障に伴う長期休止"
+      "column_1": "<meta http-equiv=Content-Style-Type content=text/css />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "6",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "行方市高須崎交流センター",
-      "名称_カナ": "ナメガタシタカスザキコウリュウセンター",
-      "名称_英語": "",
-      "住所": "茨城県行方市玉造甲1969-3",
-      "設置位置": "入口脇",
-      "緯度": "36.094466",
-      "経度": "140.404678",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "0",
-      "女性トイレ数_（洋式）": "2",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<meta http-equiv=Content-Script-Type content=text/javascript />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "7",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "行方市高須崎公園（芝生駐車場奥）",
-      "名称_カナ": "ナメガシタカスザキコウエン（シバフチュウシャジョウオク）",
-      "名称_英語": "",
-      "住所": "茨城県行方市玉造甲1970",
-      "設置位置": "芝生駐車場奥",
-      "緯度": "36.093335",
-      "経度": "140.405021",
-      "男性トイレ_総数": "5",
-      "男性トイレ数_（小便器）": "3",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "3",
-      "女性トイレ数_（和式）": "2",
-      "女性トイレ数_（洋式）": "1",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "有",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<meta http-equiv=X-UA-Compatible content=IE=edge />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "8",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "手賀ふれあいの森",
-      "名称_カナ": "テガフレアイノモリ",
-      "名称_英語": "",
-      "住所": "茨城県行方市手賀字小座山地内",
-      "設置位置": "駐車場脇",
-      "緯度": "36.091557",
-      "経度": "140.448076",
-      "男性トイレ_総数": "2",
-      "男性トイレ数_（小便器）": "0",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "1",
-      "女性トイレ数_（和式）": "1",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<meta name=viewport content=width=1100 />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "9",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "旧玉造駅前",
-      "名称_カナ": "キュウタマツクリエキマエ",
-      "名称_英語": "",
-      "住所": "茨城県行方市玉造甲94-3",
-      "設置位置": "バス停脇",
-      "緯度": "36.111348",
-      "経度": "140.413556",
-      "男性トイレ_総数": "3",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "0",
-      "女性トイレ数_（洋式）": "2",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<meta name=keywords content= />"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "10",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "麻生公民館",
-      "名称_カナ": "アソウコウミンカン",
-      "名称_英語": "",
-      "住所": "茨城県行方市麻生1221",
-      "設置位置": "駐車場右奥",
-      "緯度": "35.591621",
-      "経度": "140.291672",
-      "男性トイレ_総数": "2",
-      "男性トイレ数_（小便器）": "1",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "2",
-      "女性トイレ数_（和式）": "1",
-      "女性トイレ数_（洋式）": "1",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "終日",
-      "利用終了時間": "終日",
-      "利用可能時間特記事項": "24時間使用可能",
-      "備考": ""
+      "column_1": "<meta name=description content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "11",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "麻生運動場弓道場",
-      "名称_カナ": "アソウウンドウジョウキュウドウジョウ",
-      "名称_英語": "",
-      "住所": "茨城県行方市南269-1",
-      "設置位置": "弓道場脇",
-      "緯度": "36.022608",
-      "経度": "140.474825",
-      "男性トイレ_総数": "2",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "0",
-      "女性トイレ数_（和式）": "0",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "2",
-      "男女共用トイレ数_（和式）": "2",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta property=og:url content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "12",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "麻生運動場多目的広場グラウンド",
-      "名称_カナ": "アソウウンドウジョウタモクテキヒロバグラウンド",
-      "名称_英語": "",
-      "住所": "茨城県行方市島並1247-4",
-      "設置位置": "多目的広場脇",
-      "緯度": "36.009002",
-      "経度": "140.474103",
-      "男性トイレ_総数": "4",
-      "男性トイレ数_（小便器）": "3",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "4",
-      "女性トイレ数_（和式）": "1",
-      "女性トイレ数_（洋式）": "3",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "1",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta property=og:type content=article>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "13",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "北浦運動場第一グラウンド",
-      "名称_カナ": "キタウラウンドウジョウダイイチグラウンド",
-      "名称_英語": "",
-      "住所": "茨城県行方市山田2175",
-      "設置位置": "グラウンド右側テニスコート奥",
-      "緯度": "36.082063",
-      "経度": "140.531498",
-      "男性トイレ_総数": "8",
-      "男性トイレ数_（小便器）": "6",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "1",
-      "女性トイレ_総数": "5",
-      "女性トイレ数_（和式）": "1",
-      "女性トイレ数_（洋式）": "4",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "1",
-      "車椅子使用者用_トイレ有無": "有",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta property=og:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "14",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "北浦運動場第二グラウンド",
-      "名称_カナ": "キタウラウンドウジョウダイニグラウンド",
-      "名称_英語": "",
-      "住所": "茨城県行方市山田3064",
-      "設置位置": "第二グラウンド駐車場右奥",
-      "緯度": "36.085464",
-      "経度": "140.519591",
-      "男性トイレ_総数": "6",
-      "男性トイレ数_（小便器）": "4",
-      "男性トイレ数_（和式）": "2",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "5",
-      "女性トイレ数_（和式）": "5",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta property=og:title content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "15",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "北浦運動場クロッケーコート",
-      "名称_カナ": "キタウラウンドウジョウクロッケーコート",
-      "名称_英語": "",
-      "住所": "茨城県行方市山田2175",
-      "設置位置": "クロッケーコート入口脇",
-      "緯度": "36.080504",
-      "経度": "140.532617",
-      "男性トイレ_総数": "4",
-      "男性トイレ数_（小便器）": "3",
-      "男性トイレ数_（和式）": "1",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "3",
-      "女性トイレ数_（和式）": "2",
-      "女性トイレ数_（洋式）": "1",
-      "男女共用トイレ_総数": "0",
-      "男女共用トイレ数_（和式）": "0",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta property=og:description content=>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "16",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "玉造運動場浜野球場",
-      "名称_カナ": "タマツクリウンドウジョウハマヤキュウジョウ",
-      "名称_英語": "",
-      "住所": "茨城県行方市玉造甲3251-1",
-      "設置位置": "野球場駐車場脇",
-      "緯度": "36.103663",
-      "経度": "140.439475",
-      "男性トイレ_総数": "2",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "0",
-      "女性トイレ数_（和式）": "0",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "2",
-      "男女共用トイレ数_（和式）": "1",
-      "男女共用トイレ数_（洋式）": "1",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta name=twitter:card content=summary>"
     },
     {
-      "都道府県コード又は市区町村コード": "82333",
-      "NO": "17",
-      "都道府県名": "茨城県",
-      "市区町村名": "行方市",
-      "名称": "玉造運動場泉野球場",
-      "名称_カナ": "タマツクリウンドウジョウイズミヤキュウジョウ",
-      "名称_英語": "",
-      "住所": "茨城県行方市浜2454",
-      "設置位置": "野球場脇",
-      "緯度": "36.12184",
-      "経度": "140.401367",
-      "男性トイレ_総数": "2",
-      "男性トイレ数_（小便器）": "2",
-      "男性トイレ数_（和式）": "0",
-      "男性トイレ数_（洋式）": "0",
-      "女性トイレ_総数": "0",
-      "女性トイレ数_（和式）": "0",
-      "女性トイレ数_（洋式）": "0",
-      "男女共用トイレ_総数": "1",
-      "男女共用トイレ数_（和式）": "1",
-      "男女共用トイレ数_（洋式）": "0",
-      "多機能トイレ数": "0",
-      "車椅子使用者用_トイレ有無": "無",
-      "乳幼児用設備_設置トイレ有無": "無",
-      "オストメイト設置_トイレ有無": "無",
-      "利用開始時間": "8:30",
-      "利用終了時間": "22:00",
-      "利用可能時間特記事項": "休館日：毎週月曜日・年末年始",
-      "備考": ""
+      "column_1": "<meta name=twitter:description content=>"
+    },
+    {
+      "column_1": "<meta name=twitter:title content=>"
+    },
+    {
+      "column_1": "<meta name=twitter:image content=https://www.city.namegata.ibaraki.jp/web_clip_icon.png>"
+    },
+    {
+      "column_1": "<title>&nbsp;|&nbsp;行方市公式ホームページ</title>"
+    },
+    {
+      "column_1": "<base href=https://www.city.namegata.ibaraki.jp/>"
+    },
+    {
+      "column_1": "<link rel=shortcut icon href=./favicon.ico />"
+    },
+    {
+      "column_1": "<link rel=apple-touch-icon href=./web_clip_icon.png />"
+    },
+    {
+      "column_1": "<link rel=stylesheet href=./skin/default/css/import.css?250924 type=text/css media=all />"
+    },
+    {
+      "column_1": "<link rel=stylesheet href=./skin/common/css/print.css type=text/css media=print />"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/jquery.jg.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/functions.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/plugins.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/rwdImageMaps.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/colorbox/colorbox.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/slick.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/ready.common.js></script>"
+    },
+    {
+      "column_1": "<script src=./skin/common/js/gsearch.js></script>"
+    },
+    {
+      "column_1": "<script src=//typesquare.com/3/tsst/script/ja/typesquare.js?616e89de4180483d9fc215c7ac1e02d5 charset=utf-8 defer></script>"
+    },
+    {
+      "column_1": "<!--"
+    },
+    {
+      "column_1": "<script src=https://cdn-eas.readspeaker.com/script/13059<!--/webReader/webReader.js?pids=wr&amp;forceAdapter=ioshtml5&amp;disable=translation,lookup id=rs_req_Init></script>"
+    },
+    {
+      "column_1": "<style> #readspeaker_button1 { z-index: 100 !important; } </style>"
+    },
+    {
+      "column_1": "-->"
+    },
+    {
+      "column_1": "<!-- Google tag (gtag.js) -->"
+    },
+    {
+      "column_1": "<script async src=https://www.googletagmanager.com/gtag/js?id=G-GM9M67QTJT></script>"
+    },
+    {
+      "column_1": "<script>"
+    },
+    {
+      "column_1": "  window.dataLayer = window.dataLayer || [];"
+    },
+    {
+      "column_1": "  function gtag(){dataLayer.push(arguments);}"
+    },
+    {
+      "column_1": "  gtag('js'"
+    },
+    {
+      "column_1": "  gtag('config'"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=https://tsutaeru.cloud/assets/snippet/js/tsutaeru.js?api_key=75d89a96-3250-47b9-a5d9-beab399b8668></script>"
+    },
+    {
+      "column_1": "<script src=https://tsutaeru.cloud/assets/snippet/js/tsutaeru_mo.js></script>"
+    },
+    {
+      "column_1": "<script> "
+    },
+    {
+      "column_1": "__tsutaeruMO.init({"
+    },
+    {
+      "column_1": "\taccess_token: 'f165c9c6-9d6b-41bb-8c03-ad80842ffc02'"
+    },
+    {
+      "column_1": "});"
+    },
+    {
+      "column_1": "</script>"
+    },
+    {
+      "column_1": "<script src=./count.php?type=10000&amp;code=0&amp;career=0 id=myTypeCode data-type=10000 data-code=0></script>"
+    },
+    {
+      "column_1": "</head>"
+    },
+    {
+      "column_1": "<body>"
+    },
+    {
+      "column_1": "<div id=container>"
+    },
+    {
+      "column_1": "\t<header id=header>"
+    },
+    {
+      "column_1": "\t\t<div id=headerContents>"
+    },
+    {
+      "column_1": "\t\t\t<div id=logoTitle><a href=./ title=行方市公式ホームページへ>行方市公式ホームページ</a></div>"
+    },
+    {
+      "column_1": "\t\t\t<span class=hide><a href=#wrapper>本文へ移動する</a></span>"
+    },
+    {
+      "column_1": "\t\t\t<div id=headerInner>"
+    },
+    {
+      "column_1": "            \t<a id=btn_sns href=./page/page006031.html>行方市公式SNS</a>"
+    },
+    {
+      "column_1": "            \t<span id=btnAccessibility>アクセシビリティ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=tools>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=toolsInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=sizeChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>文字サイズ</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=df><span tabindex=0>標準</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=zf><span tabindex=0>拡大</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<dl id=colorChanger>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dt>背景色</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_default><a href=# title=背景を白(標準)にします>白</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_blue><a href=./skin/common/css/colorChanger/bg_blue.css title=背景を青色にします>青</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_yellow><a href=./skin/common/css/colorChanger/bg_yellow.css title=背景を黄色にします>黄</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<dd id=bg_black><a href=./skin/common/css/colorChanger/bg_black.css title=背景を黒色にします>黒</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#tools --></div>"
+    },
+    {
+      "column_1": "                <div id=browserSupportPlayer>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnBrowserSupportPlayer tabindex=0>音声読み上げ</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<script>_tsutaeru.speech.button();</script>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<span id=btnBrowserSupportRuby title=閲覧しているページにふりがなを振ります tabindex=0>ルビ振り</span>"
+    },
+    {
+      "column_1": "\t\t\t\t<span id=btnGentle tabindex=0>やさしい日本語</span>"
+    },
+    {
+      "column_1": "                <div id=foreigners>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=btnForeigners tabindex=0>Language</span>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001813.html>English</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001814.html>简体中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001815.html>繁體中文</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001816.html>한국어</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001817.html>Português</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001818.html>Español</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li><a href=./page/page001819.html>ไทย</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<!-- /#foreigners --></div>"
+    },
+    {
+      "column_1": "            <!-- /#headerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#headerContents --></div>"
+    },
+    {
+      "column_1": "\t\t<nav id=gNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav01><a href=./page/dir009176.html>防災・安全</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav02><a href=./page/dir000002.html>生活</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav03><a href=./page/dir011526.html target=_blank>教育・文化・スポーツ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav04><a href=./page/dir009178.html>まちづくり</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav05><a href=./page/dir000004.html>事業者</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav06><a href=./page/dir000005.html>市政</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--"
+    },
+    {
+      "column_1": "\t\t\t\t<li class=nav07><a href=./<!--page/dir015561.html>市制施行20周年</a>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div class=gNavBox>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div class=gNavBoxInner></div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</li>"
+    },
+    {
+      "column_1": "\t\t\t\t-->"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t<!-- /#gNav --></nav>"
+    },
+    {
+      "column_1": "\t\t<div id=pageSearchBox>"
+    },
+    {
+      "column_1": "\t\t\t<div id=SearchBox>"
+    },
+    {
+      "column_1": "\t\t\t\t<h2>キーワードから探す</h2>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=SearchBoxInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul class=tab>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav01><a href=#SearchContents01><span class=arw>サイト内検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav02><a href=#SearchContents02><span class=arw>Google検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li class=nav03><a href=#SearchContents03><span class=arw>ページ番号検索</span></a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents01 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchPage title=キーワード入力によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_page type=text name=keyword placeholder=キーワード入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents02 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=googleBoxPage>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form id=cse-search-box-top action=./search_google.php>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=cx value=449e6534bedd64e24>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input type=hidden name=ie value=UTF-8>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=google_field_page type=text name=q size=31 placeholder=キーワード入力>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_google_search_page type=submit name=sa value=検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<div id=SearchContents03 class=area>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<div id=searchNumberPage class= title=ページ番号によるサイト内検索>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t<form action=./search.php method=post>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<label for=field_search_num_page class=hide>お探しの情報は何でしょうか？</label>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=field_search_num_page type=text name=id_no placeholder=ページ番号入力 autocomplete=off>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t\t<input id=btn_search_num_page type=submit value=検索 title=ボタンを押すと検索を開始します>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t\t</form>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t\t<!--<a class=searchHelpPage href=#>検索方法</a>-->"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#SearchBox --></div>"
+    },
+    {
+      "column_1": "\t\t<!-- /#pageSearchBox --></div>"
+    },
+    {
+      "column_1": "\t<!-- /#header --></header>"
+    },
+    {
+      "column_1": "\t<div id=wrapper>"
+    },
+    {
+      "column_1": "\t\t<nav id=topicpath>"
+    },
+    {
+      "column_1": "\t\t\t<ol>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=/>ホーム</a>&gt;</li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li></li>"
+    },
+    {
+      "column_1": "\t\t\t</ol>"
+    },
+    {
+      "column_1": "\t\t<!-- /#topicpath --></nav>"
+    },
+    {
+      "column_1": "\t\t<main id=main>"
+    },
+    {
+      "column_1": "\t\t\t<div id=mainContents>"
+    },
+    {
+      "column_1": "\t\t\t\t<h1 id=pageTitle><span class=innerTitle></span></h1>"
+    },
+    {
+      "column_1": "<div id=errorDocumentBox>"
+    },
+    {
+      "column_1": "\t<div id=errorDocumentBoxInner>"
+    },
+    {
+      "column_1": "\t\t<p></p>"
+    },
+    {
+      "column_1": "\t</div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#mainContents --></div>"
+    },
+    {
+      "column_1": "\t\t\t<div id=pageInfo>"
+    },
+    {
+      "column_1": "\t\t\t\t<div id=pageInfoInner>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<!--cms contents access-->"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=update>【更新日】<span>0年0月0日</span></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t\t<li id=print title=このページを印刷する><a href=#>印刷する</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t\t\t\t<span id=pageTop><a href=#container>PAGE TOP</a></span>"
+    },
+    {
+      "column_1": "\t\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t\t<!-- /#pageInfo --></div>"
+    },
+    {
+      "column_1": "<script>(function(){"
+    },
+    {
+      "column_1": "var w=window"
+    },
+    {
+      "column_1": "var s=https://app.chatplus.jp/cp.js;"
+    },
+    {
+      "column_1": "d[__cp_d]=https://app.chatplus.jp;"
+    },
+    {
+      "column_1": "d[__cp_c]=492541d5_1;"
+    },
+    {
+      "column_1": "var a=d.createElement(script)"
+    },
+    {
+      "column_1": "a.async=true"
+    },
+    {
+      "column_1": "\t\t<!-- /#main  --></main>"
+    },
+    {
+      "column_1": "\t<!-- /#wrapper --></div>"
+    },
+    {
+      "column_1": "<!-- /#container --></div>"
+    },
+    {
+      "column_1": "<div id=footer>"
+    },
+    {
+      "column_1": "\t<div id=footerContents>"
+    },
+    {
+      "column_1": "\t\t<div id=footerInner>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govAsou>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>麻生庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3892 茨城県行方市麻生1561-9</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-72-0811<span>（代表）</span></dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/zCYMd72jNgGGVWQNA target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govKitaura>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>北浦庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-1792 茨城県行方市山田2564-10</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0291-35-2111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/7rSEeEZQ6krVj9L97 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "\t\t\t<dl id=govTamatsukuri>"
+    },
+    {
+      "column_1": "\t\t\t\t<dt>玉造庁舎</dt>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>〒311-3512 茨城県行方市玉造甲404</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd>【電話番号】0299-55-0111</dd>"
+    },
+    {
+      "column_1": "\t\t\t\t<dd class=btnFooterMap><a href=https://goo.gl/maps/o6pdPy5r2Mzw22jb6 target=_blank>マップ</a></dd>"
+    },
+    {
+      "column_1": "\t\t\t</dl>"
+    },
+    {
+      "column_1": "            <p>【開庁日時】 平日（月曜から金曜） 午前8時30分から午後5時15分まで</p>"
+    },
+    {
+      "column_1": "\t\t<!-- /#footerInner --></div>"
+    },
+    {
+      "column_1": "\t\t<div id=footerNav>"
+    },
+    {
+      "column_1": "\t\t\t<ul>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page014280.html>お問い合わせ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./update.php>更新情報</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000061.html>リンク集</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/dir000060.html>ホームページご利用ガイド</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./page/page002482.html>プライバシーポリシー</a></li>"
+    },
+    {
+      "column_1": "\t\t\t\t<li><a href=./sitemap.php>サイトマップ</a></li>"
+    },
+    {
+      "column_1": "\t\t\t</ul>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "    <!-- /#footerContents --></div>"
+    },
+    {
+      "column_1": "\t<p id=copyright>&copy; City of Namegata.</p>"
+    },
+    {
+      "column_1": "\t<div id=adBanner>"
+    },
+    {
+      "column_1": "\t\t<div id=adBannerInner>"
+    },
+    {
+      "column_1": "\t\t\t<div class=bosyuLink>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=btn_bnr_close href=#>閉じる</a>"
+    },
+    {
+      "column_1": "\t\t\t\t<a id=bosyuBtn href=./page/page000238.html>広告掲載について</a>"
+    },
+    {
+      "column_1": "\t\t\t</div>"
+    },
+    {
+      "column_1": "\t\t</div>"
+    },
+    {
+      "column_1": "\t<!-- /#adBanner --></div>"
+    },
+    {
+      "column_1": "</div>"
+    },
+    {
+      "column_1": "<div id=viewPC2SP><a href=https://www.city.namegata.ibaraki.jp/ua.php?type=10000&amp;code=0&amp;now_type=1>スマートフォン用ページで見る</a></div>"
+    },
+    {
+      "column_1": "<!--<script src=https://airwait.jp/js/corporate/airwait.js data-airwait=key:FwqM5BXeoFBUGXLt18ILxnDM0ZNgdiUP enable-log charset=utf-8></script>-->"
+    },
+    {
+      "column_1": "</body>"
+    },
+    {
+      "column_1": "</html>"
     }
   ]
 }
